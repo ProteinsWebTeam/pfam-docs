@@ -12,11 +12,13 @@ Pfam is the product from an international consortium of researchers that has bee
 European Bioinformatics Institute (EMBL-EBI), UK
 ------------------------------------------------
 
-    * Alex Bateman - Pfam team leader and head of Protein Sequence resources at EMBL-EBI
-    * Sara Chuguransky - Curator
-    * Tiago Grego - Developer
-    * Beatriz Lazaro Pinto - Curator
-    * Gustavo Salazar - Web developer
+- - `Alex Bateman <http://www.ebi.ac.uk/about/people/alex-bateman>`_ - Pfam team leader and head of Protein Sequence resources at EMBL-EBI
+- `Antonina Entcheva Andreeva <https://www.ebi.ac.uk/people/person/antonina-andreeva/>`_ - Biocurator 
+- `Sara Chuguransky <http://www.ebi.ac.uk/about/people/sara-chuguransky>`_ - Biocurator
+- `Tiago Grego <http://www.ebi.ac.uk/about/people/tiago-grego>`_ - Software developer
+- `Beatriz Lazaro Pinto <http://www.ebi.ac.uk/about/people/beatriz-lazaro-pinto>`_ - Biocurator
+- `Luis Sanchez Pulido <http://www.ebi.ac.uk/about/people/luis-sanchez-pulido>`_ - Biocurator
+
 
 Harvard University, USA
 -----------------------
