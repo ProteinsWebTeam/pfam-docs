@@ -46,4 +46,4 @@ If you use Pfam in your work, please consider citing the :ref:`citing-pfam:Pfam 
 Get in touch
 ============
 
-If you have any questions or feedback, email us at interhelp@ebi.ac.uk.
+If you have any questions or feedback, contact us through the Pfam helpdesk <https://www.ebi.ac.uk/support/interpro>_.
