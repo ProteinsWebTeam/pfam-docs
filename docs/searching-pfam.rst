@@ -6,7 +6,7 @@ Searching Pfam
 
 There are multiple ways to look for information in Pfam by using the IntePro website.
 
-.. _search_by_text:
+.. _search:
 Searching a specific Pfam entry 
 ===============================
 
@@ -69,7 +69,7 @@ This text box allows you to go quickly to the relevant page in the InterPro site
 Searching a protein sequence against Pfam
 =========================================
 
-Searching a protein sequence against the Pfam library of HMMs will enable you to find out the domain architecture of the protein, and thus what its potential function might be. If your protein is present in the version of UniProt used to make the current release of InterPro, we have already calculated its domain architecture. You can access this by entering the Uniprot sequence identifier in any of the Search boxes mentioned above (see :ref: search_by_text).
+Searching a protein sequence against the Pfam library of HMMs will enable you to find out the domain architecture of the protein, and thus what its potential function might be. If your protein is present in the version of UniProt used to make the current release of InterPro, we have already calculated its domain architecture. You can access this by entering the Uniprot sequence identifier in any of the Search boxes mentioned above (see :ref:`search`).
 
 If your sequence is not in the InterPro database, you could perform a single-sequence or a batch search against the Pfam database on the InterPro website. This search uses the web based InterProScan tool, which allows you to scan up 100 sequences at a time with a maximum length of 40,000 amino acids. To run a any online search you can follow this steps:
 
