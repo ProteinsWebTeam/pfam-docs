@@ -13,8 +13,7 @@ Site organisation
 .. figure:: images/Pfam_entry.png
     :alt: Scheme of the organisation of the information in the Pfam database.
     :width: 400
-
     :align: center
 
-  Scheme of the organisation of the information in the Pfam database. The arrows represent the flow of the data.
+  Schematic representation of the organisation of the information in the Pfam database. The arrows represent the flow of data.
 
