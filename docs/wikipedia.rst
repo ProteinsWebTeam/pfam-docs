@@ -1,5 +1,3 @@
-.. _wikipedia:
-
 ****************************
 Pfam Annotation in Wikipedia
 ****************************

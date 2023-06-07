@@ -14,26 +14,26 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   summary
-   getting-started
-   searching-pfam
-   pfam-entry-organisation
-   clan_set-page-organisation
-   training
-   faq
-   glossary
-   scores
-   citing-pfam
-   wikipedia
-   linking-to-pfam
-   guide-to-graphics
-   restful-interface
-   pfam-database
-   ftp-site
-   privacy
-   authorship
-   team-members
-   contact-us
+   /summary
+   /getting-started
+   /searching-pfam
+   /pfam-entry-organisation
+   /clan_set-page-organisation
+   /training
+   /faq
+   /glossary
+   /scores
+   /citing-pfam
+   /wikipedia
+   /linking-to-pfam
+   /guide-to-graphics
+   /restful-interface
+   /pfam-database
+   /ftp-site
+   /privacy
+   /authorship
+   /team-members
+   /contact-us
 
 
 License

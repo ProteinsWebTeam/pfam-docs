@@ -1,5 +1,3 @@
-.. _getting-started:
-
 ***************
 Getting Started
 ***************
@@ -11,9 +9,9 @@ Site organisation
 =================
 
 .. figure:: images/Pfam_entry.png
-    :alt: Scheme of the organisation of the information in the Pfam database.
-    :width: 400
-    :align: center
+  :alt: Scheme of the organisation of the information in the Pfam database.
+  :width: 400
+  :align: center
 
   Schematic representation of the organisation of the information in the Pfam database. The arrows represent the flow of data.
 
