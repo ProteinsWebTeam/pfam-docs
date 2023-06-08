@@ -1,145 +1,117 @@
 .. _restful-interface:
 
-####################################
-Querying Pfam using the InterPro API 
-####################################
+*****************
+RESTful interface
+*****************
 
-This is an introduction to the `InterPro API <https://www.ebi.ac.uk/interpro/api>`_ to retrieve Pfam annotations. A programmatic interface, 
-commonly called an `Application Programming Interface <http://en.wikipedia.org/wiki/Api>`_ (API) allows users to write scripts or programs 
-to access data, rather than having to rely on a browser to view a site.
+This is an introduction to the `"RESTful" <http://www.xfront.com/REST-Web-Services.html>`_ interface to the Pfam website. `REST <http://en.wikipedia.org/wiki/Representational_State_Transfer>`_ (or Representation State Transfer) refers to a style of building websites which makes it easy to interact programmatically with the services provided by the site. A programmatic interface, commonly called an `Application Programming Interface <http://en.wikipedia.org/wiki/Api>`_ (API) allows users to write scripts or programs to access data, rather than having to rely on a browser to view a site.
 
-**************
 Basic concepts
-**************
+==============
 
 URLs
-====
+----
 
-A RESTful service typically sends and receives data over `HTTP <http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_, 
-the same protocol that's used by websites and browsers. As such, the services provided through a RESTful interface are identified using URLs.
+A RESTful service typically sends and receives data over `HTTP <http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol>`_, the same protocol that's used by websites and browsers. As such, the services provided through a RESTful interface are identified using URLs.
 
-In the InterPro website we use a different URL to provide the standard HTML representation of Pfam data and the alternative 
-programmatic JSON format through the API. 
+In the Pfam website we use the same basic URL to provide both the standard HTML representation of Pfam data and the alternative `XML <http://en.wikipedia.org/wiki/Xml>`_ representation. To see the data for a particular Pfam-A family, you would visit the following URL in your browser:
 
-To see the data for a particular Pfam-A family, you would visit the following URL in your browser:
+  /family/Piwi
 
-  `/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/>`_
+To retrieve the data in XML format, just add an extra parameter, output=xml, to the URL:
 
-To retrieve the data in JSON format, just add an extra parameter, api to the URL:
+  /family/Piwi?output=xml 
 
-  `/api/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02171/>`_
-
-The response from the server will now be an JSON document, rather than an HTML page. 
-
-The table below lists the website vs API url:
-
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Data                                            | Example website url                                                                                                    | Example API url                                                                                                                |
-+=================================================+========================================================================================================================+================================================================================================================================+
-| List all Pfam signatures                        | `/entry/pfam/#table <https://www.ebi.ac.uk/interpro/entry/pfam/#table>`_                                               | `/api/entry/pfam/ <https://www.ebi.ac.uk/interpro/api/entry/pfam/>`_                                                           |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| List all Pfam signatures of type Family         | `/entry/integrated/pfam/?type=family#table <https://www.ebi.ac.uk/interpro/entry/integrated/pfam/?type=family#table>`_ | `/api/entry/pfam/?type=family <https://www.ebi.ac.uk/interpro/api/entry/pfam/?type=family>`_                                   |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Information about a specific family             | `/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/>`_                                           | `/api/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02171/>`_                                           |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| List of proteins matching a specific family     | `/entry/pfam/PF02171/protein/UniProt/ <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/protein/UniProt/>`_           | `/api/protein/UniProt/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/api/protein/UniProt/entry/pfam/PF02171/>`_           |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Different domain architectures matching         | `/entry/pfam/PF02171/domain_architecture/ <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/domain_architecture/>`_   | `/api/entry/pfam/PF02171?ida <https://www.ebi.ac.uk:443/interpro/api/entry/pfam/PF02171?ida>`_                                 |
-|a specific family                                |                                                                                                                        |                                                                                                                                |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| List of PDB structures matching                 | `/entry/pfam/PF02171/structure/PDB/ <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/structure/PDB/>`_               | `/api/structure/PDB/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/api/structure/PDB/entry/pfam/PF02171/>`_               |
-|a specific family                                |                                                                                                                        |                                                                                                                                |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Download the PDB file of the predicted          | `/entry/pfam/PF14331/rosettafold/ <https://www.ebi.ac.uk/interpro/entry/pfam/PF14331/rosettafold/>`_                   | `/api/entry/pfam/PF14331?model:structure <https://www.ebi.ac.uk:443/interpro/api/entry/pfam/PF14331?model:structure>`_         |
-|structure from RoseTTAFold                       |                                                                                                                        |                                                                                                                                |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-|                                                 |                                                                                                                        |                                                                                                                                |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| List all Pfam clans/sets                        | `/set/all/entry/pfam/#table <https://www.ebi.ac.uk/interpro/set/all/entry/pfam/#table>`_                               | `/api/set/pfam <https://www.ebi.ac.uk/interpro/api/set/pfam>`_                                                                 |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| List of Pfam signatures in                      | `/set/pfam/CL0219/entry/pfam/ <https://www.ebi.ac.uk/interpro/set/pfam/CL0219/entry/pfam/>`_                           | `/api/entry/pfam/set/pfam/CL0219?page_size=100 <https://www.ebi.ac.uk/interpro/api/entry/pfam/set/pfam/CL0219?page_size=100>`_ |
-|a specific clan/set                              |                                                                                                                        |                                                                                                                                |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| General information about a specific clan/set   | `/set/pfam/CL0219/ <https://www.ebi.ac.uk/interpro/set/pfam/CL0219/>`_                                                 | `/api/set/pfam/CL0219 <https://www.ebi.ac.uk/interpro/api/set/pfam/CL0219>`_                                                   |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-
+The response from the server will now be an XML document, rather than an HTML page. 
 
 Sending requests
-================
+----------------
+
+Using curl
+^^^^^^^^^^
+
+Although you can use a browser to retrieve family data in XML format, it's most useful to send requests and retrieve XML programmatically. The simplest way to do this is using a Unix command line tool such as curl: 
+
+.. code-block:: bash
+
+  curl -LH 'Expect:' -F output=xml '/family/Piwi'
+  
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!-- information on Pfam-A family PF02171 (Piwi), generated: 16:35:52 26-Oct-2009 -->
+  <pfam xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="https://pfam.xfam.org/"
+        xsi:schemaLocation="https://pfam.xfam.org/
+                            https://pfam.xfam.org/static/documents/schemas/pfam_family.xsd"
+        release="24.0"
+        release_date="2009-10-07">
+    <entry entry_type="Pfam-A" accession="PF02171" id="Piwi">
+      ...
+
+
+**Note**: we have recently changed the web server that we use for serving the Pfam site. Due to a bug in the server itself, requests that come from curl are normally rejected. The current work-around is to add an extra parameter to the curl command line: -H 'Expect:'. This should avoid problems with requests being rejected.
 
 Using a script
 ^^^^^^^^^^^^^^
 
-Most programming languages have the ability to send HTTP requests and receive HTTP responses. A Python script to retrieve 
-data about a Pfam family might be as trivial as this::
+Most programming languages have the ability to send HTTP requests and receive HTTP responses. A Perl script to retrieve data about a Pfam family might be as trivial as this::
 
-  #!/usr/bin/env python3
+  #!/usr/bin/perl
+  
+  use strict;
+  use warnings;
+  
+  use LWP::UserAgent;
+  
+  my $ua = LWP::UserAgent->new;
+  $ua->env_proxy;
+  
+  my $res = $ua->get( '/family/Piwi?output=xml' );
+  
+  if ( $res->is_success ) {
+    print $res->content;
+  }
+  else {
+    print STDERR $res->status_line, "\n";
+  }
 
-  # standard library modules
-  import sys, errno, re, json, ssl
-  from urllib import request
-  from urllib.error import HTTPError
-  from time import sleep
 
-  BASE_URL = "https://www.ebi.ac.uk:443/interpro/api/entry/pfam/PF02171"
-  
-  def output_list():
-    #disable SSL verification to avoid config issues
-    context = ssl._create_unverified_context()
-  
-    next = BASE_URL
-    last_page = False
-  
-    
-    attempts = 0
-    while next:
-      try:
-        req = request.Request(next, headers={"Accept": "application/json"})
-        res = request.urlopen(req, context=context)
-        # If the API times out due a long running query
-        if res.status == 408:
-          # wait just over a minute
-          sleep(61)
-          # then continue this loop with the same URL
-          continue
-        elif res.status == 204:
-          #no data so leave loop
-          break
-        payload = json.loads(res.read().decode())
-        next = payload["next"]
-        attempts = 0
-        if not next:
-          last_page = True
-      except HTTPError as e:
-        if e.code == 408:
-          sleep(61)
-          continue
-        else:
-          # If there is a different HTTP error, it wil re-try 3 times before failing
-          if attempts < 3:
-            attempts += 1
-            sleep(61)
-            continue
-          else:
-            sys.stderr.write("LAST URL: " + next)
-            raise e
-  
-      for i, item in enumerate(payload["results"]):
-        sys.stdout.write(item["metadata"]["name"]["short"] + "\n")
-      # Don't overload the server, give it time before asking for more
-      if next:
-        sleep(1)
-  
-  if __name__ == "__main__":
-    output_list()
-  
+Retriveing data
+===============
 
-This script prints out the short name (Piwi) for the family (`PF02171 <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/>`_). 
+Although XML is just plain text and therefore human-readable, it's intended to be parsed into a data structure. Extending the Perl script above, we can add the ability to parse the XML using an external Perl module, `XML::LibXML <http://search.cpan.org/dist/XML-LibXML/>`_::
+
+  #!/usr/bin/perl
+  
+  use strict;
+  use warnings;
+  
+  use LWP::UserAgent;
+  use XML::LibXML;
+  
+  my $ua = LWP::UserAgent->new;
+  $ua->env_proxy;
+  
+  my $res = $ua->get( '/family/Piwi?output=xml' );
+  
+  die "error: failed to retrieve XML: " . $res->status_line . "\n"
+    unless $res->is_success;
+  
+  my $xml = $res->content;
+  
+  my $xml_parser = XML::LibXML->new();
+  my $dom = $xml_parser->parse_string( $xml );
+  
+  my $root = $dom->documentElement();
+  my ( $entry ) = $root->getChildrenByTagName( 'entry' );
+  
+  print 'accession: ' . $entry->getAttribute( 'accession' ) . "\n";
+
+This script now prints out the accession for the family "Piwi" (`PF02171 <http://pfam.xfam.org/family/piwi>`_). 
 
 Available services
 ==================
 
-The following is a list of the sections of the website which are through the API.
+The following is a list of the sections of the website which are currently available as RESTful services.
 
 Pfam ID/accession conversion
 ----------------------------
