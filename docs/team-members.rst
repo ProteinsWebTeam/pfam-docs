@@ -1,5 +1,3 @@
-.. _team-members:
-
 ************
 Team Members
 ************
