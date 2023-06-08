@@ -70,7 +70,9 @@ Searching a protein sequence against Pfam
 Searching a protein sequence against the Pfam library of HMMs will enable you to find out the domain architecture of the protein, 
 and thus what its potential function might be. If your protein is present UniProt version used to make the current 
 release of InterPro, we have already calculated its domain architecture. You can access this by entering the Uniprot sequence 
-identifier in any of the Search boxes mentioned above (see :ref:`Searching a specific Pfam entry <search>`).
+identifier in any of the Search boxes mentioned above (see `Searching a specific Pfam entry`_).
+
+
 
 Use the InterPro online sequence search
 ---------------------------------------
