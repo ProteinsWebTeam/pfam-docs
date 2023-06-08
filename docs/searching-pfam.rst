@@ -126,7 +126,17 @@ The results of the submitted job are accessible by selecting **Results + Your In
 All Pfam entries - and the InterPro entries where they are integrated - are displayed in the protein sequence viewer. The Pfam and 
 InterPro entries are grouped by type (family, domain, repeat, site). The coloured bars indicate the location of entry matches on 
 the protein sequence. Each matched InterPro entry is displayed on a separate line, with the Pfam entries integrated in it displayed 
-below where pertinent. The Pfam entries that remain unintegrated in InterPro are displayed separately. The matches for Pfam-N are 
+below where pertinent. 
+
+.. figure:: images/IPresults.png
+  :alt: Selecting Results + Your InterProScan Searches
+  :width: 700
+  :align: left
+
+  Results of the submitted job. The colour code of the protein viewer is customised as **Colour By + Domain Relationship** for all 
+  Pfam domains to be displayed in different colours.
+
+The Pfam entries that remain unintegrated in InterPro are displayed separately. The matches for Pfam-N are 
 displayed below '**Other features**'. Pfam-N (N for network) provides additional Pfam matches identified by the Google Research team 
 using deep learning approaches. You can read more about it `in this blog post <https://xfam.wordpress.com/tag/pfam-n/>`_.
 
