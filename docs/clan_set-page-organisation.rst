@@ -119,7 +119,13 @@ first icon (**View matching proteins**), download the data in different formats 
 
 **Alignment**
 ---------------
-.. 
-    Note: I don't really understand this tab. In the example I'm using there are 40 entries (but it says 40 sets?) in this list but there are 70 entries in the clan.
+This tab shows a list of the Pfam entries belonging to the clan/set with a relationship to each other. By clicking on each entry, users can see a 
+small-size protein viewer showing the alignment of the related entries.
 
 
+.. figure:: images/clproteomes.png
+    :alt: Example of a Pfam clan/set page with the Proteomes tab selected.
+    :width: 700
+    :align: left
+
+    Example of a Pfam clan/set page (CL0219_) with the tab **Alignment** selected.
