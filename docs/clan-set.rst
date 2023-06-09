@@ -123,7 +123,7 @@ This tab shows a list of the Pfam entries belonging to the clan/set with a relat
 small-size protein viewer showing the alignment of the related entries.
 
 
-.. figure:: images/clproteomes.png
+.. figure:: images/clalignment.png
     :alt: Example of a Pfam clan/set page with the Proteomes tab selected.
     :width: 700
     :align: left

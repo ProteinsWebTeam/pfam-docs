@@ -17,8 +17,8 @@ Contents:
    /summary
    /getting-started
    /searching-pfam
-   /pfam-entry-organisation
-   /clan_set-page-organisation
+   /pfam-entry
+   /clan-set
    /training
    /faq
    /glossary
@@ -30,7 +30,6 @@ Contents:
    /restful-interface
    /pfam-database
    /ftp-site
-   /privacy
    /authorship
    /team-members
    /contact-us
