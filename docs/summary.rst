@@ -10,22 +10,12 @@ Each Pfam family, sometimes referred to as a Pfam-A entry, consists of a curated
 
 Pfam entries are classified in one of six types:
 
-**Family**
-  A collection of related protein regions
 
-**Domain**
-  A structural unit
+.. figure:: images/pfentriespb.png
+    :alt: Types of Pfam entries.
+    :width: 700
+    :align: left
 
-**Repeat**
-  A short unit which is unstable in isolation but forms a stable structure when multiple copies are present
-
-**Motifs**
-  A short unit found outside globular domains
-
-**Coiled-Coil**
-  Regions that predominantly contain coiled-coil motifs, regions that typically contain alpha-helices that are coiled together in bundles of 2-7.
-
-**Disordered**
-  Regions that are conserved, yet are either shown or predicted to contain bias sequence composition and/or are intrinsically disordered (non-globular).
+    Types of Pfam entries.
 
 Related Pfam entries are grouped together into clans; the relationship may be defined by similarity of sequence, structure or profile HMM. 
