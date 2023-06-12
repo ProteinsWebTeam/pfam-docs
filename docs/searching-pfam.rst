@@ -92,7 +92,7 @@ with a maximum length of 40,000 amino acids. To run any online search you can fo
 
 2. Provide the FASTA formatted protein sequence(s) of interest by pasting them into the text box or by importing them from a file.
 
-.. figure:: images/fasta2.png
+.. figure:: images/fasta.png
   :alt: Selecting Search + By Sequence in the InterPro website menu
   :width: 700
   :align: left
@@ -116,7 +116,7 @@ get a pop-up notification when the job has been completed (this requires the bro
 
 The results of the submitted job are accessible by selecting **Results + Your InterProScan Searches** in the InterPro website menu. 
 
-.. figure:: images/results2.png
+.. figure:: images/results.png
   :alt: Selecting Results + Your InterProScan Searches
   :width: 700
   :align: left
@@ -135,7 +135,7 @@ to show InterPro entries only or to display also the contributing entries from t
 to see a pop-up box with the accession number, description and amino acid coordinates of the match of an entry when hovering the mouse 
 over it. Snapshots of the results can be taken in PNG or PDF format.
 
-.. figure:: images/IPresults2.png
+.. figure:: images/IPresults.png
   :alt: Results of the submitted job.
   :width: 700
   :align: left
