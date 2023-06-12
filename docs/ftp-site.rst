@@ -6,8 +6,8 @@ The Pfam `FTP site <http://ftp.ebi.ac.uk/pub/databases/Pfam>`_ is organised into
 
 - :ref:`antifam`
 - :ref:`rosettafold`
-- :ref:`current_release`
 - :ref:`tools`
+- :ref:`current_release`
 - :ref:`mappings`
 - :ref:`papers`
 - :ref:`releases`
@@ -30,7 +30,6 @@ RoseTTAfold_aln
 The **RoseTTAfold_aln** directory contains the alignments used by RoseTTAfold to predict their structural models using Pfam.
 
 .. _tools:
-
 
 Tools
 =====

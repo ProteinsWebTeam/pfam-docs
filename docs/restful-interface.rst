@@ -23,7 +23,7 @@ To see the data for a particular Pfam-A family, you would visit the following UR
 
   `/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/>`_
 
-To retrieve the data in JSON format, just add an extra parameter, api to the URL:
+To retrieve the data in JSON format, just add an extra parameter, **api**, to the URL:
 
   `/api/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02171/>`_
 

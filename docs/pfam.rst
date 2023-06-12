@@ -63,6 +63,7 @@ activities via grants BB/L024136/1 and BB/N00521X/1.
 The Howard Hughes Medical Institute supports the Eddy group.
 
 |
+
 Many organisations have supported Pfam activities in the past.
 
 For more information, please contact the `Pfam helpdesk <https://www.ebi.ac.uk/support/interpro>`_.
