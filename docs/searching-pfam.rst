@@ -4,7 +4,7 @@ Searching Pfam
 
 There are multiple ways to look for information in Pfam by using the IntePro website.
 
-.. _search:
+.. _search-boxes:
 Searching a specific Pfam entry 
 ===============================
 
@@ -70,9 +70,9 @@ Searching a protein sequence against Pfam
 Searching a protein sequence against the Pfam library of HMMs will enable you to find out the domain architecture of the protein, 
 and thus what its potential function might be. If your protein is present UniProt version used to make the current 
 release of InterPro, we have already calculated its domain architecture. You can access this by entering the Uniprot sequence 
-identifier in any of the Search boxes mentioned above (see `Searching a specific Pfam entry`_).
+identifier in any of the Search boxes mentioned above (see :ref:`Searching a specific Pfam entry <search-boxes>`).
 
-
+.. _search-by-sequence:
 
 Use the InterPro online sequence search
 ---------------------------------------
@@ -123,6 +123,8 @@ The results of the submitted job are accessible by selecting **Results + Your In
 
   Select **Results + Your InterProScan Searches** in the InterPro website menu. 
 
+.. _protein-viewer:
+
 All Pfam entries - and the InterPro entries where they are integrated - are displayed in the protein sequence viewer. The Pfam and 
 InterPro entries are grouped by type (family, domain, repeat, site). The coloured bars indicate the location of entry matches on 
 the protein sequence. Each matched InterPro entry is displayed on a separate line, with the Pfam entries integrated in it displayed 
@@ -144,9 +146,6 @@ over it. Snapshots of the results can be taken in PNG or PDF format.
   protein viewer. The colour code of the protein viewer is customised as **Colour By + Member Database** for all Pfam entries to be 
   highlighted in blue.
 
-
-.. The matches for Pfam-N are displayed below '**Other features**'. Pfam-N (N for network) provides additional Pfam matches identified by 
-   the Google Research team using deep learning approaches. You can read more about it `in this blog post <https://xfam.wordpress.com/tag/pfam-n/>`_.
 
 Local protein search
 --------------------

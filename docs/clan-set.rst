@@ -64,7 +64,7 @@ on the **Export** button, and customise the page settings, by clicking on the wh
     Example of a Pfam clan/set page (CL0219_) with the **Proteins** tab selected. The 
     table is customised to show only **Reviewed** proteins.
 
-
+.. _clstruct:
 **Structures**
 ----------------
 This tab displays a list of all the PDB structures linked to the proteins matching any Pfam entry belonging to the clan/set. For 
