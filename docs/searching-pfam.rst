@@ -18,7 +18,7 @@ via three different **Search boxes**:
   :width: 700
   :align: left
 
-  Example of browsing the Pfam database. A paginated list of all available Pfam enties is displayed. A **Search box** appears on top of this list.
+  Example of browsing the Pfam database. A paginated list of all available Pfam entries is displayed. A **Search box** appears on top of this list.
 
 2. After selecting **Search + By text**, a larger text box is shown in the center of the page.
 
@@ -169,4 +169,4 @@ name, Pfam accession or InterPro accession.
   :width: 700
   :align: left
 
-  Select **Search + By Domain architecture** in the IntePro menu, enter the desired Pfam entries and select/unselect the relevant options.
+  Select **Search + By Domain architecture** in the InterPro menu, enter the desired Pfam entries and select/unselect the relevant options.
