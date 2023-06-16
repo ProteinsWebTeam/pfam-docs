@@ -73,7 +73,7 @@ What is the relation between Pfam and InterPro?
 
 The Pfam database is a large collection of protein domain families. Each family is represented by multiple sequence alignments and a profile hidden 
 Markov model (HMM) and has information associated. All the information in the Pfam database can be accessed through the InterPro website, where it is 
-hosted. See :ref:`Getting started <pfam>` for more information.
+hosted. See :doc:`Getting started </getting-started>` for more information.
 
 InterPro is a resource that provides functional analysis of protein sequences by classifying them into families and predicting the presence of 
 domains and important sites through the use of predictive models, known as signatures, provided by several collaborating databases (referred to 
