@@ -74,8 +74,8 @@ identifier in any of the Search boxes mentioned above (see :ref:`Searching a spe
 
 .. _search-by-sequence:
 
-Use the InterPro online sequence search
----------------------------------------
+Using the InterPro online sequence search
+-----------------------------------------
 
 If your sequence is not in the InterPro database, you could perform a single-sequence or a batch search against the Pfam database 
 on the InterPro website. This search uses the web based InterProScan tool, which allows you to scan up 100 sequences at a time 
@@ -124,6 +124,8 @@ The results of the submitted job are accessible by selecting **Results + Your In
   Select **Results + Your InterProScan Searches** in the InterPro website menu. 
 
 .. _protein-viewer:
+Interpreting the protein viewer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 All Pfam entries - and the InterPro entries where they are integrated - are displayed in the protein sequence viewer. The Pfam and 
 InterPro entries are grouped by type (family, domain, repeat, site). The coloured bars indicate the location of entry matches on 
