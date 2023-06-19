@@ -27,6 +27,7 @@ Contents:
    restful-interface
    pfam-database
    ftp-site
+   privacy
    authorship
    team-members
    contact-us
