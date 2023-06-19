@@ -1,23 +1,68 @@
-.. _ftp-site:
-
 ********
 FTP Site
 ********
 
 The Pfam `FTP site <http://ftp.ebi.ac.uk/pub/databases/Pfam>`_ is organised into the following structure: 
 
-.. figure:: images/ftp-structure.png
-    :width: 200
-    :align: center
+- :ref:`antifam`
+- :ref:`rosettafold`
+- :ref:`tools`
+- :ref:`current_release`
+- :ref:`mappings`
+- :ref:`papers`
+- :ref:`releases`
 
-The most important directory is probably the current_release directory. This contains the flat-files for the current release. Some of these files may be very large (of the order of several hundred megabytes). Please check the sizes on the FTP site before trying to download them over a slow connection. The files, most of which are compressed using gzip, are:
+The most important directory is probably the :ref:`current_release` directory. It contains the flat-files for the current release.
+
+.. _antifam:
+
+AntiFam
+=======
+
+The **AntiFam** directory contains the different releases of the 
+`AntiFam database <https://www.ebi.ac.uk/research/bateman/software/antifam-tool-identify-spurious-proteins>`_, identifying spurious proteins.
+
+.. _rosettafold:
+
+RoseTTAfold_aln
+===============
+
+The **RoseTTAfold_aln** directory contains the alignments used by RoseTTAfold to predict their structural models using Pfam.
+
+.. _tools:
+
+Tools
+=====
+
+The **Tools** directory contains code for running *pfam_scan.pl*. 
+
+The README file in this directory contains detailed information on 
+how to install and run the script. Note that we have gone for a modular design for the script, enabling the functionally on the script 
+to be easily incorporated into other Perl scripts. The *ChangeLog* file lists the versions and changes to the current version of 
+*pfam_scan.pl* (and modules). 
+
+There is also an archived version of *pfam_scan.pl* that works with HMMER2. This is no longer supported. 
+
+There is also Perl code for predicting active sites found in the ActSitePred directory, the functionality of which has been rolled 
+into the latest version of *pfam_scan.pl*.
+
+.. _current_release:
+
+current_release
+===============
+
+This directory contains the flat-files for the current release. Some of these files may be very large (of the order of several hundred megabytes). 
+Please check the sizes on the FTP site before trying to download them over a slow connection. 
+The files, most of which are compressed using gzip, are:
 
 `Pfam-A.dead.gz <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.dead.gz>`_
     Listing of families that have been deleted from the database 
 `Pfam-A.fasta.gz <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.fasta.gz>`_
-    A 90% non-redundant set of fasta formatted sequence for each Pfam-A family. The sequences are only the regions hit by the model and not full length protein sequences. 
+    A 90% non-redundant set of fasta formatted sequence for each Pfam-A family. The sequences are only the regions hit by the 
+    model and not full length protein sequences. 
 `Pfam-A.full.gz <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.full.gz>`_
-    The full alignments of the curated families, searched against pfamseq/UniProtKB reference proteomes (prior to Pfam 29.0, this file contained matches against the whole of UniProtKB). 
+    The full alignments of the curated families, searched against pfamseq/UniProtKB reference proteomes (prior to Pfam 29.0, 
+    this file contained matches against the whole of UniProtKB). 
 `Pfam-A.full.uniprot.gz <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.full.uniprot.gz>`_
     The full alignments of the curated families, searched against UniProtKB. 
 `Pfam-A.full.metagenomics.gz <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.full.metagenomics.gz>`_
@@ -37,7 +82,8 @@ The most important directory is probably the current_release directory. This con
 `database.tar <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/database.tar>`_
     A tar-ball of the database_files directory. 
 `database_files <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/database_files>`_
-    Directory contains two files per table from the MySQL database. The .sql.gz file contains the table structure, the .txt.gz files contains the content of the table as a tab delimited file with field enclosed by a single quote ('). 
+    Directory contains two files per table from the MySQL database. The .sql.gz file contains the table structure, the .txt.gz 
+    files contains the content of the table as a tab delimited file with field enclosed by a single quote ('). 
 `diff.gz <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/diff.gz>`_
     Stores the change status of entries between this release and last. 
 `md5_checksums <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/md5_checksums>`_
@@ -67,10 +113,25 @@ The most important directory is probably the current_release directory. This con
 `Pfam-A.clans.tsv.gz <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.clans.tsv.gz>`_
     A tab separated file containing Pfam-A family and clan information for all Pfam-A families 
 
-The **papers** directory contains each NAR database issue article describing Pfam. For a detailed description of the latest changes to Pfam, please consult (and cite) these papers.
+.. _mappings:
 
-The **releases** directory contains all the flat files and database dumps (where appropriate) for all version of Pfam to-date. The files in more recent releases are the same as described for the current release, but in older releases the contents do change.
+mappings
+========
 
-The **Tools** directory contains code for running pfam_scan.pl. The README file in this directory contains detailed information on how to install and run the script. Note that we have gone for a modular design for the script, enabling the functionally on the script to be easily incorporated into other Perl scripts. The ChangeLog file lists the versions and changes to the current version of pfam_scan.pl (and modules). There is also an archived version of pfam_scan.pl that works with HMMER2. This is no longer supported. There is also Perl code for predicting active sites found in the ActSitePred directory, the functionality of which has been rolled into the latest version of pfam_scan.pl
+The **mapping** directory contains the mapping between PDB structures and Pfam entries.
 
-The top level directory contains the **sitesearch** folder, that contain a subset of information from Pfam in an XML file. This XML file, primarily for use by the EMBL-EBI Web Team, is indexed using lucene and used in the EMBL-EBI site search. This is updated at each release. 
+.. _papers:
+
+papers
+======
+
+The **papers** directory contains each NAR database issue article describing Pfam. For a detailed description of the latest changes 
+to Pfam, please consult (and cite) these papers.
+
+.. _releases:
+
+releases
+========
+
+The **releases** directory contains all the flat files and database dumps (where appropriate) for all version of Pfam to-date. 
+The files in more recent releases are the same as described for the current release, but in older releases the contents do change.
