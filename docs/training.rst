@@ -8,7 +8,7 @@ Training materials
 Pfam Quick tour
 ===============
 
-* `Quick tour <https://www.ebi.ac.uk/training-beta/online/courses/pfam-quick-tour>`_ provides a brief introduction to the Pfam website and database.
+* `Quick tour <https://www.ebi.ac.uk/training-beta/online/courses/pfam-quick-tour>`_ provides a brief introduction to the Pfam database and how to access its annotations through the InterPro website.
 
 
 

@@ -14,23 +14,25 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   summary
-   getting-started
-   training
-   faq
-   glossary
-   scores
-   citing-pfam
-   wikipedia
-   linking-to-pfam
-   guide-to-graphics
-   restful-interface
-   pfam-database
-   ftp-site
-   privacy
-   authorship
-   team-members
-   contact-us
+   /summary
+   /getting-started
+   /searching-pfam
+   /pfam-entry
+   /clan-set
+   /training
+   /faq
+   /glossary
+   /scores
+   /citing-pfam
+   /wikipedia
+   /linking-to-pfam
+   /guide-to-graphics
+   /restful-interface
+   /pfam-database
+   /ftp-site
+   /authorship
+   /team-members
+   /contact-us
 
 
 License
@@ -46,4 +48,4 @@ If you use Pfam in your work, please consider citing the :ref:`citing-pfam:Pfam 
 Get in touch
 ============
 
-If you have any questions or feedback, email us at pfam-help@ebi.ac.uk.
+If you have any questions or feedback, contact us through the `Pfam helpdesk <https://www.ebi.ac.uk/support/interpro>`_.
