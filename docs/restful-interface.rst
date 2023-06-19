@@ -180,7 +180,7 @@ You can retrieve a sub-set of the data in a Pfam-A family page as an JSON docume
 
 Some Pfam families are removed or merged into others, in which case they become "dead" families. 
 If you try to retrieve annotation information about a dead family, you'll get a simple JSON document that only tells you that there 
-aren't any content associated to this entry.
+isn't any content associated to this entry.
 
 .. If you try to retrieve annotation information about a dead family, you'll get a simple JSON document that only includes information on the replacement (if any) for the family: 
 
