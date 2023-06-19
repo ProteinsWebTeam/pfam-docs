@@ -4,7 +4,7 @@ Pfam entry page organisation
 
 .. _PF02171: https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/
 
-In each Pfam entry page, different tabs with relevant information are available:
+In each Pfam entry page, different tabs with relevant information are available, as shown in the figure below.
 
 .. figure:: images/overview.png
   :alt: Example of a Pfam entry with the default tab selected (Overview)
@@ -216,9 +216,9 @@ This tab is divided into two subsections:
 
   Example of a Pfam entry page (PF02171_) with the tab **Curation** selected.
 
-
+************************************
 Pfam entries creation and annotation
-====================================
+************************************
 
 For each Pfam entry, the HMM model is run against the protein sequences belonging to the UniProt Reference Proteomes. 
 Subsequently, Pfam curators set a statistical cut-off, known as a gathering threshold (GA) for an entry. Sequences 

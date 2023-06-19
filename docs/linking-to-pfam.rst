@@ -1,9 +1,9 @@
-***************************
-Linking to the Pfam website
-***************************
+********************************
+Linking to pages related to Pfam
+********************************
 
 Linking to Pfam entry pages
-=======================
+===========================
 
 You can refer to Pfam entries using their accession. 
 

@@ -15,6 +15,7 @@ Contents:
    :maxdepth: 1
 
    /summary
+   /pfam
    /getting-started
    /searching-pfam
    /pfam-entry
