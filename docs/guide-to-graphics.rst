@@ -1,8 +1,63 @@
+###################
+Generating graphics
+###################
+
+We provide different tools to generate graphical representation of the features found within a sequence.
+There are a variety of different shapes and styles and each one has a particular meaning. This page gives an in-depth description 
+of the elements of the library from the :ref:`Nightingale component <nightingale>` and the :ref:`Domain graphic tool <guide-to-graphics>`.
+
+.. _nightingale:
+
+Domain visualisation using Nightingale
+======================================
+
+The `Nightingale component <https://github.com/ebi-webcomponents/nightingale>`_ is used throughout the `InterPro website <https://www.ebi.ac.uk/interpro>`_ to display protein features in the protein sequence viewer. We provide a tool that allows to generate a 
+personalised representation of protein features using `Nightingale v4 <https://codepen.io/typhainepl/pen/qBLZpgr>`_.
+
+In the JavaScript part in the link above, you can edit the *sequence* and *feature* variables to display the features for your protein of interest. 
+You can then take a screenshot of the graphical representation generated.
+
+For each component, you can specific the following parameters:
+
+.. code-block:: javascript
+
+  { // family/single domain
+    accession: "PF14826",
+    start: 19,
+    end: 181,
+    color: "blue",
+    short_name: "FACT-Spt16_Nlob",
+    shape:"roundRectangle" 
+  },
+
+  { // discontinuous domain
+    accession: "PF08644",
+    locations: [{ fragments: [{ start: 520, end: 616 }, { start: 725, end: 810 }] }], 
+    color: "#A42ea2",
+    short_name: "SPT16",
+    shape:"roundRectangle"
+  }
+
+Recommended shapes:
+
+- Family or domain components are rendered as rectangles with curved ends (roundRectangle), while other components are represented by rectangle shapes
+- Repeat/motif: rectangle
+- Other sequence motifs (e.g. signal peptides, low complexity regions, coiled-coils and transmembrane regions): rectangle
+- disulphide bridges: bridge
+- signal peptide: diamond
+
+.. figure:: images/nightingale_dom_graph.png
+  
+  Example of a domain visualisation using Nightingale v4.
+
+For more information about how to use the Nightingale component, you can have a look at `its documentation 
+<https://ebi-webcomponents.github.io/nightingale/?path=/story/introduction--page>`_.
+
+
 .. _guide-to-graphics:
 
-####################
-Domain Graphics tool
-####################
+Domain graphics tool
+====================
 
 The domain graphics tool provides graphical representation of the features found within a sequence, termed domain graphics. 
 There are a variety of different shapes and styles and each one has a particular meaning. This page gives an in-depth description 
@@ -11,13 +66,10 @@ Please note that we do not recommend to use this tool anymore, but to use the :r
 
 The library that generates the images in this page uses a `JSON <http://en.wikipedia.org/wiki/Json>`_ string to describe the domain graphic. 
 
-Generating graphics
-===================
-
 You can generate your own graphics using the `domain graphics library <https://github.com/ProteinsWebTeam/domain-gfx>`_ available on github.
 
 The sequence
-============
+------------
 
 The base sequence, undecorated by any domains or features, is represented by a plain grey bar: 
 
@@ -35,14 +87,14 @@ The length of the domain graphic that is drawn is proportional to the length of 
 are drawn on the sequence are also scaled by the same factor. 
 
 Pfam-A
-======
+------
 
 The high quality, curated *Pfam-A* domains are classified into one of six different types: *family, domain, coiled-coil, disordered, 
 repeat* and *motif* (for more details see :doc:`Summary </summary>`). These different classification types are rendered slightly differently.
 
 
 Family/domain
--------------
+^^^^^^^^^^^^^
 
 It is possible for a sequence to match either the full length of a Pfam HMM (a full length match), or to match a portion of an HMM 
 (a fragment match). The two types of match are rendered differently.
@@ -143,7 +195,7 @@ three cases are shown below.
   }
 
 Repeat/motif
-------------
+^^^^^^^^^^^^
  
 *Repeats* and *motifs* are types of Pfam domain which do not form independently folded units. In order to distinguish them from 
 domains of type family and domain, repeats and motifs are represented by rectangles with straight edges. As for families and 
@@ -202,7 +254,7 @@ domains, partial matches are represented with jagged edges.
   }
  
 Discontinuous nested domains
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Some domains in Pfam are disrupted by the insertion of another domain (or domains) within them. A number of names have been given 
 to this arrangement: *discontinuous* (referring to the outer domain), *inserted* or *nested* (both referring to the inner domain). 
@@ -271,7 +323,7 @@ parts are joined by a line bridging them.
   } 
 
 Other sequence motifs
-=====================
+---------------------
 
 In addition to domains, smaller sequences motifs are represented by the domain graphics. Currently the following motifs are represented: 
 *signal peptides*, *low complexity regions*, *coiled-coils* and *transmembrane regions*. These usually take lower prority than other 
@@ -333,7 +385,7 @@ example of each motif is shown below.
   }
 
 Signal peptides
----------------
+^^^^^^^^^^^^^^^
 
 *Signal peptides* are short regions (<60 residues long) found at the N-terminus of proteins, which direct the post-translational transport 
 of a protein and are subsequently removed by peptidases. More specifically, a signal peptide is characterised by a short hydrophobic helix 
@@ -343,7 +395,7 @@ Between the hydrophobic helix and the cleavage site is a somewhat polar and unch
 peptides and they can be represented graphically by a small orange box.
 
 Low complexity regions
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 *Low complexity regions* are regions of biased sequence composition, usually comprised of different types of repeats. These regions have been 
 shown to be functionally important in some proteins, but they are generally not well understood and are masked out to focus on globular 
@@ -352,12 +404,12 @@ domains within the protein.
 The presence of a low complexity region can be indicated by a cyan rectangle.
 
 Disordered regions
-------------------
+^^^^^^^^^^^^^^^^^^
 
 We use `MobiDB-lite <https://www.mobidb.org/>`_ for the prediction of disordered regions in the query sequence.
 
 Coiled-coils
-------------
+^^^^^^^^^^^^
 
 *Coiled coils* are motifs found in proteins that structurally form alpha-helices that wrap or wind around each other. Normally, two to three 
 helices are involved, but cases of up to seven alpha-helices have been reported. Coiled-coils are found in a wide variety of proteins, many 
@@ -366,7 +418,7 @@ functionally very important. In InterPro they are obtained from COILS.
 Coiled-coils can be represented by a small lime-green rectangle.
 
 Transmembrane regions
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 Integral membrane proteins contain one or more *transmembrane regions* that are comprised of an alpha-helix that passes through or "spans" 
 a membrane. Transmembrane helices are quite variable in length, with the average being about 20 amino-acids in length. 
@@ -374,7 +426,7 @@ a membrane. Transmembrane helices are quite variable in length, with the average
 of transmembrane regions, which can be represented by a red rectangle.
 
 Other Sequence features
-=======================
+-----------------------
 
 Below is a demonstration of how *disulphide bridges* and *active site residues* can be represented. Each of these features can appear 
 above or below the sequence, but in the example below the disulphide bridges are shown above the sequence and the active site residues below the line.
@@ -544,7 +596,7 @@ above or below the sequence, but in the example below the disulphide bridges are
   }
 
 Disulphide bridges
-------------------
+^^^^^^^^^^^^^^^^^^
 
 *Disulphide bridges* play a fundamental role in the folding and stability of some proteins. They are formed by covalent bonding between 
 the thiol groups from two cysteine residues. The disulphide bridge annotations can be represented by a solid bridge-shaped line. 
@@ -552,7 +604,7 @@ When mutliple disulphide bonds occur, the heights of the bridges are adjusted to
 are represented by single vertical lines. Moving the mouse over the "bridge graphic" shows the details of the bond in a tooltip. 
 
 Active site residues
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 Within an enzyme, a small number of residues are directly involved in catalysis of a reaction. These are termed *active site residues*. 
 Within Pfam there are three categories of active site: those that are experimentally determined, those that are predicted by UniProt 
@@ -560,7 +612,7 @@ and those predicted by Pfam. All three types can be represented by a "lollipop" 
 for each of the three types respectively.
 
 "Lollipops"
------------
+^^^^^^^^^^^
 
 A wide range of different lollipop styles can be create by combining different line and head colours with different drawing styles. 
 The lollipop head can be drawn as a square, circle or diamond, as a simple coloured bar, or as an arrow (pointing away from the sequence) 
@@ -642,7 +694,7 @@ or a "pointer" (an arrow pointing towards the sequence).
   }
 
 Tooltips
-========
+--------
 
 If appropriate metadata are present in the sequence description, the domain graphics library can also add tooltips to the image. The example 
 below shows a domain graphic and its description includes the necessary metadata for generating tooltips.
@@ -973,46 +1025,3 @@ below shows a domain graphic and its description includes the necessary metadata
   }
 
 
-.. _nightingale:
-
-######################################
-Domain visualisation using Nightingale
-######################################
-
-We do not recommend to use the :ref:`Domain Graphics tool <guide-to-graphics>` anymore. However, we now provide a tool to generate a graphical representation 
-of domains using the Nightingale web component: `Domain visualisation using Nightingale v4 <https://codepen.io/typhainepl/pen/qBLZpgr>`_.
-
-In the JavaScript part, you can edit the *sequence* and *feature* variables to display the features for your protein of interest. You can then take a screenshot
-of the graphical representation generated.
-
-For each component, you can specific the following parameters:
-
-.. code-block:: javascript
-
-  { // family/single domain
-    accession: "PF14826",
-    start: 19,
-    end: 181,
-    color: "blue",
-    short_name: "FACT-Spt16_Nlob",
-    shape:"roundRectangle" 
-  },
-
-  { // discontinuous domain
-    accession: "PF08644",
-    locations: [{ fragments: [{ start: 520, end: 616 }, { start: 725, end: 810 }] }], 
-    color: "#A42ea2",
-    short_name: "SPT16",
-    shape:"roundRectangle"
-  }
-
-Recommended shapes:
-
-- Family or domain: roundRectangle
-- Repeat/motif: rectangle
-- Other sequence motifs (e.g. signal peptides, low complexity regions, coiled-coils and transmembrane regions): rectangle
-- disulphide bridges: bridge
-- signal peptide: diamond
-
-For more information about how to use the Nightingale component, you can have a look at `its documentation 
-<https://ebi-webcomponents.github.io/nightingale/?path=/story/introduction--page>`_.
