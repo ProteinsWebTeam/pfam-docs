@@ -23,4 +23,16 @@ Pfam entries are classified in one of six types:
 
     Types of Pfam entries.
 
-Related Pfam entries are grouped together into clans; the relationship may be defined by similarity of sequence, structure or profile HMM. 
+Pfam clans
+==========
+
+Structural properties are often more conserved than the underlying sequence. Therefore, a single profile HMM is often insufficient to 
+model an entire, diverse, structural superfamily and related Pfam entries are sometimes grouped together into clans (called sets in 
+InterPro); the relationship may be defined by:
+
+- sequence similarity (whilst still originating from a common ancestor)
+- similarity of known three-dimensional structures
+- functional similarity
+- and/or similarity between their profile HMMs (as determined by algorithms such as HHsearch) similarity of sequence, structure or profile HMM.
+
+The majority of Pfam Clans are groupings of domains and families.
