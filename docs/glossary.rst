@@ -1,5 +1,3 @@
-.. _glossary:
-
 ********
 Glossary
 ********
@@ -9,7 +7,10 @@ Glossary
 Alignment coordinates
 =====================
 
-HMMER3 reports two sets of domain coordinates for each profile HMM match. The envelope coordinates delineate the region on the sequence where the match has been probabilistically determined to lie, whereas the alignment coordinates delineate the region over which HMMER is confident that the alignment of the sequence to the profile HMM is correct. Our full alignments contain the envelope coordinates from HMMER3.
+HMMER3 reports two sets of domain coordinates for each profile HMM match. The envelope coordinates delineate the region on the sequence 
+where the match has been probabilistically determined to lie, whereas the alignment coordinates delineate the region over which HMMER 
+is confident that the alignment of the sequence to the profile HMM is correct. Our full alignments contain the envelope coordinates from 
+HMMER3.
 
 Architecture
 ============
@@ -17,8 +18,7 @@ Architecture
 The collection of domains that are present on a protein.
 
 Clan/Set
-====
-
+========
 A collection of related Pfam entries. The relationship may be defined by similarity of sequence, structure or profile-HMM.
 
 Domain
@@ -29,7 +29,8 @@ A structural unit.
 Domain score
 ============
 
-The score of a single domain aligned to a profile HMM. Note that, for HMMER2, if there was more than one domain, the sequence score was the sum of all the domain scores for that Pfam entry. This is not quite true for HMMER3.
+The score of a single domain aligned to a profile HMM. Note that, for HMMER2, if there was more than one domain, the sequence score was 
+the sum of all the domain scores for that Pfam entry. This is not quite true for HMMER3.
 
 DUF
 ===
@@ -49,22 +50,27 @@ A collection of related protein regions.
 Full alignment
 ==============
 
-An alignment of the set of related sequences which score higher than the manually set threshold values for the profile HMMs of a particular Pfam entry.
+An alignment of the set of related sequences which score higher than the manually set threshold values for the profile HMMs of a 
+particular Pfam entry.
 
 Gathering threshold (GA)
 ========================
-
-Also called the gathering cut-off, this value is the search threshold used to build the full alignment. The gathering threshold is assigned by a curator when the family is built. The GA is the minimum score a sequence must attain in order to belong to the full alignment of a Pfam entry. For each Pfam profile HMM we have two GA cutoff values, a sequence cutoff and a domain cutoff.
+Also called the gathering cut-off, this value is the search threshold used to build the full alignment. The gathering threshold is 
+assigned by a curator when the family is built. The GA is the minimum score a sequence must attain in order to belong to the full 
+alignment of a Pfam entry. For each Pfam profile HMM we have two GA cutoff values, a sequence cutoff and a domain cutoff.
 
 HMMER
 =====
 
-The suite of programs that Pfam uses to build and search profile HMMs. Since Pfam release 24.0 we have used HMMER version 3 to make Pfam. See the `HMMER <http://hmmer.janelia.org/>`_ site for more information.
+The suite of programs that Pfam uses to build and search profile HMMs. Since Pfam release 24.0 we have used HMMER version 3 to make Pfam. 
+See the `HMMER <http://hmmer.janelia.org/>`_ site for more information.
 
 Hidden Markov model (HMM)
 =========================
 
-A profile HMM is a probablistic model. In Pfam we use profile HMMs to transform the information contained within a multiple sequence alignment into a position-specific scoring system. We search our profile HMMs against the UniProt protein database to find homologous sequences.
+A profile HMM is a probabilistic model. In Pfam we use profile HMMs to transform the information contained within a multiple sequence 
+alignment into a position-specific scoring system. We search our profile HMMs against the UniProt protein database to find homologous 
+sequences.
 
 Motif
 =====
@@ -79,12 +85,15 @@ The bit scores of the highest scoring match not in the full alignment.
 Pfam-A
 ======
 
-A profile HMM based hand curated Pfam entry which is built using a small number of representative sequences. We manually set a threshold value for each profile-HMM and search our models against the UniProtKB database. All of the sequnces which score above the threshold for a Pfam entry are included in the entry's full alignment.
+A profile HMM based hand curated Pfam entry which is built using a small number of representative sequences. We manually set a threshold 
+value for each profile-HMM and search our models against the UniProtKB database. All of the sequences which score above the threshold for 
+a Pfam entry are included in the entry's full alignment.
 
 Pfam-B
 ======
 
-A set of unannotated, computationally generated multiple sequence alignments. They are one of the sources we use for creating Pfam-A entries.
+A set of unannotated, computationally generated multiple sequence alignments. They are one of the sources we use for creating Pfam-A 
+entries.
 
 Posterior probability
 =====================

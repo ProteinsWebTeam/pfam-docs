@@ -6,7 +6,7 @@ Pfam encourages the annotation of Pfam entries via Wikipedia. Below the traditio
 that we feel provides a good description of the Pfam entry.
 
 Wikipedia content in the website
-=====================================
+================================
 
 When we build a new Pfam family, we try to find a Wikipedia article that describes the family and provides what we feel to be a valuable annotation for it.
 
@@ -36,7 +36,6 @@ we would really like to add one. If you know of an article that would provide a 
 
 Editing Wikipedia articles
 ==========================
-
 
 Before you edit for the first time
 ----------------------------------

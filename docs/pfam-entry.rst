@@ -15,20 +15,21 @@ In each Pfam entry page, different tabs with relevant information are available,
   below can be found on the left-hand side menu. The **Overview** tab is displayed by default.
 
 
-**Overview**
---------------
-The entry overview tab is the default display, where the type of Pfam entry, the short name and the clan/set 
-(if the entry belongs to any) are shown at the top. Usually, a curated description of the entry is displayed below, 
-with the relevant literature references. 
+Overview
+========
 
-If there is a Wikipedia page for the entry, the first paragraph and the box with an image of a 
-tridimensional structure and some cross-links are displayed. The full Wikipedia article can be open in a 
-new tab by clicking on the title.
+The entry overview tab is the default display, where the type of Pfam entry, the short name and the clan/set (if the entry belongs to any) are shown at the top, more 
+information about how clans are defined can be found in :ref:`<summary>`. Usually, a curated description of the entry is displayed below, with the relevant literature 
+references. 
+
+If there is a Wikipedia page for the entry, the first paragraph and the box with an image of a tridimensional structure and some cross-links are displayed. The full 
+Wikipedia article can be open in a new tab by clicking on the title.
 
 .. _proteins:
 
-**Proteins**
---------------
+Proteins
+========
+
 The list of proteins matching this entry is displayed in this tab. This view can be customised to show:
 
 1. **All** proteins (from the whole UniProtKB database).
@@ -37,10 +38,7 @@ The list of proteins matching this entry is displayed in this tab. This view can
 
 3. Only **Unreviewed** proteins (from TrEMBL - derived from public databases automatically integrated into UniProt).
 
-For each protein, the corresponding protein page in InterPro can be accessed by clicking on the protein accession or name; 
-the InterPro taxonomy page can be accessed by clicking on the species name; and a small-size protein viewer displays the 
-location of the Pfam entry in the protein. The coordinates of the match can be shown by hovering the mouse over it. You can 
-also export this data in different formats, by clicking on the **Export** button, and customise the page settings, by 
+For each protein, the corresponding protein page in InterPro can be accessed by clicking on the protein accession or name; the InterPro taxonomy page can be accessed by clicking on the species name; and a small-size protein viewer displays the location of the Pfam entry in the protein. The coordinates of the match can be shown by hovering the mouse over it. You can also export this data in different formats, by clicking on the **Export** button, and customise the page settings, by 
 clicking on the wheel icon.
 
 .. figure:: images/pfproteins.png
@@ -53,8 +51,9 @@ clicking on the wheel icon.
   `A3KPK0 <https://www.ebi.ac.uk/interpro/protein/reviewed/A3KPK0/>`_.
 
 
-**Domain architectures**
---------------------------
+Domain architectures
+====================
+
 This tab shows the various domain arrangements of the proteins matched by the entry, ordered in descending order by the number of times that 
 this architecture is seen. Identifying the different domains present in proteins is crucial to understand how they function.
 
@@ -73,8 +72,9 @@ clicking on the protein number.
   Example of a Pfam entry page (PF02171_) with the tab **Domain architectures** selected.
 
 
-**Taxonomy**
---------------
+Taxonomy
+========
+
 This tab shows by default a sunburst chart of all the species that the proteins matched by the Pfam entry belong to.
 
 By default, eight individual nodes that are derived from the taxonomic lineage of each protein sequence, ranging from 
@@ -101,8 +101,9 @@ can be downloaded in different formats.
   the species having proteins belonging to this Pfam entry are displayed on the right-hand side.
 
 
-**Proteomes**
----------------
+Proteomes
+=========
+
 A list of the reference proteomes matched by the entry is displayed in this tab. Each item in this list shows the Proteome ID 
 (which is a link to the Proteome page in InterPro), the name of the species carrying this proteome and the number of proteins 
 in this proteome that match the entry. From the **Actions** column, users can also see a list of these proteins by clicking the 
@@ -116,8 +117,8 @@ first icon (**View matching proteins**), download the data in different formats 
   Example of a Pfam entry page (PF02171_) with the tab **Proteomes** selected.
 
 .. _pfstruct:
-**Structures**
-----------------
+Structures
+==========
 This tab displays a list of all the PDB structures linked to the proteins matching the Pfam entry. For each structure, you can 
 see the PDB accession, the name of the structure in PDB, and a small-sized protein sequence viewer displaying the location of the 
 Pfam entry in the structure.
@@ -142,8 +143,9 @@ of interest in the drop-down list **Highlight Entry in the 3D structure** or by 
 match in the protein sequence viewer. Additionally, links to similar PDB viewers and cross-references to other structural databases 
 are provided in the **External links** section.
 
-**Signature**
----------------
+Signature
+=========
+
 This tab shows the HMM logo of the Pfam model, visualised using `Skylign <http://www.skylign.org/>`_. HMM logos are one way of
 visualising profile HMMs. Logos provide a quick overview of the properties of an HMM in a graphical form.
 
@@ -159,16 +161,17 @@ selecting a particular residue in the logo, the probabilities of each amino acid
   Example of a Pfam entry page (PF02171_) with the tab **Signature** and the second residue position in the protein sequence selected.
 
 .. _ap:
-**AlphaFold**
----------------
-Many of the proteins found in the Pfam entry may have a predicted structure generated by `AlphaFoldDB <https://alphafold.ebi.ac.uk/>`_. 
-A list of all the predicted structures available in AlphaFoldDB for the proteins belonging to this entry is displayed in this tab. For 
-each protein in the list, its Uniprot accession, name, the species it belongs to, its length, and a button that allows you to show the 
-predicted structure of this protein in the structure viewer are displayed. 
+AlphaFold
+=========
 
-It is also possible to click on the Uniprot accession to go 
-to the InterPro protein page and go to the **Alphafold** tab, where the position of the different entries in the 3D structure viewer 
-are displayed by clicking on the bar corresponding to the entry match in the protein sequence viewer.
+Many of the proteins found in the Pfam entry may have a predicted structure generated by `AlphaFoldDB <https://alphafold.ebi.ac.uk/>`_. 
+A list of all the predicted structures available in AlphaFoldDB for the proteins belonging to this entry is displayed in this tab. 
+For each protein in the list, its Uniprot accession, name, the species it belongs to, its length, and a button that allows you to show 
+the predicted structure of this protein in the structure viewer are displayed. 
+
+It is also possible to click on the Uniprot accession to go to the InterPro protein page and go to the **Alphafold** tab, where the 
+position of the different entries in the 3D structure viewer are displayed by clicking on the bar corresponding to the entry match in 
+the protein sequence viewer.
 
 .. figure:: images/pfAP.png
   :alt: Example of a Pfam entry with the AlphaFold tab selected.
@@ -178,8 +181,9 @@ are displayed by clicking on the bar corresponding to the entry match in the pro
   Example of a Pfam entry page (PF02171_) with the **AlphaFold** tab selected.
 
 
-**Alignment**
----------------
+Alignment
+=========
+
 Three different alignments can be chosen and visualised in this tab:
 
 1. The **seed** alignment shows the multiple sequence alignment used to create the HMM model in Pfam. This is a representative set of sequences of the family and it normally has a relatively short number of protein sequences (from the Uniprot Reference proteomes).
@@ -201,8 +205,9 @@ All the alignments can be downloaded by clicking on the **Download** button.
   bar was dragged to the left to zoom in and visualise better an specific region of the protein sequence selected.
 
 
-**Curation**
---------------
+Curation
+========
+
 This tab is divided into two subsections:
 
 1. In the first section, you can see details about Pfam curators and Sequence ontology.

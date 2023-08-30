@@ -21,7 +21,7 @@ You can refer to InterPro entries using InterPro accessions.
 | https://www.ebi.ac.uk/interpro/entry/interpro/IPR000832/
 
 Linking to protein pages
-=================================
+========================
 
 As for Pfam entry pages, you can refer to protein pages by UniProt accession. 
 

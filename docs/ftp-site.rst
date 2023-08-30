@@ -18,7 +18,6 @@ The most important directory is probably the :ref:`current_release` directory. I
 
 AntiFam
 =======
-
 The **AntiFam** directory contains the different releases of the 
 `AntiFam database <https://www.ebi.ac.uk/research/bateman/software/antifam-tool-identify-spurious-proteins>`_, identifying spurious proteins.
 
@@ -26,14 +25,12 @@ The **AntiFam** directory contains the different releases of the
 
 RoseTTAfold_aln
 ===============
-
 The **RoseTTAfold_aln** directory contains the alignments used by RoseTTAfold to predict their structural models using Pfam.
 
 .. _tools:
 
 Tools
 =====
-
 The **Tools** directory contains code for running *pfam_scan.pl*. 
 
 The README file in this directory contains detailed information on 
@@ -50,7 +47,6 @@ into the latest version of *pfam_scan.pl*.
 
 current_release
 ===============
-
 This directory contains the flat-files for the current release. Some of these files may be very large (of the order of several hundred megabytes). 
 Please check the sizes on the FTP site before trying to download them over a slow connection. 
 The files, most of which are compressed using gzip, are:
@@ -117,14 +113,12 @@ The files, most of which are compressed using gzip, are:
 
 mappings
 ========
-
 The **mapping** directory contains the mapping between PDB structures and Pfam entries.
 
 .. _papers:
 
 papers
 ======
-
 The **papers** directory contains each NAR database issue article describing Pfam. For a detailed description of the latest changes 
 to Pfam, please consult (and cite) these papers.
 
@@ -132,6 +126,5 @@ to Pfam, please consult (and cite) these papers.
 
 releases
 ========
-
 The **releases** directory contains all the flat files and database dumps (where appropriate) for all version of Pfam to-date. 
 The files in more recent releases are the same as described for the current release, but in older releases the contents do change.

@@ -17,10 +17,10 @@ can also be used to analyse proteomes and questions of more complex domain archi
 For each Pfam accession, we have an entry page. See :ref:`Searching a specific Pfam entry <search-boxes>` for more information on how to access them.
 
 What is a Pfam entry page?
-=========================
+==========================
 
 On the Pfam entry page you can view all the associated information, from annotation to structure predictions of the protein members. 
-See :doc:`Pfam entry page organisation</pfam-entry>` for a detailed description on how this data is presented.
+See :doc:`Pfam entry page organisation </pfam-entry>` for a detailed description on how this data is presented.
 
 What is a clan/set?
 ===================
@@ -36,7 +36,7 @@ E-value.
 The clan pages can be accessed by following a link from the Pfam entry page, or alternatively they can be accessed by by selecting **Browse + By Set** 
 in the `InterPro website menu <https://www.ebi.ac.uk/interpro/set/all/entry/pfam/#table>`_ and select **Pfam** in the database section.
 
-For each clan page, you can access all the related data. See :doc:`Clan/Set page organisation</clan-set>` for more information. 
+For each clan page, you can access all the related data. See :doc:`Clan/Set page organisation </clan-set>` for more information. 
 
 What criteria do you use for putting families into clans?
 =========================================================
@@ -80,7 +80,7 @@ domains and important sites through the use of predictive models, known as signa
 as member databases). One of it 13 member databases is Pfam. For further information you can explore the 
 `InterPro About pages <https://www.ebi.ac.uk/interpro/about/interpro/>`_.
 
-Members of the :ref:`Pfam team <team-members>` at the EMBL-EBI are also part of the `InterPro team <https://www.ebi.ac.uk/interpro/about/team/>`_. In this way, 
+Members of the :doc:`Pfam team </team-members>` at the EMBL-EBI are also part of the `InterPro team <https://www.ebi.ac.uk/interpro/about/team/>`_. In this way, 
 while both protein resources are independently maintained, there is a really close relation between them, with feedback constantly going in both directions to 
 improve protein classification.
 
@@ -110,7 +110,7 @@ Why doesn't Pfam include my sequence?
 
 Pfam is built from a fixed release of UniProtKB. At each InterPro release we incorporate sequences from the latest release of UniProtKB. This means that, 
 at any time, the sequences used by Pfam might be several weeks behind those in the most up-to-date versions of the sequence databases. If your sequence 
-isn't in Pfam, you can still find out what domains it contains by pasting it into the sequence search box (see :ref:`InterPro online sequence search<search-by-sequence>` 
+isn't in Pfam, you can still find out what domains it contains by pasting it into the sequence search box (see :ref:`InterPro online sequence search <search-by-sequence>` 
 for more information).
 
 Why is there apparent redundancy of UniProtKB IDs in the full-length FASTA sequence file?
@@ -131,7 +131,7 @@ and associated literature evidence if available.
 Can I search my protein against Pfam?
 =====================================
 
-Of course! Please look at the :ref:`sequence search<search-by-sequence>` section for instructions on how to do it.
+Of course! Please look at the :ref:`sequence search <search-by-sequence>` section for instructions on how to do it.
 
 What is the difference between the '-' and '.' characters in your full alignments?
 ==================================================================================
@@ -146,7 +146,7 @@ emitted from the Insert (I) state are in lower case.
       :align: center
 
 How can I visualise the position of a Pfam entry in a structure?
-===============================================================
+================================================================
 
 In the **Structures** tab of a :ref:`Pfam entry <pfstruct>` or a :ref:`Pfam clan/set <clstruct>` page you can find links to relevant InterPro structure 
 pages. 

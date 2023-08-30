@@ -15,7 +15,6 @@ Contents:
    :maxdepth: 1
 
    /summary
-   /pfam
    /getting-started
    /searching-pfam
    /pfam-entry
@@ -31,6 +30,7 @@ Contents:
    /restful-interface
    /pfam-database
    /ftp-site
+   /pfam
    /authorship
    /team-members
    /contact-us

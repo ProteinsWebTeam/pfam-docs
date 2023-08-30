@@ -4,10 +4,10 @@ Clan/Set page organisation
 
 .. _CL0219: https://www.ebi.ac.uk/interpro/set/pfam/CL0219/
 
-**Pfam clans** are called **Sets** in the InterPro website. If a Pfam entry is included in a clan this information will be displayed 
-in the **Overview** tab, next to Set, below the Pfam short name, with a link to the corresponding clan/set page. Additionally, it is 
-possible to browse through the Pfam clans by selecting **Browse + By Set** in the `InterPro website menu 
-<https://www.ebi.ac.uk/interpro/set/all/entry/pfam/#table>`_ and select **Pfam** in the database section.
+**Pfam clans** are called **Sets** in the InterPro website, more information about how clans are defined can be found in :doc:`Summary </summary>`. 
+If a Pfam entry is included in a clan this information will be displayed in the **Overview** tab, next to *Set*, below the Pfam short name, 
+with a link to the corresponding clan/set page. Additionally, it is possible to browse through the Pfam clans by selecting **Browse + By Set** in 
+the `InterPro website menu <https://www.ebi.ac.uk/interpro/set/all/entry/pfam/#table>`_ and select **Pfam** in the database section.
 
 .. figure:: images/cloverview.png
     :alt: Example of a Pfam clan/set page with the default tab selected (Overview)
@@ -19,16 +19,18 @@ possible to browse through the Pfam clans by selecting **Browse + By Set** in th
 
 In each Pfam clan/set page, different tabs with relevant information are available, the information they contain is described below.
 
-**Overview**
---------------
+Overview
+========
+
 The clan/set Overview tab is the default display, where clan accession number, the short name and the author(s) are shown on top. A 
 description of the clan is displayed below, with the relevant literature references and an interactive view of the Pfam entries included 
 in the clan are displayed. For the interactive view, different label types can be chosen through the **Label Content** menu: Accession, 
 Name and Short name.
 
 
-**Entries**
------------
+Entries
+=======
+
 The list of Pfam entries included in the clan/set is provided in this tab. For each entry, accession, name, short name and links to the 
 entries SEED alignment and domain architectures pages are available. 
 
@@ -42,8 +44,9 @@ Users can export this data in different formats, by clicking on the **Export** b
     Example of a Pfam clan/set page (CL0219_) with the **Entries** tab selected.
 
 
-**Proteins**
---------------
+Proteins
+========
+
 The list of proteins matching any Pfam entry belonging to the clan/set is displayed in this tab. The view can be customised to show:
 
 1. **All** proteins (from the whole UniProtKB database).
@@ -65,8 +68,9 @@ on the **Export** button, and customise the page settings, by clicking on the wh
     table is customised to show only **Reviewed** proteins.
 
 .. _clstruct:
-**Structures**
-----------------
+Structures
+==========
+
 This tab displays a list of all the PDB structures linked to the proteins matching any Pfam entry belonging to the clan/set. For 
 each structure, you can see the PDB accession and the name of the structure in PDB.
 
@@ -85,8 +89,9 @@ Additionally, links to similar PDB viewers and cross-references to other structu
     Example of a Pfam clan/set page (CL0219_) with the **Structures** tab selected.
 
 
-**Taxonomy**
---------------
+Taxonomy
+========
+
 This tab shows by default a list of all the species that the proteins matched by any Pfam entry of the clan/set belong to.
 
 These data can also be seen as a tree. These visualisation options can be chosen from the icon panel above the list. All this information 
@@ -102,8 +107,9 @@ can be downloaded in different formats.
     taxonomic tree for this clan is shown below.
 
 
-**Proteomes**
----------------
+Proteomes
+=========
+
 A list of the reference proteomes matched by any Pfam entry belonging to the clan/set is displayed in this tab. Each item in this list 
 shows the Proteome ID (which is a link to the Proteome page in InterPro), the name of the species carrying this proteome and the number
 of proteins in this proteome that match the entry. From the **Actions** column, users can also see a list of these proteins by clicking the 
@@ -116,9 +122,9 @@ first icon (**View matching proteins**), download the data in different formats 
 
     Example of a Pfam clan/set page (CL0219_) with the tab **Proteomes** selected.
 
+Alignment
+=========
 
-**Alignment**
----------------
 This tab shows a list of the Pfam entries belonging to the clan/set with a relationship to each other. By clicking on each entry, users can see a 
 small-size protein viewer showing the alignment of the related entries.
 
