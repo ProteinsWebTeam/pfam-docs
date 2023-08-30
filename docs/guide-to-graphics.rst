@@ -7,13 +7,14 @@ Domain Graphics tool
 The domain graphics tool provides graphical representation of the features found within a sequence, termed domain graphics. 
 There are a variety of different shapes and styles and each one has a particular meaning. This page gives an in-depth description 
 of the elements of the Domain graphics library.
+Please note that we do not recommend to use this tool anymore, but to use the :ref:`nightingale` instead.
 
 The library that generates the images in this page uses a `JSON <http://en.wikipedia.org/wiki/Json>`_ string to describe the domain graphic. 
 
 Generating graphics
 ===================
 
-You can generate your own graphics using the `domain graphics library <https://github.com/ProteinsWebTeam/domain-gfx>`_ available on github. 
+You can generate your own graphics using the `domain graphics library <https://github.com/ProteinsWebTeam/domain-gfx>`_ available on github.
 
 The sequence
 ============
@@ -37,7 +38,7 @@ Pfam-A
 ======
 
 The high quality, curated *Pfam-A* domains are classified into one of six different types: *family, domain, coiled-coil, disordered, 
-repeat* and *motif* (for more details see :ref:`summary`). These different classification types are rendered slightly differently.
+repeat* and *motif* (for more details see :doc:`Summary </summary>`). These different classification types are rendered slightly differently.
 
 
 Family/domain
@@ -970,3 +971,48 @@ below shows a domain graphic and its description includes the necessary metadata
       } 
     ] 
   }
+
+
+.. _nightingale:
+
+######################################
+Domain visualisation using Nightingale
+######################################
+
+We do not recommend to use the :ref:`Domain Graphics tool <guide-to-graphics>` anymore. However, we now provide a tool to generate a graphical representation 
+of domains using the Nightingale web component: `Domain visualisation using Nightingale v4 <https://codepen.io/typhainepl/pen/qBLZpgr>`_.
+
+In the JavaScript part, you can edit the *sequence* and *feature* variables to display the features for your protein of interest. You can then take a screenshot
+of the graphical representation generated.
+
+For each component, you can specific the following parameters:
+
+.. code-block:: javascript
+
+  { // family/single domain
+    accession: "PF14826",
+    start: 19,
+    end: 181,
+    color: "blue",
+    short_name: "FACT-Spt16_Nlob",
+    shape:"roundRectangle" 
+  },
+
+  { // discontinuous domain
+    accession: "PF08644",
+    locations: [{ fragments: [{ start: 520, end: 616 }, { start: 725, end: 810 }] }], 
+    color: "#A42ea2",
+    short_name: "SPT16",
+    shape:"roundRectangle"
+  }
+
+Recommended shapes:
+
+- Family or domain: roundRectangle
+- Repeat/motif: rectangle
+- Other sequence motifs (e.g. signal peptides, low complexity regions, coiled-coils and transmembrane regions): rectangle
+- disulphide bridges: bridge
+- signal peptide: diamond
+
+For more information about how to use the Nightingale component, you can have a look at `its documentation 
+<https://ebi-webcomponents.github.io/nightingale/?path=/story/introduction--page>`_.
