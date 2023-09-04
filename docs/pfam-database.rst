@@ -48,7 +48,7 @@ Domain Information
 
 Two of the central tables in the Pfam database are **pfamseq**, which contains UniProtKB reference proteomes and **pfamA**, which contains information about the Pfam-A families. Most of the other tables in the database link to one or both of these tables, either directly or indirectly. Note that prior to Pfam 29.0, the pfamseq table contained the whole of UniProtKB. From Pfam 29.0, this table contains only the reference proteome portion of UniProtKB. The full alignments in Pfam are based on the sequences in the **pfamseq** table.
 
-The table pfamA_reg_seed contains the Pfam regions that are present in a seed alignment. All sequences in **pfamA_reg_seed** are in the **pfamseq** table or the **uniprot** table (the uniprot table contains all the sequences in UniProtKB). The pfamA_reg_full_significant table contains all of the sequence regions from the pfamseq table that match the HMM and score above the curated threshold, i.e. are significant matches, for each family. There is also a table named **pfamA_reg_full_insignificant** which contains, as the name suggests, all the insignificant matches for each family. Insignificant matches are those which match the HMM with an E-value less than 1000, but score below the curated bit score threshold for each family.
+The table pfamA_reg_seed contains the Pfam regions that are present in a seed alignment. All sequences in **pfamA_reg_seed** are in the **pfamseq** table or the **uniprot** table (the uniprot table contains all the sequences in UniProtKB). The **pfamA_reg_full_significant** table contains all of the sequence regions from the pfamseq table that match the HMM and score above the curated threshold, i.e. are significant matches, for each family. There is also a table named **pfamA_reg_full_insignificant** which contains, as the name suggests, all the insignificant matches for each family. Insignificant matches are those which match the HMM with an E-value less than 1000, but score below the curated bit score threshold for each family.
 
 In addition to providing matches to the sequences in the **pfamseq** table, we also provide the significant matches for the sequences in the uniprot table. These can be found in the table **uniprot_reg_full**.
 
@@ -144,7 +144,7 @@ Pfamseq - other tables
 
 This section contains a few tables that link to the **pfamseq** table, but don't fit nicely into any of the sections described above.
 
-The **pfam_annseq** table contains binary Perl data structures which are used internally to generate the Pfam domain graphics. This table is not intended for use by Pfam users, as it is very dependent on Perl module versions.
+.. The **pfam_annseq** table contains binary Perl data structures which are used internally to generate the Pfam domain graphics. This table is not intended for use by Pfam users, as it is very dependent on Perl module versions.
 
 The **evidence** table contains the UniProtKB evidence code key that is used in the evidence field in the **pfamseq** and uniprot tables.
 
@@ -241,61 +241,62 @@ Example output:
   Q43495       108_SOLLC           41        77 
   Q43495       108_SOLLC           79        99
 
-
-Architecture information for a family
-=====================================
-
-.. figure:: images/db_schema/architecture.png
-    :width: 600
-    :align: center
-
-In Pfam, an architecture is the combination of domains that are present on a protein. The **architecture** table can be used to find out which combination of domains are found on particular sets of proteins, or to find out which proteins share the same domains architecture. 
-
-Example query: Give me all of the architectures and sequences for the family 'Dehyd-heme_bind' 
-
-.. code-block:: sql
-
-  SELECT architecture_acc, pfamseq_id, pfamseq_acc 
-  FROM   architecture, pfamseq
-  WHERE  architecture like '%Dehyd-heme_bind%'
-  AND    pfamseq.auto_architecture = architecture.auto_architecture
-
-Example output:
-
-.. code-block:: none
-
-  architecture_acc                   pfamseq_id        pfamseq_acc 
-  PF09098 PF14930 PF09099            F0G341_9BURK      F0G341      
-  PF09098 PF14930 PF09099 PF09100    A0A013VTV5_9SPHN  A0A013VTV5  
-  PF09098 PF14930 PF09099 PF09100    A0A023DP27_GEOTM  A0A023DP27  
-  PF09098 PF14930 PF09099 PF09100    A0A024E848_9PSED  A0A024E848  
-  PF09098 PF14930 PF09099 PF09100    A0A024HHX9_PSESB  A0A024HHX9  
-  PF09098 PF14930 PF09099 PF09100    A0A059KVB0_9PSED  A0A059KVB0  
-  PF09098 PF14930 PF09099 PF09100    A0NPA8_9RHOB      A0NPA8      
-  ...
-
-Example query: Give me all the sequences which have the architecture 'PF09098 PF09099 PF09100' 
-
-.. code-block:: sql
+..
+  Architecture information for a family
+  =====================================
   
-  SELECT pfamseq_acc, pfamseq_id
-  FROM   architecture, pfamseq
-  WHERE  architecture.auto_architecture = pfamseq.auto_architecture
-  AND    architecture_acc = "PF09098 PF14930 PF09099 PF09100"
+  .. figure:: images/db_schema/architecture.png
+      :width: 600
+      :align: center
+  
+  In Pfam, an architecture is the combination of domains that are present on a protein. The **architecture** table can be used to find out which combination of domains are found on particular sets of proteins, or to find out which proteins share the same domains architecture. 
+  
+  Example query: Give me all of the architectures and sequences for the family 'Dehyd-heme_bind' 
+  
+  .. code-block:: sql
+  
+    SELECT architecture_acc, pfamseq_id, pfamseq_acc 
+    FROM   architecture, pfamseq
+    WHERE  architecture like '%Dehyd-heme_bind%'
+    AND    pfamseq.auto_architecture = architecture.auto_architecture
+  
+  Example output:
+  
+  .. code-block:: none
+  
+    architecture_acc                   pfamseq_id        pfamseq_acc 
+    PF09098 PF14930 PF09099            F0G341_9BURK      F0G341      
+    PF09098 PF14930 PF09099 PF09100    A0A013VTV5_9SPHN  A0A013VTV5  
+    PF09098 PF14930 PF09099 PF09100    A0A023DP27_GEOTM  A0A023DP27  
+    PF09098 PF14930 PF09099 PF09100    A0A024E848_9PSED  A0A024E848  
+    PF09098 PF14930 PF09099 PF09100    A0A024HHX9_PSESB  A0A024HHX9  
+    PF09098 PF14930 PF09099 PF09100    A0A059KVB0_9PSED  A0A059KVB0  
+    PF09098 PF14930 PF09099 PF09100    A0NPA8_9RHOB      A0NPA8      
+    ...
+  
+  Example query: Give me all the sequences which have the architecture 'PF09098 PF09099 PF09100' 
+  
+  .. code-block:: sql
+    
+    SELECT pfamseq_acc, pfamseq_id
+    FROM   architecture, pfamseq
+    WHERE  architecture.auto_architecture = pfamseq.auto_architecture
+    AND    architecture_acc = "PF09098 PF14930 PF09099 PF09100"
+  
+  Example output:
+  
+  .. code-block:: none
+  
+    pfamseq_acc  pfamseq_id       
+    A0A013VTV5   A0A013VTV5_9SPHN 
+    A0A023DP27   A0A023DP27_GEOTM 
+    A0A024E848   A0A024E848_9PSED 
+    A0A024HHX9   A0A024HHX9_PSESB 
+    A0A059KVB0   A0A059KVB0_9PSED 
+    A0NPA8       A0NPA8_9RHOB     
+    A1B2Q6       A1B2Q6_PARDP     
+    ...
 
-Example output:
-
-.. code-block:: none
-
-  pfamseq_acc  pfamseq_id       
-  A0A013VTV5   A0A013VTV5_9SPHN 
-  A0A023DP27   A0A023DP27_GEOTM 
-  A0A024E848   A0A024E848_9PSED 
-  A0A024HHX9   A0A024HHX9_PSESB 
-  A0A059KVB0   A0A059KVB0_9PSED 
-  A0NPA8       A0NPA8_9RHOB     
-  A1B2Q6       A1B2Q6_PARDP     
-  ...
 
 Annotation information for a family
 ===================================
@@ -391,27 +392,28 @@ Example output:
 
 Note: The other_params column contains 'fa;' where the Pfam family corresponds to a SCOP family, and 'sf;' where the Pfam family corresponds to a SCOP superfamily. 
 
-Example query: Give me the interacting domains for the domain 'EGF' 
-
-.. code-block:: sql
-
-  SELECT a.pfamA_id, b.pfamA_id 
-  FROM   pfamA as a, pfamA as b, pfamA_interactions 
-  WHERE  a.pfamA_acc = pfamA_interactions.pfamA_acc_A 
-  AND    b.pfamA_acc = pfamA_interactions.pfamA_acc_B 
-  AND    a.pfamA_id = "EGF"
-
-Example output:
-
-.. code-block:: none
-
-  pfamA_id  pfamA_id       
-  EGF       EGF            
-  EGF       DSL            
-  EGF       FXa_inhibition 
-  EGF       Tissue_fac     
-  EGF       Interfer-bind  
-  EGF       Trypsin        
+..
+  Example query: Give me the interacting domains for the domain 'EGF' 
+  
+  .. code-block:: sql
+  
+    SELECT a.pfamA_id, b.pfamA_id 
+    FROM   pfamA as a, pfamA as b, pfamA_interactions 
+    WHERE  a.pfamA_acc = pfamA_interactions.pfamA_acc_A 
+    AND    b.pfamA_acc = pfamA_interactions.pfamA_acc_B 
+    AND    a.pfamA_id = "EGF"
+  
+  Example output:
+  
+  .. code-block:: none
+  
+    pfamA_id  pfamA_id       
+    EGF       EGF            
+    EGF       DSL            
+    EGF       FXa_inhibition 
+    EGF       Tissue_fac     
+    EGF       Interfer-bind  
+    EGF       Trypsin        
 
 Clan data
 =========
@@ -516,45 +518,46 @@ Example output:
       journal: FEBS Lett 1988;231:1-4.
 
 
-Example query: Give me the first 5 architectures for the clan 'CL0001' 
-
-.. code-block:: mysql
-
-  SELECT architecture, architecture_acc, type_example, no_seqs 
-  FROM   architecture, clan_architecture, clan 
-  WHERE  architecture.auto_architecture = clan_architecture.auto_architecture 
-  AND    clan_architecture.clan_acc = clan.clan_acc 
-  AND    clan.clan_acc = 'CL0001'
-  LIMIT  5 
-
-Example output:
-
-.. code-block:: none
-
-      architecture: DSL~hEGF~EGF
-  architecture_acc: PF01414 PF12661 PF00008
-      type_example: E5STS8
-           no_seqs: 2
-    
-  architecture: DSL~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF_CA~EGF~EGF~EGF~EGF
-  architecture_acc: PF01414 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF07645 PF00008 PF00008 PF00008 PF00008
-      type_example: V4A2Z5
-           no_seqs: 1
-      
-  architecture: MNNL~DSL~EGF~hEGF~EGF~hEGF~EGF~EGF~EGF~EGF~EGF
-  architecture_acc: PF07657 PF01414 PF00008 PF12661 PF00008 PF12661 PF00008 PF00008 PF00008 PF00008 PF00008
-      type_example: G6DTI0
-           no_seqs: 1
-      
-  architecture: MNNL~DSL~EGF~EGF~EGF
-  architecture_acc: PF07657 PF01414 PF00008 PF00008 PF00008
-      type_example: Q8I497
-           no_seqs: 2
+..
+  Example query: Give me the first 5 architectures for the clan 'CL0001' 
   
-      architecture: MNNL~DSL~hEGF~EGF~EGF~EGF
-  architecture_acc: PF07657 PF01414 PF12661 PF00008 PF00008 PF00008
-      type_example: Q95YG0
-           no_seqs: 3
+  .. code-block:: mysql
+  
+    SELECT architecture, architecture_acc, type_example, no_seqs 
+    FROM   architecture, clan_architecture, clan 
+    WHERE  architecture.auto_architecture = clan_architecture.auto_architecture 
+    AND    clan_architecture.clan_acc = clan.clan_acc 
+    AND    clan.clan_acc = 'CL0001'
+    LIMIT  5 
+  
+  Example output:
+  
+  .. code-block:: none
+  
+        architecture: DSL~hEGF~EGF
+    architecture_acc: PF01414 PF12661 PF00008
+        type_example: E5STS8
+             no_seqs: 2
+      
+    architecture: DSL~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF_CA~EGF~EGF~EGF~EGF
+    architecture_acc: PF01414 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF07645 PF00008 PF00008 PF00008 PF00008
+        type_example: V4A2Z5
+             no_seqs: 1
+        
+    architecture: MNNL~DSL~EGF~hEGF~EGF~hEGF~EGF~EGF~EGF~EGF~EGF
+    architecture_acc: PF07657 PF01414 PF00008 PF12661 PF00008 PF12661 PF00008 PF00008 PF00008 PF00008 PF00008
+        type_example: G6DTI0
+             no_seqs: 1
+        
+    architecture: MNNL~DSL~EGF~EGF~EGF
+    architecture_acc: PF07657 PF01414 PF00008 PF00008 PF00008
+        type_example: Q8I497
+             no_seqs: 2
+    
+        architecture: MNNL~DSL~hEGF~EGF~EGF~EGF
+    architecture_acc: PF07657 PF01414 PF12661 PF00008 PF00008 PF00008
+        type_example: Q95YG0
+             no_seqs: 3
 
 Example query: Give me the database links for clan 'CL0001' 
 
@@ -608,7 +611,7 @@ Example query: Give me all of the information about 'dead' clan 'CL0152'
 
   SELECT * 
   FROM dead_clan 
-  WHERE clan_acc = "CL0152"
+  WHERE clan_acc = 'CL0152'
 
 Example output:
 
@@ -672,64 +675,66 @@ Example output:
   pfamA_id  nested_pfamA_acc  pfamseq_acc  seq_version  seq_start  seq_end 
   IMPDH     PF00571           Q21KQ8                 1        155      271 
 
-Structural data
-===============
-.. figure:: images/db_schema/pdb.png
-    :width: 600
-    :align: center
 
-In order for the `Protein DataBank <http://www.wwpdb.org/>`_ (PDB) information to be useful to Pfam, we need to map between PDB residues and UniProtKB sequence residues, which is not a trivial task. We store the residue-by-residue mapping that is provided by the `PDBe <http://www.ebi.ac.uk/pdbe/>`_ group in the **pdb_residue_data** table. Note that the pdb_pfamA_reg table is based on seqeunces in the **uniprot** table, and not the **pfamseq table**. This is to maximise the number of structures that can be mapped to each Pfam entry. 
-
-Example query: Give me the first 10 residue mappings for the structure '2abl' 
-
-.. code-block:: mysql
-
-  SELECT pdb.pdb_id, pdb_res, pdb_seq_number, pfamseq_acc, pfamseq_res, pfamseq_seq_number
-  FROM   pdb_residue_data, pdb
-  WHERE  pdb.pdb_id = pdb_residue_data.pdb_id
-  AND    pdb.pdb_id = '2abl'
-  LIMIT  10
-
-Example output:
-
-.. code-block:: none
-
-  pdb_id  pdb_res  pdb_seq_number  pfamseq_acc  pfamseq_res  pfamseq_seq_number 
-  2abl    GLY                  76  P00519       G                            57 
-  2abl    PRO                  77  P00519       P                            58 
-  2abl    SER                  78  P00519       S                            59 
-  2abl    GLU                  79  P00519       E                            60 
-  2abl    ASN                  80  P00519       N                            61 
-  2abl    ASP                  81  P00519       D                            62 
-  2abl    PRO                  82  P00519       P                            63 
-  2abl    ASN                  83  P00519       N                            64 
-  2abl    LEU                  84  P00519       L                            65 
-  2abl    PHE                  85  P00519       F                            66 
-
-Example query: Give me all the structures that map to the family 'Globin' 
-
-.. code-block:: mysql
-
-  SELECT pdb_pfamA_reg.pdb_id, chain, pdb_res_start, pdb_res_end, seq_start, seq_end
-  FROM   pdb, pdb_pfamA_reg, pfamA
-  WHERE  pfamA_id = 'Globin' 
-  AND    pfamA.pfamA_acc = pdb_pfamA_reg.pfamA_acc 
-  AND    pdb_pfamA_reg.pdb_id = pdb.pdb_id
-
-Example output:
-
-.. code-block:: none
-
-  pdb_id  chain  pdb_res_start  pdb_res_end  seq_start  seq_end 
-  101M    A                  6          112          7      113 
-  102M    A                  6          112          7      113 
-  103M    A                  6          112          7      113 
-  104M    A                  6          112          7      113 
-  105M    A                  6          112          7      113 
-  106M    A                  6          112          7      113 
-  107M    A                  6          112          7      113 
-  ... 
-
+..
+  Structural data
+  ===============
+  .. figure:: images/db_schema/pdb.png
+      :width: 600
+      :align: center
+  
+  In order for the `Protein DataBank <http://www.wwpdb.org/>`_ (PDB) information to be useful to Pfam, we need to map between PDB residues and UniProtKB sequence residues, which is not a trivial task. We store the residue-by-residue mapping that is provided by the `PDBe <http://www.ebi.ac.uk/pdbe/>`_ group in the **pdb_residue_data** table. Note that the pdb_pfamA_reg table is based on seqeunces in the **uniprot** table, and not the **pfamseq table**. This is to maximise the number of structures that can be mapped to each Pfam entry. 
+  
+  Example query: Give me the first 10 residue mappings for the structure '2abl' 
+  
+  .. code-block:: mysql
+  
+    SELECT pdb.pdb_id, pdb_res, pdb_seq_number, pfamseq_acc, pfamseq_res, pfamseq_seq_number
+    FROM   pdb_residue_data, pdb
+    WHERE  pdb.pdb_id = pdb_residue_data.pdb_id
+    AND    pdb.pdb_id = '2abl'
+    LIMIT  10
+  
+  Example output:
+  
+  .. code-block:: none
+  
+    pdb_id  pdb_res  pdb_seq_number  pfamseq_acc  pfamseq_res  pfamseq_seq_number 
+    2abl    GLY                  76  P00519       G                            57 
+    2abl    PRO                  77  P00519       P                            58 
+    2abl    SER                  78  P00519       S                            59 
+    2abl    GLU                  79  P00519       E                            60 
+    2abl    ASN                  80  P00519       N                            61 
+    2abl    ASP                  81  P00519       D                            62 
+    2abl    PRO                  82  P00519       P                            63 
+    2abl    ASN                  83  P00519       N                            64 
+    2abl    LEU                  84  P00519       L                            65 
+    2abl    PHE                  85  P00519       F                            66 
+  
+  Example query: Give me all the structures that map to the family 'Globin' 
+  
+  .. code-block:: mysql
+  
+    SELECT pdb_pfamA_reg.pdb_id, chain, pdb_res_start, pdb_res_end, seq_start, seq_end
+    FROM   pdb, pdb_pfamA_reg, pfamA
+    WHERE  pfamA_id = 'Globin' 
+    AND    pfamA.pfamA_acc = pdb_pfamA_reg.pfamA_acc 
+    AND    pdb_pfamA_reg.pdb_id = pdb.pdb_id
+  
+  Example output:
+  
+  .. code-block:: none
+  
+    pdb_id  chain  pdb_res_start  pdb_res_end  seq_start  seq_end 
+    101M    A                  6          112          7      113 
+    102M    A                  6          112          7      113 
+    103M    A                  6          112          7      113 
+    104M    A                  6          112          7      113 
+    105M    A                  6          112          7      113 
+    106M    A                  6          112          7      113 
+    107M    A                  6          112          7      113 
+    ... 
+  
 Proteomes
 =========
 .. figure:: images/db_schema/proteome.png
