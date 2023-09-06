@@ -27,8 +27,7 @@ Contents:
    /wikipedia
    /linking-to-pfam
    /guide-to-graphics
-   /restful-interface
-   /pfam-database
+   /api
    /ftp-site
    /pfam
    /authorship

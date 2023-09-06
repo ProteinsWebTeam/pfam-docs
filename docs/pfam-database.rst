@@ -3,7 +3,7 @@
 *******************
 Pfam MySQL database
 *******************
-The Pfam MySQL database contains all of the data accessible via the website. The database currently consists of 65 tables. Below is some basic documentation on the schema layout and how smaller numbers of tables can be put together to enable access to a subset of the data. At the time of writing, between releases 28.0 and 29.0, the fields within the tables and the results of queries are correct. The data within the tables will change with each release. Although we do not anticipate any major changes to the database, we reserve the right to make changes with or without warning; we will endeavour to update this document if such changes are made.
+The Pfam MySQL database contains all of the data accessible via the website. The database currently consists of 63 tables. Below is some basic documentation on the schema layout and how smaller numbers of tables can be put together to enable access to a subset of the data. At the time of writing, release 36.0, the fields within the tables and the results of queries are correct. The data within the tables will change with each release. Although we do not anticipate any major changes to the database, we reserve the right to make changes with or without warning; we will endeavour to update this document if such changes are made. Please note that we do not provide a public version of the Pfam database after release 36.0.
 
 A red diamond in the images below indicates a foreign key. In some images there are tables which appear not to be linked to any other table in the image. This is due to a foreign key being populated late in production of the database. The 'floating' table can still be joined and example queries of how to do so are given under each image. 
 
@@ -22,20 +22,20 @@ Example query: Give me all of the version information for the Pfam database
 .. code-block:: sql
 
   SELECT * 
-  FROM   version 
+  FROM version 
 
 
 Example output:
 
 .. code-block:: none
 
-           pfam_release: 28.0
-      pfam_release_date: 2015-05-15
-     swiss_prot_version: 2014_07
-         trembl_version: 2014_07
-          hmmer_version: 3.1b1
-         pfamA_coverage: 81.5
- pfamA_residue_coverage: 61.4
+           pfam_release: 36.0
+      pfam_release_date: 2023-07-18
+     swiss_prot_version: 2022_05
+         trembl_version: 2022_05
+          hmmer_version: 3.3
+         pfamA_coverage: 76.2
+ pfamA_residue_coverage: 48.6
 
 
 
@@ -46,17 +46,17 @@ Domain Information
     :width: 800
     :align: center
 
-Two of the central tables in the Pfam database are **pfamseq**, which contains UniProtKB reference proteomes and **pfamA**, which contains information about the Pfam-A families. Most of the other tables in the database link to one or both of these tables, either directly or indirectly. Note that prior to Pfam 29.0, the pfamseq table contained the whole of UniProtKB. From Pfam 29.0, this table contains only the reference proteome portion of UniProtKB. The full alignments in Pfam are based on the sequences in the **pfamseq** table.
+Two of the central tables in the Pfam database are **pfamseq**, which contains UniProtKB reference proteomes and **pfamA**, which contains information about the Pfam-A families. Most of the other tables in the database link to one or both of these tables, either directly or indirectly. Note that prior to Pfam 29.0, the **pfamseq** table contained the whole of UniProtKB. From Pfam 29.0, this table contains only the reference proteome portion of UniProtKB. The full alignments in Pfam are based on the sequences in the **pfamseq** table.
 
-The table pfamA_reg_seed contains the Pfam regions that are present in a seed alignment. All sequences in **pfamA_reg_seed** are in the **pfamseq** table or the **uniprot** table (the uniprot table contains all the sequences in UniProtKB). The **pfamA_reg_full_significant** table contains all of the sequence regions from the pfamseq table that match the HMM and score above the curated threshold, i.e. are significant matches, for each family. There is also a table named **pfamA_reg_full_insignificant** which contains, as the name suggests, all the insignificant matches for each family. Insignificant matches are those which match the HMM with an E-value less than 1000, but score below the curated bit score threshold for each family.
+The table **pfamA_reg_seed** contains the Pfam regions that are present in a seed alignment. All sequences in **pfamA_reg_seed** are in the **pfamseq** table or the **uniprot** table (the **uniprot** table contains all the sequences in UniProtKB). The **pfamA_reg_full_significant** table contains all of the sequence regions from the **pfamseq** table that match the HMM and score above the curated threshold, i.e. are significant matches, for each family. There is also a table named **pfamA_reg_full_insignificant** which contains, as the name suggests, all the insignificant matches for each family. Insignificant matches are those which match the HMM with an E-value less than 1000, but score below the curated bit score threshold for each family.
 
-In addition to providing matches to the sequences in the **pfamseq** table, we also provide the significant matches for the sequences in the uniprot table. These can be found in the table **uniprot_reg_full**.
+In addition to providing matches to the sequences in the **pfamseq** table, we also provide the significant matches for the sequences in the **uniprot** table. These can be found in the table **uniprot_reg_full**.
 
 The tables **pfamA_reg_full_significant** and **uniprot_reg_full** contain a column called 'in_full'. The matches that are present in the full alignment for a Pfam family have this column set to 1, while those that are not present in the full alignment have the 'in_full' column set to 0. A significant match will only be excluded from the full alignment (in_full = 0) if it matches a family that belongs to a clan, and the match overlaps with another more significant (lower E-value) match to a family within the clan.
 
-For each sequence match we store two sets of coordinates, the envelope coordinates and the alignment coordinates. The envelope co-ordinates delineate the region on the sequence where the match has been probabilistically determined to lie, whereas the alignment coordinates delineate where HMMER is confident that the alignment of the sequence to the profile HMM is correct. Our full alignments contain the envelope coordinates. In the database, envelope start and end positions are stored in the seq_start and seq_end fields columns, and the alignment coordinates are stored in the ali_start and ali_end fields.
+For each sequence match we store two sets of coordinates, the envelope coordinates and the alignment coordinates. The envelope co-ordinates delineate the region on the sequence where the match has been probabilistically determined to lie, whereas the alignment coordinates delineate where HMMER is confident that the alignment of the sequence to the profile HMM is correct. Our full alignments contain the envelope coordinates. In the database, envelope start and end positions are stored in the *seq_start* and *seq_end* fields columns, and the alignment coordinates are stored in the *ali_start* and *ali_end* fields.
 
-The Pfam database has historically been built on the UniProtKB database. However, as of release 22.0 we also provide Pfam domain data for the NCBI sequence database (GenPept) and a set of metagenomics sequences. As of release 28.0, we no longer store Pfam information at the sequence level for the NCBI and metagenomics data sets in the MySQL database, but we still provide the family alignments for them in the alignment_and_tree table. The Pfam website can still be queried using NCBI and metagenomics accessions.
+The Pfam database has historically been built on the UniProtKB database. However, as of release 22.0 we also provide Pfam domain data for the NCBI sequence database (GenPept) and a set of metagenomics sequences. As of release 28.0, we no longer store Pfam information at the sequence level for the NCBI and metagenomics data sets in the MySQL database, but we still provide the family alignments for them in the **alignment_and_tree** table.
 
 Example query: Give me all of the domains for sequence 'VAV_HUMAN' 
 
@@ -75,8 +75,8 @@ Example output:
 .. code-block:: none
 
   pfamA_acc  pfamA_id  seq_start  seq_end 
-  PF00307    CH                1      115 
-  PF00621    RhoGEF          198      372 
+  PF00307    CH                1      121 
+  PF00621    RhoGEF          198      371 
   PF00169    PH              403      504 
   PF00130    C1_1            516      568 
   PF00018    SH3_1           615      652 
@@ -100,14 +100,17 @@ Example output:
 
 .. code-block:: none
 
-  pfamseq_id    pfamseq_acc  seq_start  seq_end  pfamA_id 
-  U3I8N7_ANAPL  U3I8N7              16       81  B12D     
-  M0XBC6_HORVD  M0XBC6               1       49  B12D     
-  D9ZFG6_HORSE  D9ZFG6               9       50  B12D     
-  G3VJG8_SARHA  G3VJG8              16       84  B12D     
-  B6DDV9_ANODA  B6DDV9              11       78  B12D     
-  V9LJR2_CALMI  V9LJR2              11       79  B12D     
-  G7EA12_MIXOS  G7EA12               7       73  B12D     
+  pfamseq_id        pfamseq_acc   seq_start  seq_end  pfamA_id 
+  A0A4W6ED51_LATCA  A0A4W6ED51    11         80       B12D
+  A0A2C6L090_9APIC  A0A2C6L090    43         96       B12D
+  A0A1U8P0E7_GOSHI  A0A1U8P0E7     5         66       B12D
+  A0A6P6JK09_CARAU  A0A6P6JK09    11         79       B12D
+  A0A436ZUI8_9PEZI  A0A436ZUI8    55         96       B12D
+  A0A0D9WNU3_9ORYZ  A0A0D9WNU3     8         76       B12D
+  A0A5N5FAS6_9ROSA  A0A5N5FAS6     7         38       B12D
+  A0A1V4KBT8_PATFA  A0A1V4KBT8    11         79       B12D
+  B6DDV9_ANODA      B6DDV9        11         78       B12D
+  A0A0C9M2H1_9FUNG  A0A0C9M2H1    19         86       B12D
   ...
 
 Example query: Give me all the sequences in the **seed** alignment for the family 'B12D'
@@ -124,14 +127,17 @@ Example output:
 
 .. code-block:: none
 
-  pfamseq_id    pfamseq_acc  seq_start  seq_end  pfamA_id 
-  V8NRR6_OPHHA  V8NRR6              44      110  B12D     
-  M1C9M8_SOLTU  M1C9M8               7       75  B12D     
-  E2B831_HARSA  E2B831              11       78  B12D     
-  G3VW47_SARHA  G3VW47               9       75  B12D     
-  M0U3S7_MUSAM  M0U3S7               5       73  B12D     
-  I1H296_BRADI  I1H296               6       74  B12D     
-  K7DYW7_MONDO  K7DYW7               9       75  B12D     
+  pfamseq_id        pfamseq_acc  seq_start  seq_end  pfamA_id
+  M3ZJB0_XIPMA      M3ZJB0       36         105      B12D
+  M1C9M8_SOLTU      M1C9M8        7          75      B12D
+  E2B831_HARSA      E2B831       11          78      B12D
+  A0A4S8III1_MUSBA  A0A4S8III1    5          73      B12D
+  I1H296_BRADI      I1H296        6          74      B12D
+  K7DYW7_MONDO      K7DYW7        9          77      B12D
+  I1H293_BRADI      I1H293       14          82      B12D
+  F4WMZ4_ACREC      F4WMZ4       11          78      B12D
+  J3MJY8_ORYBR      J3MJY8       17          85      B12D
+  A0A804JLQ3_MUSAM  A0A804JLQ3    5          73      B12D    
   ...
 
 Pfamseq - other tables
@@ -144,9 +150,7 @@ Pfamseq - other tables
 
 This section contains a few tables that link to the **pfamseq** table, but don't fit nicely into any of the sections described above.
 
-.. The **pfam_annseq** table contains binary Perl data structures which are used internally to generate the Pfam domain graphics. This table is not intended for use by Pfam users, as it is very dependent on Perl module versions.
-
-The **evidence** table contains the UniProtKB evidence code key that is used in the evidence field in the **pfamseq** and uniprot tables.
+The **evidence** table contains the UniProtKB evidence code key that is used in the evidence field in the **pfamseq** and **uniprot** tables.
 
 UniProtKB sequences have secondary accessions if they have been merged or split. Secondary accession numbers are stored in the table called **secondary_pfamseq_acc**. 
 
@@ -175,7 +179,7 @@ Other regions
     :width: 600
     :align: center
 
-These tables contain sequence specific information about the reference proteome sequences. The **other_regions** table contains coiled coil, low complexity, signal peptide, transmembrane and disordered regions data. The **pfamseq_markup** table contains active site information which is taken from the UniProtKB feature table. Additional active site residues are predicted by Pfam based on conserved residues in a Pfam alignment. The **pfamseq_disulphide** tables contains disulphide bond information from the UniProtKB feature table. 
+These tables contain sequence specific information about the reference proteome sequences. The **other_regions** table contains coiled coil, low complexity, signal peptide, transmembrane and disordered regions data. The **pfamseq_markup** table contains active site information which is taken from the UniProtKB **feature** table. Additional active site residues are predicted by Pfam based on conserved residues in a Pfam alignment. The **pfamseq_disulphide** table contains disulphide bond information from the UniProtKB **feature** table. 
 
 Example query: Give me all of the transmembrane, signal-peptide, coiled-coils, low-complexity and disorder information for the sequence 'VAV_HUMAN' 
 
@@ -198,8 +202,8 @@ Example output:
   disorder        IUPred           179      180 
   disorder        IUPred           568      588 
   disorder        IUPred           635      636 
-  low_complexity  segmasker         41       50 
-  low_complexity  segmasker        355      366 
+  low_complexity  segmasker         42       51 
+  low_complexity  segmasker        356      367 
 
 Example query: Give me all of the active site information for sequence 'F7PG13' 
 
@@ -216,11 +220,9 @@ Example output:
 .. code-block:: none
 
   pfamseq_acc  pfamseq_id    residue  label                      
-  F7PG13       F7PG13_9EURY       92  Active site                
+  F7PG13       F7PG13_9EURY       92  Pfam predicted active site               
   F7PG13       F7PG13_9EURY      248  Pfam predicted active site 
-  F7PG13       F7PG13_9EURY      283  Metal ion binding          
-  F7PG13       F7PG13_9EURY      280  Metal ion binding          
-  F7PG13       F7PG13_9EURY      278  Metal ion binding          
+  F7PG13       F7PG13_9EURY       92  UniProt predicted active site       
 
 Example query: Give me all the residues involved in disulphide bonds in the sequence 'Q43495' 
 
@@ -236,67 +238,11 @@ Example output:
 .. code-block:: none
 
   pfamseq_acc  pfamseq_id  bond_start  bond_end 
-  Q43495       108_SOLLC           67        92 
-  Q43495       108_SOLLC           51        66 
   Q43495       108_SOLLC           41        77 
   Q43495       108_SOLLC           79        99
-
-..
-  Architecture information for a family
-  =====================================
-  
-  .. figure:: images/db_schema/architecture.png
-      :width: 600
-      :align: center
-  
-  In Pfam, an architecture is the combination of domains that are present on a protein. The **architecture** table can be used to find out which combination of domains are found on particular sets of proteins, or to find out which proteins share the same domains architecture. 
-  
-  Example query: Give me all of the architectures and sequences for the family 'Dehyd-heme_bind' 
-  
-  .. code-block:: sql
-  
-    SELECT architecture_acc, pfamseq_id, pfamseq_acc 
-    FROM   architecture, pfamseq
-    WHERE  architecture like '%Dehyd-heme_bind%'
-    AND    pfamseq.auto_architecture = architecture.auto_architecture
-  
-  Example output:
-  
-  .. code-block:: none
-  
-    architecture_acc                   pfamseq_id        pfamseq_acc 
-    PF09098 PF14930 PF09099            F0G341_9BURK      F0G341      
-    PF09098 PF14930 PF09099 PF09100    A0A013VTV5_9SPHN  A0A013VTV5  
-    PF09098 PF14930 PF09099 PF09100    A0A023DP27_GEOTM  A0A023DP27  
-    PF09098 PF14930 PF09099 PF09100    A0A024E848_9PSED  A0A024E848  
-    PF09098 PF14930 PF09099 PF09100    A0A024HHX9_PSESB  A0A024HHX9  
-    PF09098 PF14930 PF09099 PF09100    A0A059KVB0_9PSED  A0A059KVB0  
-    PF09098 PF14930 PF09099 PF09100    A0NPA8_9RHOB      A0NPA8      
-    ...
-  
-  Example query: Give me all the sequences which have the architecture 'PF09098 PF09099 PF09100' 
-  
-  .. code-block:: sql
-    
-    SELECT pfamseq_acc, pfamseq_id
-    FROM   architecture, pfamseq
-    WHERE  architecture.auto_architecture = pfamseq.auto_architecture
-    AND    architecture_acc = "PF09098 PF14930 PF09099 PF09100"
-  
-  Example output:
-  
-  .. code-block:: none
-  
-    pfamseq_acc  pfamseq_id       
-    A0A013VTV5   A0A013VTV5_9SPHN 
-    A0A023DP27   A0A023DP27_GEOTM 
-    A0A024E848   A0A024E848_9PSED 
-    A0A024HHX9   A0A024HHX9_PSESB 
-    A0A059KVB0   A0A059KVB0_9PSED 
-    A0NPA8       A0NPA8_9RHOB     
-    A1B2Q6       A1B2Q6_PARDP     
-    ...
-
+  Q43495       108_SOLLC           51        66
+  Q43495       108_SOLLC           67        92 
+     
 
 Annotation information for a family
 ===================================
@@ -329,25 +275,6 @@ Example output:
   involved in regulation by S-AdoMet [4]. CBS domain pairs from AMPK bind
   AMP or ATP [5]. The CBS domains from IMPDH and the chloride channel CLC2
   bind ATP [5].
-
-Example query: Give me the interpro annotation for the family 'CBS' 
-
-.. code-block:: sql
-
-  SELECT interpro_id, abstract
-  FROM   interpro, pfamA
-  WHERE  pfamA.pfamA_acc = interpro.pfamA_acc
-  AND    pfamA_id = 'CBS'
-
-Example output:
-
-.. code-block:: none
-
-  go_id       term                                                                                                   category 
-  GO:0020037  heme binding                                                                                           function 
-  GO:0016705  oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen  function 
-  GO:0005506  iron ion binding                                                                                       function 
-  GO:0055114  oxidation-reduction process                                                                            process 
 
 Example query: Give me all of the literature references for the family 'CBS'  
 
@@ -392,29 +319,6 @@ Example output:
 
 Note: The other_params column contains 'fa;' where the Pfam family corresponds to a SCOP family, and 'sf;' where the Pfam family corresponds to a SCOP superfamily. 
 
-..
-  Example query: Give me the interacting domains for the domain 'EGF' 
-  
-  .. code-block:: sql
-  
-    SELECT a.pfamA_id, b.pfamA_id 
-    FROM   pfamA as a, pfamA as b, pfamA_interactions 
-    WHERE  a.pfamA_acc = pfamA_interactions.pfamA_acc_A 
-    AND    b.pfamA_acc = pfamA_interactions.pfamA_acc_B 
-    AND    a.pfamA_id = "EGF"
-  
-  Example output:
-  
-  .. code-block:: none
-  
-    pfamA_id  pfamA_id       
-    EGF       EGF            
-    EGF       DSL            
-    EGF       FXa_inhibition 
-    EGF       Tissue_fac     
-    EGF       Interfer-bind  
-    EGF       Trypsin        
-
 Clan data
 =========
 
@@ -455,22 +359,35 @@ Example output:
 
 .. code-block:: none
 
-  pfamA_acc  pfamA_id       
-  PF01414    DSL            
-  PF04863    EGF_alliinase  
-  PF00053    Laminin_EGF    
-  PF07645    EGF_CA         
-  PF00008    EGF            
-  PF07974    EGF_2          
-  PF09064    Tme5_EGF_like  
-  PF09289    FOLN           
-  PF12661    hEGF           
-  PF12662    cEGF           
-  PF12946    EGF_MSP1_1     
-  PF12947    EGF_3          
-  PF14670    FXa_inhibition 
-  PF06247    Plasmod_Pvs28  
-
+  PF01414   DSL              
+  PF04863   EGF_alliinase    
+  PF00053   Laminin_EGF      
+  PF07645   EGF_CA           
+  PF00008   EGF              
+  PF07974   EGF_2            
+  PF09064   Tme5_EGF_like    
+  PF09289   FOLN             
+  PF12661   hEGF             
+  PF12662   cEGF             
+  PF12946   EGF_MSP1_1       
+  PF12947   EGF_3            
+  PF14670   FXa_inhibition   
+  PF06247   Plasmod_Pvs28    
+  PF09443   CFC              
+  PF00084   Sushi            
+  PF09014   Sushi_2          
+  PF00594   Gla              
+  PF18193   Fibrillin_U_N    
+  PF18372   I-EGF_1          
+  PF18720   EGF_Tenascin     
+  PF07699   Ephrin_rec_like  
+  PF20626   Sp38_C           
+  PF21195   C8A_B_C6_EGF-like
+  PF21284   C7_FIM2_N        
+  PF21286   CFAI_FIMAC_N     
+  PF21364   FBN_EGF_st1      
+  PF21700   DL-JAG_EGF-like  
+  PF21795   JAG1-like_EGF2    
 
 Example query: Give me the clan description and comment for clan 'CL0001'
 
@@ -504,60 +421,18 @@ Example output:
 .. code-block:: none
 
       comment: NULL
-  order_added: 2
-         pmid: 11852228
-        title: Domain structure and organisation in extracellular matrix proteins.
-       author: Hohenester E, Engel J;
-      journal: Matrix Biol 2002;21:115-128.
-    
-      comment: NULL
   order_added: 1
          pmid: 3282918
         title: Structure and function of epidermal growth factor-like regions in proteins.
        author: Appella E, Weber IT, Blasi F;
       journal: FEBS Lett 1988;231:1-4.
 
-
-..
-  Example query: Give me the first 5 architectures for the clan 'CL0001' 
-  
-  .. code-block:: mysql
-  
-    SELECT architecture, architecture_acc, type_example, no_seqs 
-    FROM   architecture, clan_architecture, clan 
-    WHERE  architecture.auto_architecture = clan_architecture.auto_architecture 
-    AND    clan_architecture.clan_acc = clan.clan_acc 
-    AND    clan.clan_acc = 'CL0001'
-    LIMIT  5 
-  
-  Example output:
-  
-  .. code-block:: none
-  
-        architecture: DSL~hEGF~EGF
-    architecture_acc: PF01414 PF12661 PF00008
-        type_example: E5STS8
-             no_seqs: 2
-      
-    architecture: DSL~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF~EGF_CA~EGF~EGF~EGF~EGF
-    architecture_acc: PF01414 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF00008 PF07645 PF00008 PF00008 PF00008 PF00008
-        type_example: V4A2Z5
-             no_seqs: 1
-        
-    architecture: MNNL~DSL~EGF~hEGF~EGF~hEGF~EGF~EGF~EGF~EGF~EGF
-    architecture_acc: PF07657 PF01414 PF00008 PF12661 PF00008 PF12661 PF00008 PF00008 PF00008 PF00008 PF00008
-        type_example: G6DTI0
-             no_seqs: 1
-        
-    architecture: MNNL~DSL~EGF~EGF~EGF
-    architecture_acc: PF07657 PF01414 PF00008 PF00008 PF00008
-        type_example: Q8I497
-             no_seqs: 2
-    
-        architecture: MNNL~DSL~hEGF~EGF~EGF~EGF
-    architecture_acc: PF07657 PF01414 PF12661 PF00008 PF00008 PF00008
-        type_example: Q95YG0
-             no_seqs: 3
+      comment: NULL
+  order_added: 2
+         pmid: 11852228
+        title: Domain structure and organisation in extracellular matrix proteins.
+       author: Hohenester E, Engel J;
+      journal: Matrix Biol 2002;21:115-128.
 
 Example query: Give me the database links for clan 'CL0001' 
 
@@ -585,7 +460,7 @@ Dead families and clans
 
 Sometimes we find that two or more Pfam-A families can be merged into a single family, which leads to the deletion of Pfam-A families. Likewise we might merge two clans together, which results in the deletion of a clan. The **dead_family** and **dead_clan** tables contain information about Pfam-A families and clans that have been deleted. These tables may be of use if you need to track what happened to the members of a particular family/clan that is no longer in Pfam. 
 
-Example query: Give me all of the information about 'dead' Pfam-A family 'PF06700' 
+Example query: Give me all of the information about 'dead' Pfam-A family 'PF09410' 
 
 .. code-block:: mysql
 
@@ -634,7 +509,7 @@ Nested domains
     :width: 700
     :align: center
 
-Some Pfam-A domains are disrupted by the insertion of another domain (or domains) within them. The domain that is inserted into another is known as a nested domain. The nested_locations table stores all the nested Pfam-A domains. It also stores the coordinates of the nested domain with respect to a sequence that is present in the seed alignment of the domain in which it nests. 
+Some Pfam-A domains are disrupted by the insertion of another domain (or domains) within them. The domain that is inserted into another is known as a nested domain. The **nested_locations** table stores all the nested Pfam-A domains. It also stores the coordinates of the nested domain with respect to a sequence that is present in the seed alignment of the domain in which it nests. 
 
 Example query: Give me all of the nested domains and the domains in which they are nested 
 
@@ -650,13 +525,16 @@ Example output:
 .. code-block:: none
 
   pfamA_id     nested_domain 
-  YL1          S1            
-  7tm_1        HTH_Tnp_Tc3_2 
-  7tm_1        DDE_Tnp_4     
-  DUF2330      TonB_C        
-  DUF2577      NLPC_P60      
-  ATP-synt_ab  Hom_end_hint  
-  ATP-synt_ab  Hom_end       
+  CusB_dom_1   HlyD_D4        
+  CusB_dom_1   HlyD_D23       
+  RTC          RTC_insert     
+  RtcB         HNH_3          
+  RtcB         LAGLIDADG_3    
+  RtcB         Intein_splicing
+  RtcB         Intein_splicing
+  Pro_dh       EF-hand_7      
+  LGT          PDZ            
+  HcyBio       Fer4               
   ...
 
 Example query: Give me the nested data for the family IMPDH 
@@ -675,65 +553,6 @@ Example output:
   pfamA_id  nested_pfamA_acc  pfamseq_acc  seq_version  seq_start  seq_end 
   IMPDH     PF00571           Q21KQ8                 1        155      271 
 
-
-..
-  Structural data
-  ===============
-  .. figure:: images/db_schema/pdb.png
-      :width: 600
-      :align: center
-  
-  In order for the `Protein DataBank <http://www.wwpdb.org/>`_ (PDB) information to be useful to Pfam, we need to map between PDB residues and UniProtKB sequence residues, which is not a trivial task. We store the residue-by-residue mapping that is provided by the `PDBe <http://www.ebi.ac.uk/pdbe/>`_ group in the **pdb_residue_data** table. Note that the pdb_pfamA_reg table is based on seqeunces in the **uniprot** table, and not the **pfamseq table**. This is to maximise the number of structures that can be mapped to each Pfam entry. 
-  
-  Example query: Give me the first 10 residue mappings for the structure '2abl' 
-  
-  .. code-block:: mysql
-  
-    SELECT pdb.pdb_id, pdb_res, pdb_seq_number, pfamseq_acc, pfamseq_res, pfamseq_seq_number
-    FROM   pdb_residue_data, pdb
-    WHERE  pdb.pdb_id = pdb_residue_data.pdb_id
-    AND    pdb.pdb_id = '2abl'
-    LIMIT  10
-  
-  Example output:
-  
-  .. code-block:: none
-  
-    pdb_id  pdb_res  pdb_seq_number  pfamseq_acc  pfamseq_res  pfamseq_seq_number 
-    2abl    GLY                  76  P00519       G                            57 
-    2abl    PRO                  77  P00519       P                            58 
-    2abl    SER                  78  P00519       S                            59 
-    2abl    GLU                  79  P00519       E                            60 
-    2abl    ASN                  80  P00519       N                            61 
-    2abl    ASP                  81  P00519       D                            62 
-    2abl    PRO                  82  P00519       P                            63 
-    2abl    ASN                  83  P00519       N                            64 
-    2abl    LEU                  84  P00519       L                            65 
-    2abl    PHE                  85  P00519       F                            66 
-  
-  Example query: Give me all the structures that map to the family 'Globin' 
-  
-  .. code-block:: mysql
-  
-    SELECT pdb_pfamA_reg.pdb_id, chain, pdb_res_start, pdb_res_end, seq_start, seq_end
-    FROM   pdb, pdb_pfamA_reg, pfamA
-    WHERE  pfamA_id = 'Globin' 
-    AND    pfamA.pfamA_acc = pdb_pfamA_reg.pfamA_acc 
-    AND    pdb_pfamA_reg.pdb_id = pdb.pdb_id
-  
-  Example output:
-  
-  .. code-block:: none
-  
-    pdb_id  chain  pdb_res_start  pdb_res_end  seq_start  seq_end 
-    101M    A                  6          112          7      113 
-    102M    A                  6          112          7      113 
-    103M    A                  6          112          7      113 
-    104M    A                  6          112          7      113 
-    105M    A                  6          112          7      113 
-    106M    A                  6          112          7      113 
-    107M    A                  6          112          7      113 
-    ... 
   
 Proteomes
 =========
@@ -742,7 +561,6 @@ Proteomes
     :align: center
 
 As of Pfam 29.0, all sequences in the **pfamseq** table belong to a reference proteome, and therefore a complete proteome. Prior to Pfam 29.0 this was not the case. The **complete_proteomes** table contains statistics about the number of families and coverage. The tables in this section allow you to retrieve domain information about a particular species, or to retrieve all of the species which contain a particular Pfam domain. 
-
 
 Example query: Give me the Pfam summary for the human (Homo sapiens, ncbi taxid 9606) proteome 
 
@@ -760,14 +578,14 @@ Example output:
                   species: Homo sapiens (Human)
                  grouping: Eukaryota
      num_distinct_regions: 0
-        num_total_regions: 93089
-             num_proteins: 69682
-        sequence_coverage: 70
-         residue_coverage: 44
-    total_genome_proteins: 69682
-          total_aa_length: 23542137
-         total_aa_covered: 10345679
-       total_seqs_covered: 49101
+        num_total_regions: 115682
+             num_proteins: 81828
+        sequence_coverage: 72
+         residue_coverage: 45
+    total_genome_proteins: 81828
+          total_aa_length: 29701382
+         total_aa_covered: 13467634
+       total_seqs_covered: 58973
 
 
 Example query: Give me all the Pfam-A domains for the species 'Arabidopsis thaliana' 
@@ -785,13 +603,13 @@ Example output:
 .. code-block:: none
 
   pfamA_acc  pfamA_id       description                                                      sum(number_domains) 
-  PF00004    AAA            ATPase family associated with various cellular activities (AAA)                  143 
-  PF00005    ABC_tran       ABC transporter                                                                  197 
-  PF00006    ATP-synt_ab    ATP synthase alpha/beta family, nucleotide-binding domain                         12 
-  PF00009    GTP_EFTU       Elongation factor Tu GTP binding domain                                           40 
-  PF00010    HLH            Helix-loop-helix DNA-binding domain                                              148 
-  PF00011    HSP20          Hsp20/alpha crystallin family                                                     27 
-  PF00012    HSP70          Hsp70 protein                                                                     25 
+  PF00004    AAA            ATPase family associated with various cellular activities (AAA)                  178 
+  PF00005    ABC_tran       ABC transporter                                                                  284 
+  PF00006    ATP-synt_ab    ATP synthase alpha/beta family, nucleotide-binding domain                         13 
+  PF00009    GTP_EFTU       Elongation factor Tu GTP binding domain                                           48 
+  PF00010    HLH            Helix-loop-helix DNA-binding domain                                              233 
+  PF00012    HSP70          Hsp70 protein                                                                     29
+  PF00013    KH_1           KH domain                                                                        106
   ...
 
 **Note**: The ncbi_code for the species 'Arabidopsis thaliana' is 3702. This information can be found in the **ncbi_taxonomy** table. 
@@ -809,13 +627,13 @@ Example output:
 .. code-block:: none
 
   pfamseq_acc 
-  A0A023T4L8  
-  A0A023T774  
-  A0A076      
-  A0A077      
-  A0A078      
-  A0EJE2      
-  A0EJE3      
+  A0A068FL09
+  A0A0A7EPL0
+  A0A140JWM8
+  A0A178U7J2
+  A0A178U7Y7
+  A0A178U807
+  A0A178U889    
   ...
 
 
@@ -826,7 +644,7 @@ Example query: Give me all of the protein sequences from the species 'Arabidopsi
   SELECT pfamseq.pfamseq_acc 
   FROM   pfamseq, pfamA_reg_full_significant 
   WHERE  ncbi_taxid = '3702' 
-  AND    pfamseq.pfamseq_acc = pfamA_reg_full_signficiant.pfamseq_acc 
+  AND    pfamseq.pfamseq_acc = pfamA_reg_full_significant.pfamseq_acc 
   AND    pfamA_acc = 'PF00106'
 
 Example output:
@@ -834,65 +652,15 @@ Example output:
 .. code-block:: none
 
   pfamseq_acc 
-  B9DG09      
-  B9DGU5      
-  C0Z346      
-  O24452      
-  O81738      
-  Q0WLN5      
-  Q0WMN4      
+  A0A1I9LMA8
+  A0A1I9LNL3
+  A0A1I9LNL4
+  A0A1I9LNT2
+  A0A1I9LNT2
+  A0A1I9LQ55
+  A0A1I9LQ55      
   ...
 
-Related families
-================
-
-.. figure:: images/db_schema/related_families.png
-    :width: 800
-    :align: center
-
-`SCOOP <http://bioinformatics.oxfordjournals.org/cgi/content/short/23/7/809>`_ and `HHsearch <http://toolkit.tuebingen.mpg.de/hhpred>`_ are two pieces of software that we use to help to determine which Pfam-A families are related. The scores from these programs have been a very useful aid in deciding which Pfam-A families should belong to the same clan. As a rough guide, a SCOOP score greater than 50 or a HHsearch E-value score of less than 0.01 is an indication that two families are closely related. 
-
-Example query: Give me all of the Pfam-A families that have a SCOOP score greater than 50 when compared with the family 'ABC1' 
-
-.. code-block:: mysql
-
-  SELECT a.pfamA_id, b.pfamA_id, score 
-  FROM   pfamA AS a, pfamA AS b, pfamA2pfamA_scoop AS p
-  WHERE  a.pfamA_acc = p.pfamA_acc_1 
-  AND    b.pfamA_acc = p.pfamA_acc_2
-  AND    score > 50 
-  AND    a.pfamA_id = "ABC1"
-
-Example output:
-
-.. code-block:: none
-
-  pfamA_id  pfamA_id     score   
-  ABC1      Pkinase_Tyr  154.936 
-
-Example query: Give me all of the Pfam-A families that have a HHsearch E-value score of less than 0.01 when compared with the family 'AAA' 
-
-.. code-block:: mysql
-
-  SELECT a.pfamA_id, b.pfamA_id, evalue 
-  FROM   pfamA AS a, pfamA AS b, pfamA2pfamA_hhsearch AS p 
-  WHERE  a.pfamA_acc = p.pfamA_acc_1 
-  AND    b.pfamA_acc = p.pfamA_acc_2
-  AND    evalue < 0.01 
-  AND    a.pfamA_id = "AAA"
-
-Example output:
-
-.. code-block:: none
-
-  pfamA_id  pfamA_id         evalue  
-  AAA       RuvB_N           1.3E-25 
-  AAA       AAA_2            1.1E-17 
-  AAA       AAA_5            2.5E-17 
-  AAA       TIP49            5.6E-13 
-  AAA       Sigma54_activat  1.7E-12 
-  AAA       Mg_chelatase     1.1E-11 
-  AAA       AAA_3            1.9E-11 
 
 Data Files - Alignments, trees and HMMs
 =======================================
