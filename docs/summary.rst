@@ -9,7 +9,7 @@ insights into the function of that protein.
 The Pfam database is a large collection of protein domain families. Each family is represented by multiple sequence alignments and a profile hidden 
 Markov model (HMM).
 
-Each Pfam family, sometimes referred to as a Pfam-A entry, consists of a curated seed alignment containing a small set of representative members of the 
+Each Pfam family, usually referred to as a Pfam-A entry, consists of a curated seed alignment containing a small set of representative members of the 
 family, profile HMMs built from the seed alignment, and an automatically generated full alignment, which contains all detectable protein sequences 
 belonging to the family, as defined by profile HMM searches of primary sequence databases.
 

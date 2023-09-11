@@ -5,9 +5,10 @@ Clan/Set page organisation
 .. _CL0219: https://www.ebi.ac.uk/interpro/set/pfam/CL0219/
 
 **Pfam clans** are called **Sets** in the InterPro website, more information about how clans are defined can be found in :doc:`Summary </summary>`. 
-If a Pfam entry is included in a clan this information will be displayed in the **Overview** tab, next to *Set*, below the Pfam short name, 
-with a link to the corresponding clan/set page. Additionally, it is possible to browse through the Pfam clans by selecting **Browse + By Set** in 
-the `InterPro website menu <https://www.ebi.ac.uk/interpro/set/all/entry/pfam/#table>`_ and select **Pfam** in the database section.
+If a Pfam entry is included in a clan this information will be displayed in the **Overview** tab in the Pfam entry page, next to *Set*, 
+below the Pfam short name, with a link to the corresponding clan/set page. 
+
+Additionally, it is possible to browse through the Pfam clans by selecting `Browse + By Set <https://www.ebi.ac.uk/interpro/set/all/entry/pfam/#table>`_ in the InterPro website menu and select **Pfam** in the database section.
 
 .. figure:: images/cloverview.png
     :alt: Example of a Pfam clan/set page with the default tab selected (Overview)
@@ -22,10 +23,11 @@ In each Pfam clan/set page, different tabs with relevant information are availab
 Overview
 ========
 
-The clan/set Overview tab is the default display, where clan accession number, the short name and the author(s) are shown on top. A 
-description of the clan is displayed below, with the relevant literature references and an interactive view of the Pfam entries included 
-in the clan are displayed. For the interactive view, different label types can be chosen through the **Label Content** menu: Accession, 
-Name and Short name.
+The clan/set **Overview** tab is the default display, where the clan accession number, its short name and the author(s) are shown at the top. A 
+description of the clan is displayed below, with the relevant literature references. 
+
+An interactive view of the Pfam entries included in the clan is also displayed, different label types can be chosen through the 
+**Label Content** menu: Accession, Name and Short name.
 
 
 Entries
@@ -56,8 +58,7 @@ The list of proteins matching any Pfam entry belonging to the clan/set is displa
 For each protein, the corresponding protein page in InterPro can be accessed by clicking on the protein accession or name, and the 
 InterPro taxonomy page can be accessed by clicking on the species name. 
 
-Users can export this data in different formats, by clicking 
-on the **Export** button, and customise the page settings, by clicking on the wheel icon.
+Users can export this data in different formats, by clicking on the **Export** button, and customise the page settings, by clicking on the wheel icon.
 
 .. figure:: images/clproteins.png
     :alt: Example of a Pfam clan/set page with the tab Proteins selected.
@@ -110,9 +111,9 @@ can be downloaded in different formats.
 Proteomes
 =========
 
-A list of the reference proteomes matched by any Pfam entry belonging to the clan/set is displayed in this tab. Each item in this list 
-shows the Proteome ID (which is a link to the Proteome page in InterPro), the name of the species carrying this proteome and the number
-of proteins in this proteome that match the entry. From the **Actions** column, users can also see a list of these proteins by clicking the 
+A list of the reference proteomes matched by any Pfam entry belonging to the clan/set is displayed in this tab. For each item in this list 
+the Proteome ID (which is a link to the Proteome page in InterPro), the name of the species carrying this proteome and the number
+of proteins in this proteome that match the entry are displayed. From the **Actions** column, users can also access a list of these proteins by clicking the 
 first icon (**View matching proteins**), download the data in different formats or **View proteome information**.
 
 .. figure:: images/clproteomes.png

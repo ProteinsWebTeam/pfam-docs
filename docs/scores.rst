@@ -11,7 +11,7 @@ A value of 1 is what would be expected just by chance. In principle, all you nee
 
 E-values are dependent on the size of the database searched, so we use a second system in-house for maintaining Pfam models, based on a bit score (see below), 
 which is independent of the size of the database searched. For each Pfam family, we set a bit score gathering (GA) threshold by hand, such that all sequences 
-scoring at or above this threshold appear in the full alignment. It works out that a bit score of 20 equates to an E-value of approximately 0.1, and a score 25 
+scoring at or above this threshold appear in the full alignment. It works out that a bit score of 24 equates to an E-value of approximately 0.1, and a score 27 
 of to approximately 0.01. From the gathering threshold both a "trusted cutoff" (TC) and a "noise cutoff" (NC) are recorded automatically. The TC is the score for 
 the next highest scoring match above the GA, and the NC is the score for the sequence next below the GA, i.e. the highest scoring sequence not included in the 
 full alignment.
@@ -28,9 +28,9 @@ that that sequence belongs to that protein family, i.e. truly matches the model.
 Meaning of bit-score for non-mathematicians
 ===========================================
 
-A bit score of 0 means that the likelihood of the match having been emitted by the model is equal to that of it having been emitted by the Null model (by chance). A 
-bit score of 1 means that the match is twice as likely to have been emitted by the model than by the Null. A bit score of 2 means that the match is 4 times as likely 
-to have been emitted by the model than by the Null. So, a bit score of 20 means that the match is 2 to the power 20 times as likely to have been emitted by the model 
-than by the Null.
+A bit score of 0 means that the likelihood of the match having been emitted by the model is equal to that of it having been emitted by the Null model (by chance). 
+A bit score of 1 means that the match is twice as likely to have been emitted by the model than by the Null. A bit score of 2 means that the match is 4 times as 
+likely to have been emitted by the model than by the Null. So, a bit score of 20 means that the match is 2 to the power 20 times as likely to have been emitted by 
+the model than by the Null.
 
 

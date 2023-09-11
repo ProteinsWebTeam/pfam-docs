@@ -33,12 +33,12 @@ When a sequence region has overlapping matches to more than one entry within the
 also in the seed alignment for an entry, only the match to that entry is shown. Otherwise we show the entry that corresponds to the match with the lowest 
 E-value.
 
-The clan pages can be accessed by following a link from the Pfam entry page, or alternatively they can be accessed by by selecting **Browse + By Set** 
-in the `InterPro website menu <https://www.ebi.ac.uk/interpro/set/all/entry/pfam/#table>`_ and select **Pfam** in the database section.
+The clan pages can be accessed by following a link from the Pfam entry page, or alternatively they can be accessed by by selecting 
+`Browse + By Set <https://www.ebi.ac.uk/interpro/set/all/entry/pfam/#table>`_ in the InterPro website menu and select **Pfam** in the database section.
 
 For each clan page, you can access all the related data. See :doc:`Clan/Set page organisation </clan-set>` for more information. 
 
-What criteria do you use for putting families into clans?
+What criteria do you use for adding families into clans?
 =========================================================
 
 We use a variety of measures. Where possible we do use experimental and predicted structures to guide us and that is always the gold standard. 
@@ -49,7 +49,7 @@ In the absence of a structure we use:
   * The fact that a sequence significantly matches two profile HMMs in the same region of the sequence
   * A method called SCOOP, that looks for common matches in search results that may indicate a relationship
 
-All of this information is used by one of our curators to make a decision about where families are related and we strive to find information in 
+All of this information is used by the Pfam curators to make a decision about where families are related and we strive to find information in 
 the literature that support the relationship, e.g. common function.
 
 What is Pfam-N?

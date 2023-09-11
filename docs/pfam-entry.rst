@@ -18,9 +18,9 @@ In each Pfam entry page, different tabs with relevant information are available,
 Overview
 ========
 
-The entry overview tab is the default display, where the type of Pfam entry, the short name and the clan/set (if the entry belongs to any) are shown at the top, more 
-information about how clans are defined can be found in :ref:`<summary>`. Usually, a curated description of the entry is displayed below, with the relevant literature 
-references. 
+The entry overview tab is the default display, where the type of Pfam entry, the short name and the clan/set (if the entry belongs to any) are shown at the top, 
+more information about how clans are defined can be found in :ref:`<summary>`. Usually, a curated description of the entry is displayed below, with the relevant 
+literature references. 
 
 If there is a Wikipedia page for the entry, the first paragraph and the box with an image of a tridimensional structure and some cross-links are displayed. The full 
 Wikipedia article can be open in a new tab by clicking on the title.
@@ -38,8 +38,10 @@ The list of proteins matching this entry is displayed in this tab. This view can
 
 3. Only **Unreviewed** proteins (from TrEMBL - derived from public databases automatically integrated into UniProt).
 
-For each protein, the corresponding protein page in InterPro can be accessed by clicking on the protein accession or name; the InterPro taxonomy page can be accessed by clicking on the species name; and a small-size protein viewer displays the location of the Pfam entry in the protein. The coordinates of the match can be shown by hovering the mouse over it. You can also export this data in different formats, by clicking on the **Export** button, and customise the page settings, by 
-clicking on the wheel icon.
+For each protein, the corresponding protein page in InterPro can be accessed by clicking on the protein accession or name; the InterPro taxonomy page can be 
+accessed by clicking on the species name; and a small-size protein viewer displays the location of the Pfam entry in the protein. The coordinates of the match 
+can be shown by hovering the mouse over it. You can also export this data in different formats, by clicking on the **Export** button, and customise the page 
+settings, by clicking on the wheel icon.
 
 .. figure:: images/pfproteins.png
   :alt: Example of a Pfam entry with the tab Proteins selected.
@@ -78,8 +80,8 @@ Taxonomy
 This tab shows by default a sunburst chart of all the species that the proteins matched by the Pfam entry belong to.
 
 By default, eight individual nodes that are derived from the taxonomic lineage of each protein sequence, ranging from 
-superkingdom down to species, are displayed. For each node in the taxonomy tree there is a separate ring - and each ring i
-s arranged radially, with the superkingdoms at the centre and the species around the outermost ring. The length of each 
+superkingdoms down to species, are displayed. For each node in the taxonomy tree there is a separate ring - and each ring 
+is arranged radially, with the superkingdoms at the centre and the species around the outermost ring. The length of each 
 ring is proportional to the number of proteins found within each taxon. You can choose how many rings you want to see 
 from the options on the right-hand side of the page.
 
@@ -227,9 +229,9 @@ Pfam entries creation and annotation
 
 For each Pfam entry, the HMM model is run against the protein sequences belonging to the UniProt Reference Proteomes. 
 Subsequently, Pfam curators set a statistical cut-off, known as a gathering threshold (GA) for an entry. Sequences 
-failing to make a statistical match above this threshold are not reported as hits. The threshold is usually conservative, 
-so that no known false positives are included in the entry. The Pfam model is then run against the whole UniProtKB database 
-before every InterPro release and these are the matches shown in the :ref:`proteins` tab on the Pfam entry page.
+failing to make a statistical match above this threshold are not reported as hits. The threshold is quite conservative, 
+to minimise false positives (although they are unavoidable sometimes). The Pfam model is then run against the whole 
+UniProtKB database before every InterPro release and these are the matches shown in the :ref:`proteins` tab on the Pfam entry page.
 
 Different Pfam entries have annotations providing diverse amounts of information. Many of them have a description created 
 by Pfam curators. Anyone can contribute to this annotation by contacting directly the curators through the **Add your 
@@ -251,4 +253,4 @@ In addition, Pfam encourages the annotation of Pfam families via Wikipedia. Belo
 you may find the text from a Wikipedia article that we feel provides a good description of the Pfam family. 
 
 If a family does not yet have a Wikipedia article assigned to it, there are several ways for you to help us add one. You can 
-find much more information about the process in the :doc:`Wikipedia </wikipedia>` section. 
+find more information about the process in the :doc:`Wikipedia </wikipedia>` section. 

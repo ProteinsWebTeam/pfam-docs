@@ -326,7 +326,7 @@ Other sequence motifs
 ---------------------
 
 In addition to domains, smaller sequences motifs are represented by the domain graphics. Currently the following motifs are represented: 
-*signal peptides*, *low complexity regions*, *coiled-coils* and *transmembrane regions*. These usually take lower prority than other 
+*signal peptides*, *low complexity regions*, *coiled-coils* and *transmembrane regions*. These usually take lower priority than other 
 regions that are drawn and they are therefore often obscured by, for example, a Pfam-A graphic being drawn over the top of them. An 
 example of each motif is shown below. 
 
@@ -600,7 +600,7 @@ Disulphide bridges
 
 *Disulphide bridges* play a fundamental role in the folding and stability of some proteins. They are formed by covalent bonding between 
 the thiol groups from two cysteine residues. The disulphide bridge annotations can be represented by a solid bridge-shaped line. 
-When mutliple disulphide bonds occur, the heights of the bridges are adjusted to avoid overlaps between them. Inter-protein disulphides 
+When multiple disulphide bonds occur, the heights of the bridges are adjusted to avoid overlaps between them. Inter-protein disulphides 
 are represented by single vertical lines. Moving the mouse over the "bridge graphic" shows the details of the bond in a tooltip. 
 
 Active site residues
@@ -834,7 +834,7 @@ below shows a domain graphic and its description includes the necessary metadata
         "v_align" : "top", 
         "metadata" : { 
           "database" : "pfam", 
-          "type" : "Link between discontinous regions", 
+          "type" : "Link between discontinuous regions", 
           "end" : "470", 
           "start" : "361" 
         }, 
