@@ -95,5 +95,5 @@ Previous contributors
 Pfam is a collaborative venture and we hope to be able to interact with as many people as 
 possible, in order to provide a quality database. Please get in touch with any one of us 
 for more information about Pfam. You can contact us trough the 
-`Pfam helpdesk <https://www.ebi.ac.uk/support/interpro>`_.
+`Pfam helpdesk <https://www.ebi.ac.uk/about/contact/support/pfam>`_.
 

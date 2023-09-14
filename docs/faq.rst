@@ -123,7 +123,7 @@ multiple copies of the same sequence.
 How can I submit a new domain?
 ==============================
 
-If you know of a domain that is not present in Pfam, you can submit it to the `Pfam helpdesk <https://www.ebi.ac.uk/support/interpro>`_ and we will 
+If you know of a domain that is not present in Pfam, you can submit it to the `Pfam helpdesk <https://www.ebi.ac.uk/about/contact/support/pfam>`_ and we will 
 endeavour to build a Pfam entry for it. We ask that you supply us with a multiple sequence alignment of the domain (please send the alignment file as 
 a text file (e.g. *.txt*) and not in the format of a specific application such as Microsoft Word (e.g. a *.doc*) file) or a list of Uniprot accessions, 
 and associated literature evidence if available.
@@ -176,7 +176,7 @@ Why don't you have domain YYYY in Pfam?
 
 We are very keen to be alerted to new domains. If you can provide us with a multiple sequence alignment then we will try hard to incorporate it into the 
 database. If you know of a domain, but don't have a multiple sequence alignment, we still want to know, for simple families just one sequence is enough. 
-Again contact the `Pfam helpdesk <https://www.ebi.ac.uk/support/interpro>`_.
+Again contact the `Pfam helpdesk <https://www.ebi.ac.uk/about/contact/support/pfam>`_.
 
 Are there other databases which do this?
 ========================================

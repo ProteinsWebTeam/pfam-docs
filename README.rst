@@ -28,4 +28,4 @@ Installation
 Contact
 *******
 
-If you have any questions or feedback, contact us through the `Pfam helpdesk <https://www.ebi.ac.uk/support/interpro>`_.
+If you have any questions or feedback, contact us through the `Pfam helpdesk <https://www.ebi.ac.uk/about/contact/support/pfam>`_.

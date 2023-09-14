@@ -237,7 +237,7 @@ Different Pfam entries have annotations providing diverse amounts of information
 by Pfam curators. Anyone can contribute to this annotation by contacting directly the curators through the **Add your 
 annotation** toolbox located on the right-hand side of the **Overview** tab.
 
-If you know of a domain that is not present in Pfam, you can submit it to the `Pfam helpdesk <https://www.ebi.ac.uk/support/interpro>`_ 
+If you know of a domain that is not present in Pfam, you can submit it to the `Pfam helpdesk <https://www.ebi.ac.uk/about/contact/support/pfam>`_ 
 and we will endeavour to build a Pfam entry for it. We ask that you supply us with a multiple sequence alignment of the domain 
 (please send the alignment file as a text file (e.g. .txt) and not in the format of a specific application such as Microsoft 
 Word (e.g. a .doc) file), and associated literature evidence if available.

@@ -32,7 +32,7 @@ you to consider adding one to Wikipedia yourself.
 You can now contribute to the improvement of Pfam annotations in several ways. Besides giving feedback directly to the curators to improve the traditional description, 
 you can improve existing Wikipedia articles linked to Pfam families. In addition, if you come across a family that does not yet have a Wikipedia article assigned to it, 
 we would really like to add one. If you know of an article that would provide a useful description of a family, please let us know via our annotation submission form 
-(click the **Add your annotation** button on the family page) or contact us through our `helpdesk <https://www.ebi.ac.uk/about/contact/support/interpro>`_.
+(click the **Add your annotation** button on the family page).
 
 Editing Wikipedia articles
 ==========================
@@ -62,8 +62,6 @@ scrutiny regardless). Secondly, if you edit under an IP address you may be shari
 (due to being flagged as a source of 'vandalism') your edits will also be blocked. You can find more information on this and creating a 
 `user account <http://en.wikipedia.org/wiki/Wikipedia:Why_create_an_account>`_ in Wikipedia.
 
-If you have problems editing a particular page, contact us through the `Pfam helpdesk <https://www.ebi.ac.uk/support/interpro>`_ and we will try to help.
-
 Does Pfam agree with the content of the Wikipedia entry?
 --------------------------------------------------------
 
@@ -75,4 +73,4 @@ information on the Wikipedia page.
 Contact us
 ----------
 
-If you have problems editing or experience problems with these pages please contact us through the `Pfam helpdesk <https://www.ebi.ac.uk/support/interpro>`_.
+If you have problems editing or experience problems with these pages please contact us through the `Pfam helpdesk <https://www.ebi.ac.uk/about/contact/support/pfam>`_.
