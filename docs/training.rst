@@ -23,3 +23,10 @@ Repeats in Pfam
 ===============
 
 * `Repeats <https://www.ebi.ac.uk/training-beta/online/courses/repeats-in-pfam>`_ describes how repeats are represented in Pfam. 
+
+
+
+Finding Pfam information in the InterPro website
+================================================
+
+* `Webinar <https://www.ebi.ac.uk/training/events/finding-pfam-protein-families-data-interpro-website>`_ explaining where to find Pfam annotations in the InterPro website.
