@@ -27,8 +27,7 @@ Pfam clans
 ==========
 
 Structural properties are often more conserved than the underlying sequence. Therefore, a single profile HMM is often insufficient to 
-model an entire, diverse, structural superfamily and related Pfam entries are sometimes grouped together into clans (called sets in 
-InterPro); the relationship may be defined by:
+model an entire, diverse, structural superfamily and related Pfam entries are sometimes grouped together into clans; the relationship may be defined by:
 
 - sequence similarity (whilst still originating from a common ancestor)
 - similarity of known three-dimensional structures

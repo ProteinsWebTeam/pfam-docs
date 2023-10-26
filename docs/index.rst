@@ -18,7 +18,7 @@ Contents:
    /getting-started
    /searching-pfam
    /pfam-entry
-   /clan-set
+   /clan
    /training
    /faq
    /glossary

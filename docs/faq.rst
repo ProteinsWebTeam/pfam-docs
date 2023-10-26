@@ -22,7 +22,7 @@ What is a Pfam entry page?
 On the Pfam entry page you can view all the associated information, from annotation to structure predictions of the protein members. 
 See :doc:`Pfam entry page organisation </pfam-entry>` for a detailed description on how this data is presented.
 
-What is a clan/set?
+What is a clan?
 ===================
 
 Some of the Pfam entries are grouped into clans. Pfam defines a clan as a collection of entries that have arisen from a single evolutionary origin. 
@@ -34,9 +34,9 @@ also in the seed alignment for an entry, only the match to that entry is shown. 
 E-value.
 
 The clan pages can be accessed by following a link from the Pfam entry page, or alternatively they can be accessed by by selecting 
-`Browse + By Set <https://www.ebi.ac.uk/interpro/set/all/entry/pfam/#table>`_ in the InterPro website menu and select **Pfam** in the database section.
+`Browse + By Clan/Set <https://www.ebi.ac.uk/interpro/set/all/entry/pfam/#table>`_ in the InterPro website menu and select **Pfam** in the database section.
 
-For each clan page, you can access all the related data. See :doc:`Clan/Set page organisation </clan-set>` for more information. 
+For each clan page, you can access all the related data. See :doc:`Clan page organisation </clan>` for more information. 
 
 What criteria do you use for adding families into clans?
 =========================================================
@@ -148,7 +148,7 @@ emitted from the Insert (I) state are in lower case.
 How can I visualise the position of a Pfam entry in a structure?
 ================================================================
 
-In the **Structures** tab of a :ref:`Pfam entry <pfstruct>` or a :ref:`Pfam clan/set <clstruct>` page you can find links to relevant InterPro structure 
+In the **Structures** tab of a :ref:`Pfam entry <pfstruct>` or a :ref:`Pfam clan <clstruct>` page you can find links to relevant InterPro structure 
 pages. 
 
 In an InterPro structure page, or each chain of the structure matches to Pfam and other databases and resources are displayed in a 

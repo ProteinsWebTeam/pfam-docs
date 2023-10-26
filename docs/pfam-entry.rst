@@ -18,8 +18,8 @@ In each Pfam entry page, different tabs with relevant information are available,
 Overview
 ========
 
-The entry overview tab is the default display, where the type of Pfam entry, the short name and the clan/set (if the entry belongs to any) are shown at the top, 
-more information about how clans are defined can be found in :ref:`<summary>`. Usually, a curated description of the entry is displayed below, with the relevant 
+The entry overview tab is the default display, where the type of Pfam entry, the short name and the clan (if the entry belongs to any) are shown at the top, 
+more information about how clans are defined can be found in :doc:`Summary </summary>`. Usually, a curated description of the entry is displayed below, with the relevant 
 literature references. 
 
 If there is a Wikipedia page for the entry, the first paragraph and the box with an image of a tridimensional structure and some cross-links are displayed. The full 
