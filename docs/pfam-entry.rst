@@ -123,7 +123,7 @@ Structures
 ==========
 This tab displays a list of all the PDB structures linked to the proteins matching the Pfam entry. For each structure, you can 
 see the PDB accession, the name of the structure in PDB, and a small-sized protein sequence viewer displaying the location of the 
-Pfam entry in the protein sequence.
+Pfam entry in the protein structure chain.
 
 .. figure:: images/pfstruct.png
   :alt: Example of a Pfam entry with the Structures tab selected.

@@ -17,7 +17,7 @@ Architecture
 
 The collection of domains that are present on a protein.
 
-Clan/Set
+Clan
 ========
 A collection of related Pfam entries. The relationship may be defined by similarity of sequence, structure or profile-HMM.
 
