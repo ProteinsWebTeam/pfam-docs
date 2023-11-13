@@ -18,8 +18,8 @@ In each Pfam entry page, different tabs with relevant information are available,
 Overview
 ========
 
-The entry overview tab is the default display, where the type of Pfam entry, the short name and the clan/set (if the entry belongs to any) are shown at the top, 
-more information about how clans are defined can be found in :ref:`<summary>`. Usually, a curated description of the entry is displayed below, with the relevant 
+The entry overview tab is the default display, where the type of Pfam entry, the short name and the clan (if the entry belongs to any) are shown at the top, 
+more information about how clans are defined can be found in :doc:`Summary </summary>`. Usually, a curated description of the entry is displayed below, with the relevant 
 literature references. 
 
 If there is a Wikipedia page for the entry, the first paragraph and the box with an image of a tridimensional structure and some cross-links are displayed. The full 
@@ -50,7 +50,7 @@ settings, by clicking on the wheel icon.
   
   Example of a Pfam entry page (PF02171_) with the **Proteins** tab selected. The table is customised to show only **Reviewed** proteins. 
   The screenshot was taken when hovering the mouse over the small-size protein viewer of Uniprot 
-  `A3KPK0 <https://www.ebi.ac.uk/interpro/protein/reviewed/A3KPK0/>`_.
+  `Q6QME8 <https://www.ebi.ac.uk/interpro/protein/reviewed/Q6QME8/>`_.
 
 
 Domain architectures
@@ -123,7 +123,7 @@ Structures
 ==========
 This tab displays a list of all the PDB structures linked to the proteins matching the Pfam entry. For each structure, you can 
 see the PDB accession, the name of the structure in PDB, and a small-sized protein sequence viewer displaying the location of the 
-Pfam entry in the structure.
+Pfam entry in the protein structure chain.
 
 .. figure:: images/pfstruct.png
   :alt: Example of a Pfam entry with the Structures tab selected.

@@ -15,4 +15,4 @@ Site organisation
 
   Schematic representation of the organisation of the information in the Pfam database. The arrows represent the flow of data.
 
-Note the InterPro website uses the words **'Set'** for *'Clan'* and **'Conserved site'** for *'Motif'* for consistency with the rest of the member databases that form part of `the InterPro consortium <https://www.ebi.ac.uk/interpro/about/consortium/>`_.
+Note the InterPro website uses the words **'Conserved site'** for *'Motif'* for consistency with the rest of the member databases that form part of `the InterPro consortium <https://www.ebi.ac.uk/interpro/about/consortium/>`_.

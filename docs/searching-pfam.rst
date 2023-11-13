@@ -51,8 +51,8 @@ This text box allows you to go quickly to the relevant page in the InterPro site
     - Pfam entry page
   * - Pfam identifier or name
     - Pfam entry page
-  * - Set/clan identifier
-    - Pfam Set/clan page
+  * - Clan identifier
+    - Pfam Clan page
   * - UniProt accession
     - IntePro protein page, which includes Pfam matches (with coordinates)
   * - Gene names
