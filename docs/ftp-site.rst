@@ -70,7 +70,8 @@ The files, most of which are compressed using gzip, are:
 `Pfam-A.hmm.gz <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.gz>`_
     The Pfam HMM library for Pfam-A families 
 `Pfam-A.seed.gz <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.seed.gz>`_
-    The seed alignments of the curated families 
+    The SEED alignments of the curated families.
+    Please note that from Pfam 36.0 onwards we do not process PDB data. Hence secondary structure annotations aren't available in the SEED alignments anymore. However, `PDBe provides mappings to Pfam <https://ftp.ebi.ac.uk/pub/databases/msd/sifts/flatfiles/tsv/pdb_pfam_mapping.tsv.gz>`_ which might be of interest. 
 `Pfam-C.gz <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-C.gz>`_
     A file that contains the information about clans and the Pfam-A membership 
 `active_site.dat.gz <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/active_site.dat.gz>`_
