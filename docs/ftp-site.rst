@@ -76,8 +76,6 @@ The files, most of which are compressed using gzip, are:
     A file that contains the information about clans and the Pfam-A membership 
 `active_site.dat.gz <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/active_site.dat.gz>`_
     Tar-ball of data required for the predictions of active sites by Pfam scan. 
-`database.tar <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/database.tar>`_
-    A tar-ball of the database_files directory. 
 `database_files <ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/database_files>`_
     Directory contains two files per table from the MySQL database. The .sql.gz file contains the table structure, the .txt.gz 
     files contains the content of the table as a tab delimited file with field enclosed by a single quote ('). 
