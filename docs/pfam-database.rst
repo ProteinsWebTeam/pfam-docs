@@ -39,7 +39,7 @@ Example output:
 
 
 
-Domain Information
+Domain information
 ==================
 
 .. figure:: images/db_schema/domain.png

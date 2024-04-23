@@ -30,7 +30,7 @@ As for Pfam entry pages, you can refer to protein pages by UniProt accession.
 | https://www.ebi.ac.uk/interpro/protein/UniProt/P15498/
 
 Linking to clan pages
-=========================
+=====================
 
 As for Pfam entry and protein pages, you can refer to clan pages by clan accession. 
 

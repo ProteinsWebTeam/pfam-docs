@@ -121,6 +121,7 @@ first icon (**View matching proteins**), download the data in different formats 
 .. _pfstruct:
 Structures
 ==========
+
 This tab displays a list of all the PDB structures linked to the proteins matching the Pfam entry. For each structure, you can 
 see the PDB accession, the name of the structure in PDB, and a small-sized protein sequence viewer displaying the location of the 
 Pfam entry in the protein structure chain.
@@ -238,10 +239,10 @@ by Pfam curators. Anyone can contribute to this annotation by contacting directl
 through the **Provide feedback** button located on the right-hand side of the **Overview** tab. 
 This button links to a **Feedback** page that allows the user to suggest updates.
 
-If you know of a domain that is not present in Pfam, you can submit it to the `Pfam helpdesk <https://www.ebi.ac.uk/about/contact/support/pfam>`_ 
-and we will endeavour to build a Pfam entry for it. We ask that you supply us with a multiple sequence alignment of the domain 
-(please send the alignment file as a text file (e.g. .txt) and not in the format of a specific application such as Microsoft 
-Word (e.g. a .doc) file), and associated literature evidence if available.
+If you know of a domain that is not present in Pfam, you can submit it to the `Pfam helpdesk <https://www.ebi.ac.uk/about/contact/support/pfam>`_
+and we will endeavour to build a Pfam entry for it. Please note that our interest does not currently extend to small, species-specific protein 
+families of unknown function, unless they are supported by a publication or other significant functional predictions. We kindly ask you to 
+follow the :ref:`How can I submit a new domain? <new-annot>` section of the FAQ before submitting information for the creation of a new Pfam entry.
 
 .. figure:: images/annotation.png
   :alt: Give feedback to the curators. 

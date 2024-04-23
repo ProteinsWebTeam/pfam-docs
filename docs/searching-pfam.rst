@@ -57,11 +57,11 @@ This text box allows you to go quickly to the relevant page in the InterPro site
   * - Clan identifier
     - Pfam Clan page
   * - UniProt accession
-    - IntePro protein page, which includes Pfam matches (with coordinates)
+    - InterPro protein page, which includes Pfam matches (with coordinates)
   * - Gene names
-    - IntePro protein page, which includes Pfam matches (with coordinates)
+    - InterPro protein page, which includes Pfam matches (with coordinates)
   * - PDB identifier
-    - IntePro structure page, which includes a 3D visualisation of Pfam matches
+    - InterPro structure page, which includes a 3D visualisation of Pfam matches
   * - Proteomes
     - If it is a reference proteome, the InterPro proteome page will be displayed
   * - Keywords, free text
@@ -163,7 +163,8 @@ it may be more convenient to
 Finding proteins with a specific set of domain combinations (**Domain architectures**)
 ======================================================================================
 
-Users can search protein sequences that contain specific Pfam entries in a particular arrangement by selecting `Search + By Domain architecture <https://www.ebi.ac.uk/interpro/search/ida/>`_ 
+Users can search protein sequences that contain specific Pfam entries in a particular arrangement by selecting 
+`Search + By Domain architecture <https://www.ebi.ac.uk/interpro/search/ida/>`_ 
 in the InterPro website menu. Pfam entries that the proteins should or should not contain can be 
 included or excluded from the domain architecture. 
 The **Order of domain matters** option offers the possibility to arrange the domains in a particular order. The **Exact match** option fine tunes 
