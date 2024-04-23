@@ -17,10 +17,11 @@ and important changes to Pfam, as well as for posts discussing general issues su
 posts that are specific to Pfam `here <http://xfam.wordpress.com/tag/pfam/>`_
 
 
-Twitter
-=======
+Social media
+============
 
-You can follow the `@PfamDB <https://twitter.com/PfamDB>`_ team at EMBL-EBI.
+You can follow `@PfamDB <https://twitter.com/PfamDB>`_ on X and 
+`InterPro/Pfam <https://www.linkedin.com/company/interpro-pfam/>`_ on LinkedIn.
 
 
 
