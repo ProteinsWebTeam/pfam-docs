@@ -31,35 +31,34 @@ The response from the server will now be an JSON document, rather than an HTML p
 
 The table below lists the website vs API url (scroll the table to right/left to see the corresponding API url):
 
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Data                                            | Example website url                                                                                                    | Example API url                                                                                                                |
-+=================================================+========================================================================================================================+================================================================================================================================+
-| List all Pfam entries                           | `/entry/pfam/#table <https://www.ebi.ac.uk/interpro/entry/pfam/#table>`_                                               | `/api/entry/pfam/ <https://www.ebi.ac.uk/interpro/api/entry/pfam/>`_                                                           |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| List all Pfam entries of type Family            | `/entry/integrated/pfam/?type=family#table <https://www.ebi.ac.uk/interpro/entry/integrated/pfam/?type=family#table>`_ | `/api/entry/pfam/?type=family <https://www.ebi.ac.uk/interpro/api/entry/pfam/?type=family>`_                                   |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Information about a specific Pfam entry         | `/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/>`_                                           | `/api/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02171/>`_                                           |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| List of proteins matching a specific entry      | `/entry/pfam/PF02171/protein/UniProt/ <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/protein/UniProt/>`_           | `/api/protein/UniProt/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/api/protein/UniProt/entry/pfam/PF02171/>`_           |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Different domain architectures matching         | `/entry/pfam/PF02171/domain_architecture/ <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/domain_architecture/>`_   | `/api/entry/pfam/PF02171?ida <https://www.ebi.ac.uk:443/interpro/api/entry/pfam/PF02171?ida>`_                                 |
-|a specific entry                                 |                                                                                                                        |                                                                                                                                |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| List of PDB structures matching                 | `/entry/pfam/PF02171/structure/PDB/ <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/structure/PDB/>`_               | `/api/structure/PDB/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/api/structure/PDB/entry/pfam/PF02171/>`_               |
-|a specific entry                                 |                                                                                                                        |                                                                                                                                |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Download the PDB file of the predicted          | `/entry/pfam/PF14331/rosettafold/ <https://www.ebi.ac.uk/interpro/entry/pfam/PF14331/rosettafold/>`_                   | `/api/entry/pfam/PF14331?model:structure <https://www.ebi.ac.uk:443/interpro/api/entry/pfam/PF14331?model:structure>`_         |
-|structure from RoseTTAFold                       |                                                                                                                        |                                                                                                                                |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-|                                                 |                                                                                                                        |                                                                                                                                |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| List all Pfam clans                             | `/set/all/entry/pfam/#table <https://www.ebi.ac.uk/interpro/set/all/entry/pfam/#table>`_                               | `/api/set/pfam <https://www.ebi.ac.uk/interpro/api/set/pfam>`_                                                                 |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| List of Pfam entries in                         | `/set/pfam/CL0219/entry/pfam/ <https://www.ebi.ac.uk/interpro/set/pfam/CL0219/entry/pfam/>`_                           | `/api/entry/pfam/set/pfam/CL0219?page_size=100 <https://www.ebi.ac.uk/interpro/api/entry/pfam/set/pfam/CL0219?page_size=100>`_ |
-|a specific clan                                  |                                                                                                                        |                                                                                                                                |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| General information about a specific clan       | `/set/pfam/CL0219/ <https://www.ebi.ac.uk/interpro/set/pfam/CL0219/>`_                                                 | `/api/set/pfam/CL0219 <https://www.ebi.ac.uk/interpro/api/set/pfam/CL0219>`_                                                   |
-+-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| Data                                                     | Example website url                                                                                                    | Example API url                                                                                                                |
++==========================================================+========================================================================================================================+================================================================================================================================+
+| List all Pfam entries                                    | `/entry/pfam/#table <https://www.ebi.ac.uk/interpro/entry/pfam/#table>`_                                               | `/api/entry/pfam/ <https://www.ebi.ac.uk/interpro/api/entry/pfam/>`_                                                           |
++----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| List all Pfam entries of type Family                     | `/entry/integrated/pfam/?type=family#table <https://www.ebi.ac.uk/interpro/entry/integrated/pfam/?type=family#table>`_ | `/api/entry/pfam/?type=family <https://www.ebi.ac.uk/interpro/api/entry/pfam/?type=family>`_                                   |
++----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| Information about a specific Pfam entry                  | `/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/>`_                                           | `/api/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02171/>`_                                           |
++----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| List of proteins matching a specific entry               | `/entry/pfam/PF02171/protein/UniProt/ <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/protein/UniProt/>`_           | `/api/protein/UniProt/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/api/protein/UniProt/entry/pfam/PF02171/>`_           |
++----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| Different domain architectures matching a specific entry | `/entry/pfam/PF02171/domain_architecture/ <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/domain_architecture/>`_   | `/api/entry/pfam/PF02171?ida <https://www.ebi.ac.uk:443/interpro/api/entry/pfam/PF02171?ida>`_                                 |
++----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| List of PDB structures matching a specific entry         | `/entry/pfam/PF02171/structure/PDB/ <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/structure/PDB/>`_               | `/api/structure/PDB/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/api/structure/PDB/entry/pfam/PF02171/>`_               |
++----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+|                                                          |                                                                                                                        |                                                                                                                                |
++----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| List all Pfam clans                                      | `/set/all/entry/pfam/#table <https://www.ebi.ac.uk/interpro/set/all/entry/pfam/#table>`_                               | `/api/set/pfam <https://www.ebi.ac.uk/interpro/api/set/pfam>`_                                                                 |
++----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| List of Pfam entries in a specific clan                  | `/set/pfam/CL0219/entry/pfam/ <https://www.ebi.ac.uk/interpro/set/pfam/CL0219/entry/pfam/>`_                           | `/api/entry/pfam/set/pfam/CL0219?page_size=100 <https://www.ebi.ac.uk/interpro/api/entry/pfam/set/pfam/CL0219?page_size=100>`_ |
++----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| General information about a specific clan                | `/set/pfam/CL0219/ <https://www.ebi.ac.uk/interpro/set/pfam/CL0219/>`_                                                 | `/api/set/pfam/CL0219 <https://www.ebi.ac.uk/interpro/api/set/pfam/CL0219>`_                                                   |
++----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+|                                                          |                                                                                                                        |                                                                                                                                |
++----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| List of Pfam entries matching a protein                  | `/protein/UniProt/P00789/entry/pfam/#table <https://www.ebi.ac.uk/interpro/protein/UniProt/P00789/entry/pfam/#table>`_ | `/api/protein/uniprot/P00789/entry/pfam <https://www.ebi.ac.uk/interpro/api/protein/uniprot/P00789/entry/pfam>`_               |
++----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+
 
 Available outputs formats
 -------------------------
@@ -326,6 +325,127 @@ You can retrieve a sub-set of the data in a protein page as a JSON document usin
             "similar_proteins": 10280
         }
     }
+  }
+
+Pfam entries matching in a protein
+-------------------------------
+
+You can retrieve the list of Pfam entries matching a protein as a JSON document using any of the following URL:
+`api/protein/uniprot/P00789/entry/pfam <https://www.ebi.ac.uk/interpro/api/protein/uniprot/P00789/entry/pfam>`_, where the Pfam entries are found in `entry_subset`. Please note that the start and end positions
+refer to the protein coordinates.
+
+.. code-block:: bash
+
+  HTTP 200 OK
+  Allow: GET, HEAD
+  Content-Type: application/json
+  InterPro-Version: 99.0
+  InterPro-Version-Minor: 0
+  Vary: Accept
+
+  {
+      "metadata": {
+          "accession": "P00789",
+          "id": "CANX_CHICK",
+          "source_organism": {
+              "taxId": "9031",
+              "scientificName": "Gallus gallus",
+              "fullName": "Gallus gallus (Chicken)"
+          },
+          "name": "Calpain-1 catalytic subunit",
+          "description": [
+              "Calcium-regulated non-lysosomal thiol-protease which catalyze limited proteolysis of substrates involved in cytoskeletal remodeling and signal transduction"
+          ],
+          "length": 705,
+          "sequence": "MMPFGGIAARLQRDRLRAEGVGEHNNAVKYLNQDYEALKQECIESGTLFRDPQFPAGPTALGFKELGPYSSKTRGVEWKRPSELVDDPQFIVGGATRTDICQGALGDCWLLAAIGSLTLNEELLHRVVPHGQSFQEDYAGIFHFQIWQFGEWVDVVVDDLLPTKDGELLFVHSAECTEFWSALLEKAYAKLNGCYESLSGGSTTEGFEDFTGGVAEMYDLKRAPRNMGHIIRKALERGSLLGCSIDITSAFDMEAVTFKKLVKGHAYSVTAFKDVNYRGQQEQLIRIRNPWGQVEWTGAWSDGSSEWDNIDPSDREELQLKMEDGEFWMSFRDFMREFSRLEICNLTPDALTKDELSRWHTQVFEGTWRRGSTAGGCRNNPATFWINPQFKIKLLEEDDDPGDDEVACSFLVALMQKHRRRERRVGGDMHTIGFAVYEVPEEAQGSQNVHLKKDFFLRNQSRARSETFINLREVSNQIRLPPGEYIVVPSTFEPHKEADFILRVFTEKQSDTAELDEEISADLADEEEITEDDIEDGFKNMFQQLAGEDMEISVFELKTILNRVIARHKDLKTDGFSLDSCRNMVNLMDKDGSARLGLVEFQILWNKIRSWLTIFRQYDLDKSGTMSSYEMRMALESAGFKLNNKLHQVVVARYADAETGVDFDNFVCCLVKLETMFRFFHSMDRDGTGTAVMNLAEWLLLTMCG",
+          "proteome": "UP000000539",
+          "gene": null,
+          "go_terms": [
+              {
+                  "identifier": "GO:0004198",
+                  "name": "calcium-dependent cysteine-type endopeptidase activity",
+                  "category": {
+                      "code": "F",
+                      "name": "molecular_function"
+                  }
+              },
+              {
+                  "identifier": "GO:0006508",
+                  "name": "proteolysis",
+                  "category": {
+                      "code": "P",
+                      "name": "biological_process"
+                  }
+              },
+              {
+                  "identifier": "GO:0005509",
+                  "name": "calcium ion binding",
+                  "category": {
+                      "code": "F",
+                      "name": "molecular_function"
+                  }
+              }
+          ],
+          "protein_evidence": 1,
+          "source_database": "reviewed",
+          "is_fragment": false,
+          "in_alphafold": true,
+          "ida_accession": "664e4b66bad68bfc279e99cc8deefa39a1edf04a",
+          "counters": {
+              "entries": 2,
+              "structures": 0,
+              "taxa": 1,
+              "proteomes": 1,
+              "sets": 2,
+              "similar_proteins": 10469
+          }
+      },
+      "entry_subset": [
+          {
+              "accession": "PF00648",
+              "entry_protein_locations": [
+                  {
+                      "fragments": [
+                          {
+                              "start": 49,
+                              "end": 345,
+                              "dc-status": "CONTINUOUS",
+                              "representative": false
+                          }
+                      ],
+                      "representative": false,
+                      "model": "PF00648",
+                      "score": 4.1e-127
+                  }
+              ],
+              "protein_length": 705,
+              "source_database": "pfam",
+              "entry_type": "family",
+              "entry_integrated": "ipr001300"
+          },
+          {
+              "accession": "PF01067",
+              "entry_protein_locations": [
+                  {
+                      "fragments": [
+                          {
+                              "start": 364,
+                              "end": 505,
+                              "dc-status": "CONTINUOUS",
+                              "representative": false
+                          }
+                      ],
+                      "representative": false,
+                      "model": "PF01067",
+                      "score": 1.2e-49
+                  }
+              ],
+              "protein_length": 705,
+              "source_database": "pfam",
+              "entry_type": "domain",
+              "entry_integrated": "ipr022682"
+          }
+      ]
   }
 
 Sending requests using a script
