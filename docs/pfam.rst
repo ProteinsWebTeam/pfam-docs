@@ -2,8 +2,8 @@
 About Pfam
 **********
 
-Pfam version 35.0 was produced at the `European Bioinformatics Institute <https://www.ebi.ac.uk/>`_ using a sequence database 
-called *Pfamseq*, which is based on `UniProt <http://www.uniprot.org/>`_ release 2021_03.
+Pfam version 37.0 was produced at the `European Bioinformatics Institute <https://www.ebi.ac.uk/>`_ using a sequence database 
+called *Pfamseq*, which is based on `UniProt <http://www.uniprot.org/>`_ release 2023_05.
 
 Pfam is freely available under the `Creative Commons Zero <https://creativecommons.org/publicdomain/zero/1.0/>`_ ("CC0") licence.
 
@@ -52,8 +52,8 @@ provides significant funding for Pfam (grant 221320/Z/20/Z). The current grant r
   :width: 100px
   :align: left
 
-BBSRC is supporting Pfam activities (BB/S020381/1) from November 2019 to October 2023 and has previously supported Pfam 
-activities via grants BB/L024136/1 and BB/N00521X/1.
+BBSRC is supporting Pfam activities (BB/X012492/1 and BB/X018660/1) from January 2023 to December 2026 and has previously supported Pfam 
+activities via grants BB/L024136/1, BB/N00521X/1, and BB/S020381/1.
 
 .. figure:: images/logos/hhmi_logo.jpg
   :alt: HHMI logo
