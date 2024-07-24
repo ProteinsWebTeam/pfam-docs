@@ -11,14 +11,17 @@ Searching a specific Pfam entry
 Users can navigate to specific Pfam entry pages by entering the Pfam identifier or accession number or a keyword that form part of its name 
 via three different **Search boxes**:
 
-1. When selecting the `Browse + By member database <https://www.ebi.ac.uk/interpro/entry/pfam/#table>`_ option, the search box is located in the header of the results table.
-
+1. When selecting the `Browse + By member database <https://www.ebi.ac.uk/interpro/entry/pfam/#table>`_ option, 
+the search box is located in the header of the results table.
+The user can filter these results by **Member Database Entry Type** and **InterPro state** as well as order the results 
+by accession in ascendent or descendent order by clicling on the arrow at the right side of the column title **Accession**.
 .. figure:: images/browsebymbdbpfam.png
   :alt: Selecting the 'Browse + By member database' option and Pfam.
   :width: 700
   :align: left
 
-  Example of browsing the Pfam database. A paginated list of all available Pfam entries is displayed. A **Search box** appears on top of this list.
+  Example of browsing the Pfam database. A paginated list of all available Pfam entries is displayed. 
+  A **Search box** appears on top of this list.
 
 2. After selecting `Search + By text <https://www.ebi.ac.uk/interpro/search/text/>`_, a larger text box is shown in the center of the page.
 
