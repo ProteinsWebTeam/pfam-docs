@@ -14,13 +14,14 @@ via three different **Search boxes**:
 1. When selecting the `Browse + By member database <https://www.ebi.ac.uk/interpro/entry/pfam/#table>`_ option, 
 the search box is located in the header of the results table.
 The results can be filtered by **Member Database Entry Type** and **InterPro state**, and can be ordered by accession in ascending or descending order by clicking on the arrow at the right side of the column name **Accession**.
+
 .. figure:: images/browsebymbdbpfam.png
   :alt: Selecting the 'Browse + By member database' option and Pfam.
   :width: 700
   :align: left
 
   Example of browsing the Pfam database. A paginated list of all available Pfam entries is displayed. 
-  A **Search box** appears on top of this list.
+  A **Search box** is available in the table header, next to the Export button.
 
 2. After selecting `Search + By text <https://www.ebi.ac.uk/interpro/search/text/>`_, a larger text box is shown in the center of the page.
 
