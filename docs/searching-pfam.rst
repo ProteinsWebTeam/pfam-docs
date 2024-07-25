@@ -13,8 +13,7 @@ via three different **Search boxes**:
 
 1. When selecting the `Browse + By member database <https://www.ebi.ac.uk/interpro/entry/pfam/#table>`_ option, 
 the search box is located in the header of the results table.
-The user can filter these results by **Member Database Entry Type** and **InterPro state** as well as order the results 
-by accession in ascendent or descendent order by clicling on the arrow at the right side of the column title **Accession**.
+The results can be filtered by **Member Database Entry Type** and **InterPro state**, and can be ordered by accession in ascending or descending order by clicking on the arrow at the right side of the column name **Accession**.
 .. figure:: images/browsebymbdbpfam.png
   :alt: Selecting the 'Browse + By member database' option and Pfam.
   :width: 700
