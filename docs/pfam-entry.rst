@@ -235,8 +235,9 @@ to minimise false positives (although they are unavoidable sometimes). The Pfam 
 UniProtKB database before every InterPro release and these are the matches shown in the :ref:`proteins` tab on the Pfam entry page.
 
 Different Pfam entries have annotations providing diverse amounts of information. Many of them have a description created 
-by Pfam curators. Anyone can contribute to this annotation by contacting directly the curators through the **Add your 
-annotation** toolbox located on the right-hand side of the **Overview** tab.
+by Pfam curators. Anyone can contribute to this annotation by contacting directly the curators 
+through the **Provide feedback** button located on the right-hand side of the **Overview** tab. 
+This button links to a **Feedback** page that allows the user to suggest updates.
 
 If you know of a domain that is not present in Pfam, you can submit it to the `Pfam helpdesk <https://www.ebi.ac.uk/about/contact/support/pfam>`_
 and we will endeavour to build a Pfam entry for it. Please note that our interest does not currently extend to small, species-specific protein 
@@ -248,7 +249,7 @@ follow the :ref:`How can I submit a new domain? <new-annot>` section of the FAQ 
   :width: 700
   :align: left
 
-  Select **Add your annotation** to give feedback to curators.
+  Select **Provide feedback** to give feedback to curators.
 
 In addition, Pfam encourages the annotation of Pfam families via Wikipedia. Below the traditional description of the Pfam entry, 
 you may find the text from a Wikipedia article that we feel provides a good description of the Pfam family. 
