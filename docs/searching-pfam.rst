@@ -93,7 +93,7 @@ with a maximum length of 40,000 amino acids. To run any online search you can fo
 
   Selecting **Search + By Sequence** in the InterPro website menu.
 
-2. Provide the FASTA formatted protein sequence(s) of interest by pasting them into the text box or by importing them from a file.
+2. Provide the FASTA formatted nucleotide or protein sequence(s) of interest by pasting them into the text box or by importing them from a file.
 
 .. figure:: images/fasta.png
   :alt: Selecting Search + By Sequence in the InterPro website menu
@@ -102,7 +102,8 @@ with a maximum length of 40,000 amino acids. To run any online search you can fo
 
   Example of protein sequence in FASTA format in the text box.
 
-3. Expand the **Advanced options**, click on **Unselect all** protein sequence applications and select **Pfam**.
+3. Expand the **Advanced options**, select the appropriate sequence type (protein -amino acids-, or RNA/DNA -nucleotides-), click on 
+**Unselect all** protein sequence applications and select **Pfam**.
 
 .. figure:: images/advanced_pf.png
   :alt: Selecting Pfam in the Advanced options drop-down
