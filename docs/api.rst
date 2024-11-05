@@ -328,7 +328,7 @@ You can retrieve a sub-set of the data in a protein page as a JSON document usin
   }
 
 Pfam entries matching in a protein
--------------------------------
+----------------------------------
 
 You can retrieve the list of Pfam entries matching a protein as a JSON document using any of the following URL:
 `api/protein/uniprot/P00789/entry/pfam <https://www.ebi.ac.uk/interpro/api/protein/uniprot/P00789/entry/pfam>`_, where the Pfam entries are found in `entry_subset`. Please note that the start and end positions

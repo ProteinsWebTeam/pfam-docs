@@ -55,8 +55,9 @@ the literature that support the relationship, e.g. common function.
 What is Pfam-N?
 ===============
 Pfam-N (N for network) provides additional Pfam matches identified by the Google Research team using deep learning approaches. You can read more about 
-it `in this initial blog post <https://xfam.wordpress.com/tag/pfam-n/>`_ and `this update <https://xfam.wordpress.com/2022/10/20/a-new-version-of-pfam-n-is-available/>`_. 
-The matches for Pfam-N are displayed under the '**Other features**' section in the protein sequence viewer.
+it `in this blog post <https://xfam.wordpress.com/2024/05/31/pfam-n-version-3-enhancing-pfam-coverage-of-uniprot-with-computer-vision-deep-learning-techniques/>`_.
+The matches for Pfam-N are displayed under the **Pfam-N** section in the protein sequence viewer and can be downloaded from the *extra.xml.gz* file for each 
+InterPro release on the `InterPro ftp <https://ftp.ebi.ac.uk/pub/databases/interpro/>`_.
 
 .. figure:: images/exampleprotviewer.png
   :alt: Example of InterPro protein page showing the protein viewer 
@@ -121,6 +122,7 @@ matches only to short stretches of the sequence but matches several times. In su
 multiple copies of the same sequence.
 
 .. _new-annot:
+
 How can I submit a new domain?
 ==============================
 

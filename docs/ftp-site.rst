@@ -51,6 +51,8 @@ This directory contains the flat-files for the current release. Some of these fi
 Please check the sizes on the FTP site before trying to download them over a slow connection. 
 The files, most of which are compressed using gzip, are:
 
+`Pfam-A.clans.tsv.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.clans.tsv.gz>`_
+    A tab separated file containing Pfam-A family and clan information for all Pfam-A families 
 `Pfam-A.dead.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.dead.gz>`_
     Listing of families that have been deleted from the database 
 `Pfam-A.fasta.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.fasta.gz>`_
@@ -61,14 +63,14 @@ The files, most of which are compressed using gzip, are:
     this file contained matches against the whole of UniProtKB). 
 `Pfam-A.full.uniprot.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.full.uniprot.gz>`_
     The full alignments of the curated families, searched against UniProtKB. 
-`Pfam-A.full.metagenomics.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.full.metagenomics.gz>`_
-    The full alignments of the curated families, searched against Metagenomic proteins. 
-`Pfam-A.full.ncbi.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.full.ncbi.gz>`_
-    The full alignments of the curated families, searched against NCBI GenPept proteins. 
 `Pfam-A.hmm.dat.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.dat.gz>`_
     A data file that contains information about each Pfam-A family 
 `Pfam-A.hmm.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.gz>`_
     The Pfam HMM library for Pfam-A families 
+`Pfam-A.regions.tsv.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.regions.tsv.gz>`_
+    A tab separated file containing UniProtKB reference proteome sequences and Pfam-A family information 
+`Pfam-A.regions.uniprot.tsv.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.regions.uniprot.tsv.gz>`_
+   A tab separated file containing UniProtKB sequences and Pfam-A family information
 `Pfam-A.seed.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.seed.gz>`_
     The SEED alignments of the curated families.
     Please note that from Pfam 36.0 onwards we do not process PDB data. Hence secondary structure annotations aren't available in the SEED alignments anymore. However, `PDBe provides mappings to Pfam <https://ftp.ebi.ac.uk/pub/databases/msd/sifts/flatfiles/tsv/pdb_pfam_mapping.tsv.gz>`_ which might be of interest. 
@@ -83,10 +85,6 @@ The files, most of which are compressed using gzip, are:
     Stores the change status of entries between this release and last. 
 `md5_checksums <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/md5_checksums>`_
     A file containing the MD5 checksum for each release file
-`metaseq.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/metaseq.gz>`_
-    Metagenomic sequence database used in this release 
-`ncbi.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/ncbi.gz>`_
-    NCBI GenPept sequence database used in this release. 
 `pdbmap.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/pdbmap.gz>`_
     Mapping between PDB structures and Pfam domains. 
 `pfamseq.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/pfamseq.gz>`_
@@ -101,12 +99,6 @@ The files, most of which are compressed using gzip, are:
     Data files from UniProt containing TrEMBL annotations. 
 `userman.txt <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/userman.txt>`_
     File containing information about the flatfile format 
-`Pfam-A.regions.tsv.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.regions.tsv.gz>`_
-    A tab separated file containing UniProtKB reference proteome sequences and Pfam-A family information 
-`Pfam-A.regions.uniprot.tsv.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.regions.uniprot.tsv.gz>`_
-   A tab separated file containing UniProtKB sequences and Pfam-A family information
-`Pfam-A.clans.tsv.gz <https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.clans.tsv.gz>`_
-    A tab separated file containing Pfam-A family and clan information for all Pfam-A families 
 
 .. _mappings:
 

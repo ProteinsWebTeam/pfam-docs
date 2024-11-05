@@ -11,8 +11,8 @@ A value of 1 is what would be expected just by chance. In principle, all you nee
 
 E-values are dependent on the size of the database searched, so we use a second system in-house for maintaining Pfam models, based on a bit score (see below), 
 which is independent of the size of the database searched. For each Pfam family, we set a bit score gathering (GA) threshold by hand, such that all sequences 
-scoring at or above this threshold appear in the full alignment. It works out that a bit score of 24 equates to an E-value of approximately 0.1, and a score 27 
-of to approximately 0.01. From the gathering threshold both a "trusted cutoff" (TC) and a "noise cutoff" (NC) are recorded automatically. The TC is the score for 
+scoring at or above this threshold appear in the full alignment. It works out that a bit score of 24 equates to an E-value of approximately 0.1, and a score of 27 
+to approximately 0.01. From the gathering threshold both a "trusted cutoff" (TC) and a "noise cutoff" (NC) are recorded automatically. The TC is the score for 
 the next highest scoring match above the GA, and the NC is the score for the sequence next below the GA, i.e. the highest scoring sequence not included in the 
 full alignment.
 

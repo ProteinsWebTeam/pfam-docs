@@ -46,7 +46,7 @@ Recommended shapes:
 - disulphide bridges: bridge
 - signal peptide: diamond
 
-.. figure:: images/nightingale_dom_graph.png
+.. figure:: images/graphics/nightingale_dom_graph.png
   
   Example of a domain visualisation using Nightingale v4.
 
@@ -73,7 +73,7 @@ The sequence
 
 The base sequence, undecorated by any domains or features, is represented by a plain grey bar: 
 
-.. figure:: images/seq.png
+.. figure:: images/graphics/seq.png
     :width: 200
     :align: center
 
@@ -105,7 +105,7 @@ itself. In most cases, you can click on the domains to visit the "family page" f
 should also display a tooltip showing the domain name, as well as the start and end positions of the domain. 
 
  
-.. figure:: images/seqDomain.png
+.. figure:: images/graphics/seqDomain.png
     :width: 200
     :align: center
 
@@ -152,7 +152,7 @@ the C-terminal side of the domain graphic is drawn with a jagged edge. In some r
 through either of the first or last positions of the HMM, in which case both sides are drawn with jagged edges. Examples of all 
 three cases are shown below.
 
-.. figure:: images/partial.png
+.. figure:: images/graphics/partial.png
     :width: 200
     :align: center
 
@@ -201,7 +201,7 @@ Repeat/motif
 domains of type family and domain, repeats and motifs are represented by rectangles with straight edges. As for families and 
 domains, partial matches are represented with jagged edges.  
 
-.. figure:: images/repeat.png
+.. figure:: images/graphics/repeat.png
     :width: 100
     :align: center
 
@@ -270,7 +270,7 @@ domains can be functionally tolerated.
 To represent this arrangement of domain graphically, the discontinuous domain is represented in two parts (as shown below). These two 
 parts are joined by a line bridging them. 
  
-.. figure:: images/nested.png
+.. figure:: images/graphics/nested.png
     :width: 100
     :align: center
 
@@ -330,7 +330,7 @@ In addition to domains, smaller sequences motifs are represented by the domain g
 regions that are drawn and they are therefore often obscured by, for example, a Pfam-A graphic being drawn over the top of them. An 
 example of each motif is shown below. 
 
-.. figure:: images/motifs.png
+.. figure:: images/graphics/motifs.png
     :width: 100
     :align: center
 
@@ -431,7 +431,7 @@ Other Sequence features
 Below is a demonstration of how *disulphide bridges* and *active site residues* can be represented. Each of these features can appear 
 above or below the sequence, but in the example below the disulphide bridges are shown above the sequence and the active site residues below the line.
 
-.. figure:: images/activeSite.png
+.. figure:: images/graphics/activeSite.png
     :width: 200
     :align: center
 
@@ -618,7 +618,7 @@ A wide range of different lollipop styles can be create by combining different l
 The lollipop head can be drawn as a square, circle or diamond, as a simple coloured bar, or as an arrow (pointing away from the sequence) 
 or a "pointer" (an arrow pointing towards the sequence). 
 
-.. figure:: images/lollipop.png
+.. figure:: images/graphics/lollipop.png
     :width: 100
     :align: center
 
@@ -699,7 +699,7 @@ Tooltips
 If appropriate metadata are present in the sequence description, the domain graphics library can also add tooltips to the image. The example 
 below shows a domain graphic and its description includes the necessary metadata for generating tooltips.
 
-.. figure:: images/tooltip.png
+.. figure:: images/graphics/tooltip.png
     :width: 500
     :align: center
 
