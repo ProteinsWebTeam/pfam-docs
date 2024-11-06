@@ -24,7 +24,6 @@ See :doc:`Pfam entry page organisation </pfam-entry>` for a detailed description
 
 What is a clan?
 ===============
-===============
 
 Some of the Pfam entries are grouped into clans. Pfam defines a clan as a collection of entries that have arisen from a single evolutionary origin. 
 Evidence of their evolutionary relationship can be in the form of similarity in tertiary structures, or, when structures are not available, from common 
@@ -40,7 +39,6 @@ The clan pages can be accessed by following a link from the Pfam entry page, or 
 For each clan page, you can access all the related data. See :doc:`Clan page organisation </clan>` for more information. 
 
 What criteria do you use for adding families into clans?
-========================================================
 ========================================================
 
 We use a variety of measures. Where possible we do use experimental and predicted structures to guide us and that is always the gold standard. 
@@ -155,27 +153,6 @@ In addition to the sequence alignment, to build the Pfam SEED, we also need you 
 - Your ORCID ID, to add you as an author of the Pfam entry
 
 If you know of a domain/family that is not present in Pfam, you can submit it to the `Pfam helpdesk <https://www.ebi.ac.uk/about/contact/support/pfam>`_ and we will endeavour to build a Pfam entry for it. Please note that our interest does not currently extend to small, species-specific protein families of unknown function, unless they are supported by a publication or other significant functional predictions.
-
-Pfam SEED
----------
-We need at least one sequence to start building a model. Here are some options:
-
-- Sequence UniProt ID, from the UniProt Reference Proteomes if possible, and the coordinates (start and end) when appropriate (if it is a domain, or motif). This is the preferred submission form for us.
-- Sequence/MSA in FASTA format
-- Sequence/MSA in a text file (e.g. *.txt*)
-
-If sequences are not in UniProt, we won't be able to build a model as we need UniProt IDs and versions (Stockholm format). When possible, try not to submit gene IDs in the alignments, give UniProt IDs instead.
-
-Pfam description
-----------------
-
-In addition to the sequence alignment, to build the Pfam SEED, we also need you to provide:
-
-- Suggested name and ID for the Pfam entry
-- Description of the protein/domain function if known
-- Reference to a scientific publication whenever possible
-- Your ORCID ID, to add you as an author of the Pfam entry
-
 
 Can I search my protein against Pfam?
 =====================================
