@@ -20,7 +20,7 @@ Contents:
    /pfam-entry
    /clan
    /training
-   /faq
+   /pfam-faq
    /glossary
    /scores
    /citing-pfam

@@ -39,4 +39,4 @@ As for Pfam entry and protein pages, you can refer to clan pages by clan accessi
 | https://www.ebi.ac.uk/interpro/set/pfam/CL0192/
 
 Even though we really appreciate links to these pages from your website, please don't try to programmatically extract information from them, 
-but use the :doc:`InterPro API </restful-interface>` instead.
+but use the :doc:`InterPro API </api>` instead.
