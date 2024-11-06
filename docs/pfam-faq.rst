@@ -24,6 +24,7 @@ See :doc:`Pfam entry page organisation </pfam-entry>` for a detailed description
 
 What is a clan?
 ===============
+===============
 
 Some of the Pfam entries are grouped into clans. Pfam defines a clan as a collection of entries that have arisen from a single evolutionary origin. 
 Evidence of their evolutionary relationship can be in the form of similarity in tertiary structures, or, when structures are not available, from common 
@@ -40,6 +41,7 @@ For each clan page, you can access all the related data. See :doc:`Clan page org
 
 What criteria do you use for adding families into clans?
 ========================================================
+========================================================
 
 We use a variety of measures. Where possible we do use experimental and predicted structures to guide us and that is always the gold standard. 
 We also intend to harmonise this organisation with the `ECOD classification <http://prodata.swmed.edu/ecod/>`_.
@@ -55,6 +57,9 @@ the literature that support the relationship, e.g. common function.
 What is Pfam-N?
 ===============
 Pfam-N (N for network) provides additional Pfam matches identified by the Google Research team using deep learning approaches. You can read more about 
+it `in this blog post <https://xfam.wordpress.com/2024/05/31/pfam-n-version-3-enhancing-pfam-coverage-of-uniprot-with-computer-vision-deep-learning-techniques/>`_.
+The matches for Pfam-N are displayed under the **Pfam-N** section in the protein sequence viewer and can be downloaded from the *extra.xml.gz* file for each 
+InterPro release on the `InterPro ftp <https://ftp.ebi.ac.uk/pub/databases/interpro/>`_.
 it `in this blog post <https://xfam.wordpress.com/2024/05/31/pfam-n-version-3-enhancing-pfam-coverage-of-uniprot-with-computer-vision-deep-learning-techniques/>`_.
 The matches for Pfam-N are displayed under the **Pfam-N** section in the protein sequence viewer and can be downloaded from the *extra.xml.gz* file for each 
 InterPro release on the `InterPro ftp <https://ftp.ebi.ac.uk/pub/databases/interpro/>`_.
@@ -81,9 +86,8 @@ domains and important sites through the use of predictive models, known as signa
 as member databases). One of it 13 member databases is Pfam. For further information you can explore the 
 `InterPro About pages <https://www.ebi.ac.uk/interpro/about/interpro/>`_.
 
-Members of the :doc:`Pfam team </team-members>` at the EMBL-EBI are also part of the `InterPro team <https://www.ebi.ac.uk/interpro/about/team/>`_. In this way, 
-while both protein resources are independently maintained, there is a really close relation between them, with feedback constantly going in both directions to 
-improve protein classification.
+Members of the :doc:`Pfam team </team-members>` at the EMBL-EBI are also part of the `InterPro team <https://www.ebi.ac.uk/interpro/about/team/>`_. In this way, while both protein resources are independently maintained, there is a really close relation between them, with feedback constantly going in both 
+directions to improve protein classification.
 
 This Pfam entry is not integrated into InterPro, is it useful anyway?
 =====================================================================
@@ -97,7 +101,7 @@ Is possible to build Wise2 with HMMER3 support?
 The way we get round the problem with the difference in HMMER versions, is to convert the profile HMMs that are in HMMER3 format to HMMER2 format using 
 the HMMER3 program "hmconvert" (with -2) flag. To make the searches feasible, we screen the DNA for potential domains using ncbi-blast and the 
 Pfam-A.fasta as a target library. GeneWise is then used to calculate a subset of profile HMMs against the DNA. There is some down-weighting of the 
-bits-per-position between H2 and H3 HMMs that the conversion does not account for, leading inevitably to some false negatives for some families/sequences. 
+bits-per-position between H2 and H3 HMMs that the conversion does not account for, leading inevitably to some false negatives for some families/sequences.
 However, until GeneWise is patched to deal with HMMER3 models, this is the best course of action.
 
 How can I search Pfam locally?
@@ -123,8 +127,32 @@ multiple copies of the same sequence.
 
 .. _new-annot:
 
+.. _new-annot:
+
 How can I submit a new domain?
 ==============================
+
+If you know of a domain/family that is not present in Pfam, you can submit it to the `Pfam helpdesk <https://www.ebi.ac.uk/about/contact/support/pfam>`_ and we will endeavour to build a Pfam entry for it. Please note that our interest does not currently extend to small, species-specific protein families of unknown function, unless they are supported by a publication or other significant functional predictions.
+
+Pfam SEED
+---------
+We need at least one sequence to start building a model. Here are some options:
+
+- Sequence UniProt ID, from the UniProt Reference Proteomes if possible, and the coordinates (start and end) when appropriate (if it is a domain, or motif). This is the preferred submission form for us.
+- Sequence/MSA in FASTA format
+- Sequence/MSA in a text file (e.g. *.txt*)
+
+If sequences are not in UniProt, we won't be able to build a model as we need UniProt IDs and versions (Stockholm format). When possible, try not to submit gene IDs in the alignments, give UniProt IDs instead.
+
+Pfam description
+----------------
+
+In addition to the sequence alignment, to build the Pfam SEED, we also need you to provide:
+
+- Suggested name and ID for the Pfam entry
+- Description of the protein/domain function if known
+- Reference to a scientific publication whenever possible
+- Your ORCID ID, to add you as an author of the Pfam entry
 
 If you know of a domain/family that is not present in Pfam, you can submit it to the `Pfam helpdesk <https://www.ebi.ac.uk/about/contact/support/pfam>`_ and we will endeavour to build a Pfam entry for it. Please note that our interest does not currently extend to small, species-specific protein families of unknown function, unless they are supported by a publication or other significant functional predictions.
 
@@ -157,7 +185,7 @@ Of course! Please look at the :ref:`sequence search <search-by-sequence>` sectio
 What is the difference between the '-' and '.' characters in your full alignments?
 ==================================================================================
 
-The '-' and '.' characters both represent gap characters. However they do tell you some extra information about how the profile HMM has generated the alignment. 
+The '-' and '.' characters both represent gap characters. However they do tell you some extra information about how the profile HMM has generated the alignment.
 The '-' symbols are where the alignment of the sequence has used a delete state in the profile HMM to jump past a match state. This means that the sequence is 
 missing a column that the profile HMM was expecting to be there. The '.' character is used to pad gaps where one sequence in the alignment has sequence from 
 the profile HMMs insert state. See the alignment below where both characters are used. The profile HMM states emitting each column are shown. Note that residues 
@@ -196,7 +224,7 @@ Why don't you have domain YYYY in Pfam?
 =======================================
 
 We are very keen to be alerted to new domains. If you can provide us with a multiple sequence alignment then we will try hard to incorporate it into the 
-database. If you know of a domain, but don't have a multiple sequence alignment, we still want to know, for simple families just one sequence is enough. 
+database. If you know of a domain, but don't have a multiple sequence alignment, we still want to know, for simple families just one sequence is enough.
 Again contact the `Pfam helpdesk <https://www.ebi.ac.uk/about/contact/support/pfam>`_.
 
 Are there other databases which do this?
