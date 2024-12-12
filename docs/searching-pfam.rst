@@ -23,6 +23,7 @@ The results can be filtered by **Member Database Entry Type** and **InterPro sta
 
   Example of browsing the Pfam database. A paginated list of all available Pfam entries is displayed. 
   A **Search box** is available in the table header, next to the Download button.
+  A **Search box** is available in the table header, next to the Download button.
 
 2. After selecting `Search + By text <https://www.ebi.ac.uk/interpro/search/text/>`_, a text box is displayed.
 
@@ -72,9 +73,9 @@ Searching a protein sequence against Pfam
 =========================================
 
 Searching a protein sequence against the Pfam library of HMMs will enable you to find out the domain architecture of the protein, 
-and thus what its potential function might be. If your protein is present UniProt version used to make the current 
-release of InterPro, we have already calculated its domain architecture. You can access this by entering the Uniprot sequence 
-identifier in any of the Search boxes mentioned above (see :ref:`Searching a specific Pfam entry <search-boxes>`).
+and thus what its potential function might be. If your protein is present in the UniProt version used to make the current 
+release of InterPro, we have already calculated its domain architecture. You can access this by entering the Uniprot 
+accession in any of the Search boxes mentioned above (see :ref:`Searching a specific Pfam entry <search-boxes>`).
 
 .. _search-by-sequence:
 
@@ -144,7 +145,7 @@ the results can be downloaded in TSV, JSON, XML and GFF formats, thereafter, if 
 the results are only available in JSON format.
 
 All the submitted sequences are listed in a table. Clicking on the name in the **Sequence** column allows to 
-access the results summarised in a protein sequence viewer (see the :ref:`protein viewer <protein-viewer>` section below).
+access the results summarised in a sequence viewer (see the :ref:`sequence viewer <protein-viewer>` section below).
 
 .. figure:: images/results_list_seq.png
   :alt: InterProScan search results (Sequences) page
@@ -154,21 +155,21 @@ access the results summarised in a protein sequence viewer (see the :ref:`protei
   List of sequences for a search, select one sequence to view the Pfam matches.
 
 .. _protein-viewer:
-Interpreting the protein viewer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Interpreting the sequence viewer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-All Pfam entries are displayed in the protein sequence viewer. They are grouped by entry types (family, domain, repeat, site). 
+All Pfam entries are displayed in the sequence viewer. They are grouped by entry types (family, domain, repeat, site). 
 The coloured bars indicate the location of entry matches on the protein sequence. 
 The first line of the Domains category contains a summary of the domains found in the protein.
 On the right-hand side, the Pfam accession 
 and short name and, when the Pfam is integrated, the InterPro entry information is displayed above the Pfam information. The Pfam 
 entries that remain unintegrated in InterPro entries are displayed separately in the *Unintegrated* category.
 
-On top of the protein sequence viewer, different icons allow to display the viewer on full screen and zoom in and out of the protein sequence. 
+On top of the sequence viewer, different icons allow to display the viewer on full screen and zoom in and out of the protein sequence. 
 The **Options** button offers the possibility to personalise the display by changing the colour code of the entries, the labels 
 (accession number, short name and/or description can be displayed on the right-hand side of the viewer). The tooltip should be kept active 
 to see a pop-up box with the accession number, description and amino acid coordinates of the match of a Pfam and the InterPro entry accession 
-when hovering the mouse over it. Snapshots of the results can be taken in PNG format. Results can be downloaded in multiple formats by clicking 
+when hovering the mouse over it. Results can be downloaded in multiple formats by clicking 
 on the **Download** button.
 
 .. protein used: https://www.ebi.ac.uk/interpro/protein/reviewed/A0LEL7/
@@ -178,8 +179,8 @@ on the **Download** button.
   :width: 700
   :align: left
 
-  Results of a protein sequence search. The integrated and unintegrated Pfam entries matching this protein sequence are shown in the 
-  protein viewer. The colour of the matches is customised as **Colour By + Member Database** for all Pfam entries to be 
+  Results of a protein sequence search. The integrated and unintegrated Pfam entries matching this  sequence are shown in the 
+  sequence viewer. The colour of the matches is customised as **Colour By + Member Database** for all Pfam entries to be 
   highlighted in blue.
 
 

@@ -19,7 +19,6 @@ Contents:
    /searching-pfam
    /pfam-entry
    /clan
-   /training
    /pfam-faq
    /glossary
    /scores
@@ -43,7 +42,7 @@ Pfam is freely available under the `Creative Commons Zero (“CC0”) licence <h
 Citing Pfam
 ===========
 
-If you use Pfam in your work, please consider citing the :ref:`citing-pfam:Pfam references`.
+If you use Pfam in your work, please consider citing the :ref:`citing-pfam:Latest publications`.
 
 Get in touch
 ============
