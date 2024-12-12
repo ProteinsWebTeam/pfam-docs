@@ -181,6 +181,7 @@ on the **Download** button.
 
   Results of a protein sequence search. The integrated and unintegrated Pfam entries matching this  sequence are shown in the 
   sequence viewer. The colour of the matches is customised as **Colour By + Member Database** for all Pfam entries to be 
+  highlighted in blue.
 
 
 Local sequence search
