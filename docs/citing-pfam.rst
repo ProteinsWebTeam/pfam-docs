@@ -4,22 +4,23 @@ Citing Pfam
 
 Pfam References
 ===============
+`The Pfam protein families database: embracing AI/ML <https://doi.org/10.1093/nar/gkae997>`_ T. Paysan-Lafosse, A. Andreeva, M. Blum, S. Chuguransky, T. Grego, B. Lazaro Pinto, G.A. Salazar, M.L. Bileschi, F. Llinares-López, L. Meng-Papaxanthos, L.J. Colwell, N.V. Grishin, R.D. Schaeffer, D.Clementel, S.C.E Tosatto, E. Sonnhammer, V. Wood, A. Bateman *Nucleic Acids Research* (2024) doi: 10.1093/nar/gkae997
 
-`Pfam: The protein families database in 2021 <https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkaa913/5943818?guestAccessKey=18212916-1e97-4c18-8f4d-b0ba26beeaa8>`_  J. Mistry, S. Chuguransky, L. Williams, M. Qureshi, G.A. Salazar, E.L.L. Sonnhammer, S.C.E. Tosatto, L. Paladin, S. Raj, L.J. Richardson, R.D. Finn, A. Bateman *Nucleic Acids Research* (2020) doi: 10.1093/nar/gkaa913
+`Pfam: The protein families database in 2021 <https://doi.org/10.1093/nar/gkaa913>`_  J. Mistry, S. Chuguransky, L. Williams, M. Qureshi, G.A. Salazar, E.L.L. Sonnhammer, S.C.E. Tosatto, L. Paladin, S. Raj, L.J. Richardson, R.D. Finn, A. Bateman *Nucleic Acids Research* (2020) Database Issue 49:D412–D419
 
-`The Pfam protein families database in 2019 <https://doi.org/10.1093/nar/gky995>`_: S. El-Gebali, J. Mistry, A. Bateman, S.R. Eddy, A. Luciani, S.C. Potter, M. Qureshi, L.J. Richardson, G.A. Salazar, A. Smart, E.L.L. Sonnhammer, L. Hirsh, L. Paladin, D. Piovesan, S.C.E. Tosatto, R.D. Finn *Nucleic Acids Research* (2019) doi: 10.1093/nar/gky995
+`The Pfam protein families database in 2019 <https://doi.org/10.1093/nar/gky995>`_: S. El-Gebali, J. Mistry, A. Bateman, S.R. Eddy, A. Luciani, S.C. Potter, M. Qureshi, L.J. Richardson, G.A. Salazar, A. Smart, E.L.L. Sonnhammer, L. Hirsh, L. Paladin, D. Piovesan, S.C.E. Tosatto, R.D. Finn *Nucleic Acids Research* (2019) Database Issue 47:D427–D432
 
-`The Pfam protein families database: towards a more sustainable future <https://nar.oxfordjournals.org/content/44/D1/D279.long>`_: R.D. Finn, P. Coggill, R.Y. Eberhardt, S.R. Eddy, J. Mistry, A.L. Mitchell, S.C. Potter, M. Punta, M. Qureshi, A. Sangrador-Vegas, G.A. Salazar, J. Tate, A. Bateman *Nucleic Acids Research* (2016)  Database Issue 44:D279-D285
+`The Pfam protein families database: towards a more sustainable future <https://nar.oxfordjournals.org/content/44/D1/D279.long>`_: R.D. Finn, P. Coggill, R.Y. Eberhardt, S.R. Eddy, J. Mistry, A.L. Mitchell, S.C. Potter, M. Punta, M. Qureshi, A. Sangrador-Vegas, G.A. Salazar, J. Tate, A. Bateman *Nucleic Acids Research* (2016) Database Issue 44:D279-D285
 
-`The Pfam protein families database <https://nar.oxfordjournals.org/content/42/D1/D222.long>`_: R.D. Finn, A. Bateman, J. Clements, P. Coggill, R.Y. Eberhardt, S.R. Eddy, A. Heger, K. Hetherington, L. Holm, J. Mistry, E.L.L. Sonnhammer, J. Tate, M. Punta *Nucleic Acids Research* (2014)  Database Issue 42:D222-D230
+`The Pfam protein families database <https://nar.oxfordjournals.org/content/42/D1/D222.long>`_: R.D. Finn, A. Bateman, J. Clements, P. Coggill, R.Y. Eberhardt, S.R. Eddy, A. Heger, K. Hetherington, L. Holm, J. Mistry, E.L.L. Sonnhammer, J. Tate, M. Punta *Nucleic Acids Research* (2014) Database Issue 42:D222-D230
 
-`The Pfam protein families database <https://nar.oxfordjournals.org/content/40/D1/D290.full>`_: M. Punta, P.C. Coggill, R.Y. Eberhardt, J. Mistry, J. Tate, C. Boursnell, N. Pang, K. Forslund, G. Ceric, J. Clements, A. Heger, L. Holm, E.L.L. Sonnhammer, S.R. Eddy, A. Bateman, R.D. Finn *Nucleic Acids Research* (2012)  Database Issue 40:D290-D301
+`The Pfam protein families database <https://nar.oxfordjournals.org/content/40/D1/D290.full>`_: M. Punta, P.C. Coggill, R.Y. Eberhardt, J. Mistry, J. Tate, C. Boursnell, N. Pang, K. Forslund, G. Ceric, J. Clements, A. Heger, L. Holm, E.L.L. Sonnhammer, S.R. Eddy, A. Bateman, R.D. Finn *Nucleic Acids Research* (2012) Database Issue 40:D290-D301
 
-`The Pfam protein families database <https://nar.oxfordjournals.org/cgi/content/full/38/suppl_1/D211>`_: R.D. Finn, J. Mistry, J. Tate, P. Coggill, A. Heger, J.E. Pollington, O.L. Gavin, P. Gunesekaran, G. Ceric, K. Forslund, L. Holm, E.L. Sonnhammer, S.R. Eddy, A. Bateman *Nucleic Acids Research* (2010)  Database Issue 38:D211-D222
+`The Pfam protein families database <https://nar.oxfordjournals.org/cgi/content/full/38/suppl_1/D211>`_: R.D. Finn, J. Mistry, J. Tate, P. Coggill, A. Heger, J.E. Pollington, O.L. Gavin, P. Gunesekaran, G. Ceric, K. Forslund, L. Holm, E.L. Sonnhammer, S.R. Eddy, A. Bateman *Nucleic Acids Research* (2010) Database Issue 38:D211-D222
 
-`The Pfam protein families database <https://nar.oxfordjournals.org/cgi/content/full/36/suppl_1/D281>`_: R.D. Finn, J. Tate, J. Mistry, P.C. Coggill, J.S. Sammut, H.R. Hotz, G. Ceric, K. Forslund, S.R. Eddy, E.L. Sonnhammer and A. Bateman *Nucleic Acids Research* (2008)  Database Issue 36:D281-D288
+`The Pfam protein families database <https://nar.oxfordjournals.org/cgi/content/full/36/suppl_1/D281>`_: R.D. Finn, J. Tate, J. Mistry, P.C. Coggill, J.S. Sammut, H.R. Hotz, G. Ceric, K. Forslund, S.R. Eddy, E.L. Sonnhammer and A. Bateman *Nucleic Acids Research* (2008) Database Issue 36:D281-D288
 
-`Pfam: clans, web tools and services <https://nar.oxfordjournals.org/cgi/content/full/34/suppl_1/D247>`_: R.D. Finn, J. Mistry, B. Schuster-Böckler, S. Griffiths-Jones, V. Hollich, T. Lassmann, S. Moxon, M. Marshall, A. Khanna, R. Durbin, S.R. Eddy, E.L.L. Sonnhammer and A. Bateman *Nucleic Acids Research* (2006)  Database Issue 34:D247-D51
+`Pfam: clans, web tools and services <https://nar.oxfordjournals.org/cgi/content/full/34/suppl_1/D247>`_: R.D. Finn, J. Mistry, B. Schuster-Böckler, S. Griffiths-Jones, V. Hollich, T. Lassmann, S. Moxon, M. Marshall, A. Khanna, R. Durbin, S.R. Eddy, E.L.L. Sonnhammer and A. Bateman *Nucleic Acids Research* (2006) Database Issue 34:D247-D51
 
 `Enhanced protein domain discovery by using language modeling techniques from speech recognition <https://www.ncbi.nlm.nih.gov/pubmed/12668763>`_: L. Coin, A. Bateman and R. Durbin *Proc. Natl. Acad. Sci.* USA. (2003) 100(8):4516-20
 
