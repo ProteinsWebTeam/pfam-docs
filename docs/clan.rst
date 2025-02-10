@@ -27,6 +27,8 @@ Overview
 The clan **Overview** tab is the default display, where the clan accession number, its short name and the author(s) are shown at the top. A 
 description of the clan is displayed below, with the relevant literature references. 
 
+When a Wikipedia article is available for the clan, the first paragraph of the article together with the link to the Wikipedia article are shown in the **Wikipedia** section.
+
 An interactive view of the Pfam entries included in the clan is also displayed, different label types can be chosen through the 
 **Label Content** menu: Accession, Name and Short name.
 

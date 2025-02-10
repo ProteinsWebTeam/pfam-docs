@@ -21,6 +21,7 @@ open in a new tab.
 
     The **Overview** tab of the Pfam entry page displays the associated Wikipedia article when available.
 
+Some Pfam clans also have a Wikipedia page, and in this case, the **Overview** tab of the clan page will show the first paragraph of the article together with the link to the Wikipedia article.
 
 Contributing annotations
 ========================

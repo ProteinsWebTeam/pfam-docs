@@ -125,8 +125,6 @@ multiple copies of the same sequence.
 
 .. _new-annot:
 
-.. _new-annot:
-
 How can I submit a new domain?
 ==============================
 
