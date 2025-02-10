@@ -15,6 +15,7 @@ European Bioinformatics Institute (EMBL-EBI), UK
 - `Sara Chuguransky <http://www.ebi.ac.uk/about/people/sara-chuguransky>`_ - Senior Biocurator
 - `Tiago Grego <http://www.ebi.ac.uk/about/people/tiago-grego>`_ - Software developer
 - `Beatriz Lazaro Pinto <http://www.ebi.ac.uk/about/people/beatriz-lazaro-pinto>`_ - Biocurator
+- `Nicole Morveli Flores <https://www.ebi.ac.uk/people/person/nicole-morveli/>`_ - Biocurator
 - `Typhaine Paysan-Lafosse <http://www.ebi.ac.uk/about/people/typhaine-paysan-lafosse>`_ - Curation Project Leader
 
 
