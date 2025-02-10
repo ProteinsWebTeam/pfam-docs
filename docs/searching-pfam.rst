@@ -23,7 +23,6 @@ The results can be filtered by **Member Database Entry Type** and **InterPro sta
 
   Example of browsing the Pfam database. A paginated list of all available Pfam entries is displayed. 
   A **Search box** is available in the table header, next to the Download button.
-  A **Search box** is available in the table header, next to the Download button.
 
 2. After selecting `Search + By text <https://www.ebi.ac.uk/interpro/search/text/>`_, a text box is displayed.
 
