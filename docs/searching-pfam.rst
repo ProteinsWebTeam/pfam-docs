@@ -183,7 +183,7 @@ on the **Download** button.
   sequence viewer. The colour of the matches is customised as **Colour By + Member Database** for all Pfam entries to be 
 
 
-Local protein search
+Local sequence search
 --------------------
 
 Alternatively, if you have a very large number of protein searches to perform, or you do not wish to share your sequence, 
@@ -194,7 +194,7 @@ it may be more convenient to
 Finding proteins with a specific set of domain combinations (**Domain architectures**)
 ======================================================================================
 
-Users can search protein sequences that contain specific Pfam entries in a particular arrangement by selecting 
+Users can search proteins that contain specific Pfam entries in a particular arrangement by selecting 
 `Search + By Domain architecture <https://www.ebi.ac.uk/interpro/search/ida/>`_ 
 in the InterPro website menu. Pfam entries that the proteins should or should not contain can be 
 included or excluded from the domain architecture. 
