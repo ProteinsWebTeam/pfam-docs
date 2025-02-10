@@ -1,5 +1,5 @@
 ************************************
-Querying Pfam using the InterPro API 
+Querying Pfam using the InterPro API
 ************************************
 
 This is an introduction to the `InterPro API <https://www.ebi.ac.uk/interpro/api>`_ to retrieve Pfam annotations. A programmatic interface, 
@@ -17,7 +17,7 @@ A RESTful service typically sends and receives data over `HTTP <http://en.wikipe
 the same protocol that's used by websites and browsers. As such, the services provided through a RESTful interface are identified using URLs.
 
 In the InterPro website we use a different URL to provide the standard HTML representation of Pfam data and the alternative 
-programmatic JSON format through the API. 
+programmatic JSON format through the API.
 
 To see the data for a particular Pfam-A family, you would visit the following URL in your browser:
 
@@ -27,7 +27,7 @@ To retrieve the data in JSON format, just add an extra parameter, **api**, to th
 
   `/api/entry/pfam/PF02171/ <https://www.ebi.ac.uk/interpro/api/entry/pfam/PF02171/>`_
 
-The response from the server will now be an JSON document, rather than an HTML page. 
+The response from the server will now be an JSON document, rather than an HTML page.
 
 The table below lists the website vs API url (scroll the table to right/left to see the corresponding API url):
 
@@ -465,15 +465,14 @@ data about a Pfam family might be as trivial as this:
   from time import sleep
 
   BASE_URL = "https://www.ebi.ac.uk:443/interpro/api/entry/pfam/PF02171"
-  
+
   def output_list():
     #disable SSL verification to avoid config issues
     context = ssl._create_unverified_context()
-  
+
     next = BASE_URL
     last_page = False
-  
-    
+
     attempts = 0
     while next:
       try:
@@ -506,15 +505,15 @@ data about a Pfam family might be as trivial as this:
           else:
             sys.stderr.write("LAST URL: " + next)
             raise e
-  
+
       for i, item in enumerate(payload["results"]):
         sys.stdout.write(item["metadata"]["name"]["short"] + "\n")
       # Don't overload the server, give it time before asking for more
       if next:
         sleep(1)
-  
+
   if __name__ == "__main__":
     output_list()
-  
+
 
 This script prints out the short name (Piwi) for the family (`PF02171 <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/>`_). 

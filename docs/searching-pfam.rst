@@ -6,6 +6,7 @@ There are multiple ways to look for information in Pfam by using the `IntePro we
 
 .. _search-boxes:
 
+
 Searching a specific Pfam entry 
 ===============================
 
@@ -118,13 +119,13 @@ protein sequences at a time with a maximum length of 40,000 characters. To run a
 While the sequence search is running, you can continue to navigate through the website, other browser tabs or applications and will 
 get a pop-up notification when the job has been completed (this requires the browser notifications to be enabled).
 
-The results of the submitted job are accessible by selecting `Results + Your InterProScan Searches <https://www.ebi.ac.uk/interpro/result/InterProScan/#table>`_ in the InterPro website menu. This page displays the sequence searches that have been
+The results of the submitted job are accessible by selecting `Results + Your InterProScan Searches <https://www.ebi.ac.uk/interpro/result/InterProScan/#table>`_ 
+in the InterPro website menu. This page displays the sequence searches that have been
 performed in the last seven days, with the most recent one being displayed at the top. The *Status* 
 column gives an indication of whether or not the search has completed (green tick symbol / searching), if the 
 search has been saved locally (the results will still be available even after the seven days limit set up on 
 InterPro servers), or if the results have been imported (file symbol). Searches can be deleted or saved locally 
 by clicking on the bin or file icon in the *Action* column, respectively.
-
 
 .. figure:: images/results_list_jobs.png
   :alt: Selecting Results + Your InterProScan Searches
@@ -180,7 +181,6 @@ on the **Download** button.
 
   Results of a protein sequence search. The integrated and unintegrated Pfam entries matching this  sequence are shown in the 
   sequence viewer. The colour of the matches is customised as **Colour By + Member Database** for all Pfam entries to be 
-  highlighted in blue.
 
 
 Local protein search
