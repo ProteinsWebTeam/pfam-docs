@@ -55,10 +55,10 @@ All of this information is used by the Pfam curators to make a decision about wh
 the literature that support the relationship, e.g. common function.
 
 What is InterPro-N?
-===============
+===================
 InterPro-N (N for network) provides additional Pfam matches identified by the Google Research team using deep learning approaches. You can read more about 
 it `in this blog post <https://www.ebi.ac.uk/about/news/updates-from-data-resources/interpro-105-0-ai-for-protein-classification//>`_.
-The matches for InterPro-N are identified with a sparkles icon in the protein sequence viewer and can be downloaded from the EMBL-EBI FTP site.
+The matches for InterPro-N are identified with a sparkle icon in the protein sequence viewer and can be downloaded from the `InterPro ftp <https://ftp.ebi.ac.uk/pub/databases/interpro/>`_.
 
 .. figure:: images/exampleprotviewer.png
   :alt: Example of InterPro protein page showing the protein viewer 
@@ -66,9 +66,10 @@ The matches for InterPro-N are identified with a sparkles icon in the protein se
   :align: left
 
   Example of InterPro protein page for the Uniprot accession A0A1R3RGK4_. The :ref:`protein viewer <protein-viewer>` shows the integrated and unintegrated 
-  Pfam entries matching this protein sequence, as well as Pfam InterPro-N matches.
+  Pfam entries matching this protein sequence, as well as Pfam InterPro-N matches (the **Display 
+  matches from Stacked** option is selected in the **Options** menu).
   The colour code of the protein viewer is customised as 
-  **Colour By + Member Database** for all Pfam entries to be highlighted in blue. The 'Full' option is selected in 'Feature Display Mode'.
+  **Colour By + Member Database** for all Pfam entries to be highlighted in blue. The **Full** option is selected in **Feature Display Mode**.
 
 What is the relation between Pfam and InterPro?
 ===============================================
