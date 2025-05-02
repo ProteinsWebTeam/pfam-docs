@@ -58,18 +58,23 @@ What is InterPro-N?
 ===================
 InterPro-N (N for network) provides additional Pfam matches identified by the Google Research team using deep learning approaches. You can read more about 
 it `in this blog post <https://www.ebi.ac.uk/about/news/updates-from-data-resources/interpro-105-0-ai-for-protein-classification//>`_.
-The matches for InterPro-N are identified with a sparkle icon in the protein sequence viewer and can be downloaded from the `InterPro ftp <https://ftp.ebi.ac.uk/pub/databases/interpro/>`_.
+The matches for InterPro-N are identified in the :ref:`protein viewer <protein-viewer>` with a sparkle icon in the protein sequence viewer and 
+can be downloaded from the `InterPro ftp <https://ftp.ebi.ac.uk/pub/databases/interpro/>`_.
 
 .. figure:: images/exampleprotviewer.png
   :alt: Example of InterPro protein page showing the protein viewer 
   :width: 700
   :align: left
 
-  Example of InterPro protein page for the Uniprot accession A0A1R3RGK4_. The :ref:`protein viewer <protein-viewer>` shows the integrated and unintegrated 
-  Pfam entries matching this protein sequence, as well as Pfam InterPro-N matches (the **Display 
-  matches from Stacked** option is selected in the **Options** menu).
-  The colour code of the protein viewer is customised as 
-  **Colour By + Member Database** for all Pfam entries to be highlighted in blue. The **Full** option is selected in **Feature Display Mode**.
+  Example of InterPro protein page for the Uniprot accession A0A1R3RGK4_. By default, the :ref:`protein viewer <protein-viewer>` 
+  shows the integrated and unintegrated Pfam entries matching this protein sequence, as well as additional Pfam InterPro-N matches 
+  (i.e. Pfam matches predicted by InterPro-N that are not included in the 'traditional' Pfam family). These settings can be changed
+  by selecting in **Display matches from** in the **Options** menu the following options: **IntePro**, **InterPro-N** or **Stacked** 
+  (a pop-up explains these options when hovering the mouse over the information icon next to **Display matches from**). In this example,
+  the only Pfam match of the protein is an InterPro-N prediction, highlighted with the sparkle icon. 
+  
+  In addition, the colour code of the protein viewer is customised as **Colour By + Member Database** for all Pfam entries to be 
+  highlighted in blue. The **Full** option is selected in **Feature Display Mode**.
 
 What is the relation between Pfam and InterPro?
 ===============================================
