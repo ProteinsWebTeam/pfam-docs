@@ -61,21 +61,21 @@ it `in this blog post <https://www.ebi.ac.uk/about/news/updates-from-data-resour
 The matches for InterPro-N are identified in the :ref:`protein viewer <protein-viewer>` with a sparkle icon in the protein sequence viewer and 
 can be downloaded from the `InterPro ftp <https://ftp.ebi.ac.uk/pub/databases/interpro/>`_.
 
+By default, the :ref:`protein viewer <protein-viewer>` shows the integrated and unintegrated Pfam entries matching the protein 
+sequence, as well as additional Pfam InterPro-N matches (i.e. Pfam matches predicted by InterPro-N that are not included in the 
+'traditional' Pfam family). These settings can be changed by selecting in **Display matches from** in the **Options** menu the 
+following options: **IntePro**, **InterPro-N** or **Stacked** (a pop-up explains these options when hovering the mouse over the 
+information icon next to **Display matches from**). 
+
 .. figure:: images/exampleprotviewer.png
   :alt: Example of InterPro protein page showing the protein viewer 
   :width: 700
   :align: left
 
   Example of InterPro protein page for the Uniprot accession A0A1R3RGK4_. 
-  
-  By default, the :ref:`protein viewer <protein-viewer>` shows the integrated and unintegrated Pfam entries matching this protein 
-  sequence, as well as additional Pfam InterPro-N matches (i.e. Pfam matches predicted by InterPro-N that are not included in the 
-  'traditional' Pfam family). These settings can be changed by selecting in **Display matches from** in the **Options** menu the 
-  following options: **IntePro**, **InterPro-N** or **Stacked** (a pop-up explains these options when hovering the mouse over the 
-  information icon next to **Display matches from**). In this example, the only Pfam match of the protein is an InterPro-N 
-  prediction, highlighted with the sparkle icon both on the label at the right hand of the protein sequence viewer and in the Pfam 
-  accession number in the tooltip that appears when hovering the mouse over the coluored bar if the tooltip is active.
-  
+  The only Pfam match for the protein is an InterPro-N 
+  prediction, highlighted with the sparkle icon both on the label on the right hand-side of the protein sequence viewer and next to the Pfam 
+  accession in the tooltip that appears when hovering the mouse over the coloured bar if the tooltip is active.
   In addition, the colour code of the protein viewer is customised as **Colour By + Member Database** for all Pfam entries to be 
   highlighted in blue. The **Full** option is selected in **Feature Display Mode**.
 
