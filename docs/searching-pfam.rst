@@ -155,10 +155,11 @@ access the results summarised in a sequence viewer (see the :ref:`sequence viewe
   List of sequences for a search, select one sequence to view the Pfam matches.
 
 .. _protein-viewer:
+
 Interpreting the sequence viewer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-All Pfam entries are displayed in the sequence viewer. They are grouped by entry types (family, domain, repeat, site). 
+All Pfam entries, integrated or unintegrated into IntePro entries, are displayed in the sequence viewer. They are grouped by entry types (family, domain, site). 
 The coloured bars indicate the location of entry matches on the protein sequence. 
 The first line of the Domains category contains a summary of the domains found in the protein.
 On the right-hand side, the Pfam accession 

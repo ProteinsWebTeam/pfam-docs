@@ -141,7 +141,7 @@ arranged in the three-dimensional space. Often, two residues which seem distant 
 in the folded protein. 
 
 By clicking on a PDB accession, name or small image of the structure, a view of the corresponding InterPro structure page that 
-summarises all of the entries of Pfam and other databases and resources for each chain of the structure will be displayed in a 
+summarises all of the entries of Pfam and other databases and resources for each unique chain of the structure will be displayed in a 
 protein sequence viewer. 
 
 The position of each entry within the overall 3D structure can be visualised by choosing the Pfam entry 
@@ -189,6 +189,25 @@ the protein sequence viewer.
   :align: left
 
   Example of a Pfam entry page (PF02171_) with the **AlphaFold** tab selected.
+
+BFVD
+====
+
+When any of the proteins matched by the Pfam model has a structural prediction in `the Big Fantastic Virus Database (BFVD) <https://bfvd.foldseek.com/>`_, 
+a list of all the predicted structures available is displayed in this tab. For each protein in the list, its Uniprot accession, 
+name, the species it belongs to, its length, and a button that allows you to show the predicted structure of this protein in the 
+structure viewer are displayed. 
+
+It is also possible to click on the Uniprot accession to go to the InterPro protein page and go to the **BFVD** tab, where the 
+position of the different entries in the 3D structure viewer are displayed by clicking on the bar corresponding to the entry match in 
+the protein sequence viewer.
+
+.. figure:: images/pfam_page/BFVD.png
+  :alt: Example of a Pfam entry with the BFVD tab selected.
+  :width: 700
+  :align: left
+
+  Example of a Pfam entry page (`PF00721 <https://www.ebi.ac.uk/interpro/entry/pfam/PF00721/bfvd/#table>`_) with the **BFVD** tab selected.
 
 .. _pfalign:
 

@@ -7,6 +7,8 @@ Frequently Asked Questions (FAQs)
 
 .. _A1AA27: https://www.ebi.ac.uk/interpro/protein/UniProt/A1AA27/
 
+.. _A0A1R3RGK4: https://www.ebi.ac.uk/interpro/protein/UniProt/A0A1R3RGK4/
+
 What is Pfam?
 =============
 
@@ -52,25 +54,30 @@ In the absence of a structure we use:
 All of this information is used by the Pfam curators to make a decision about where families are related and we strive to find information in 
 the literature that support the relationship, e.g. common function.
 
-What is Pfam-N?
-===============
-Pfam-N (N for network) provides additional Pfam matches identified by the Google Research team using deep learning approaches. You can read more about 
-it `in this blog post <https://xfam.wordpress.com/2024/05/31/pfam-n-version-3-enhancing-pfam-coverage-of-uniprot-with-computer-vision-deep-learning-techniques/>`_.
-The matches for Pfam-N are displayed under the **Pfam-N** section in the protein sequence viewer and can be downloaded from the *extra.xml.gz* file for each 
-InterPro release on the `InterPro ftp <https://ftp.ebi.ac.uk/pub/databases/interpro/>`_.
-it `in this blog post <https://xfam.wordpress.com/2024/05/31/pfam-n-version-3-enhancing-pfam-coverage-of-uniprot-with-computer-vision-deep-learning-techniques/>`_.
-The matches for Pfam-N are displayed under the **Pfam-N** section in the protein sequence viewer and can be downloaded from the *extra.xml.gz* file for each 
-InterPro release on the `InterPro ftp <https://ftp.ebi.ac.uk/pub/databases/interpro/>`_.
+What is InterPro-N?
+===================
+InterPro-N (N for network) provides additional Pfam matches identified by the Google Research team using deep learning approaches. You can read more about 
+it `in this blog post <https://www.ebi.ac.uk/about/news/updates-from-data-resources/interpro-105-0-ai-for-protein-classification//>`_.
+The matches for InterPro-N are identified in the :ref:`protein viewer <protein-viewer>` with a sparkle icon in the protein sequence viewer and 
+can be downloaded from the `InterPro ftp <https://ftp.ebi.ac.uk/pub/databases/interpro/>`_.
+
+By default, the :ref:`protein viewer <protein-viewer>` shows the integrated and unintegrated Pfam entries matching the protein 
+sequence, as well as additional Pfam InterPro-N matches (i.e. Pfam matches predicted by InterPro-N that are not included in the 
+'traditional' Pfam family). These settings can be changed by selecting in **Display matches from** in the **Options** menu the 
+following options: **IntePro**, **InterPro-N** or **Stacked** (a pop-up explains these options when hovering the mouse over the 
+information icon next to **Display matches from**). 
 
 .. figure:: images/exampleprotviewer.png
   :alt: Example of InterPro protein page showing the protein viewer 
   :width: 700
   :align: left
 
-  Example of InterPro protein page for the Uniprot accession A1AA27_. The :ref:`protein viewer <protein-viewer>` shows the integrated and unintegrated 
-  Pfam entries matching this protein sequence, as well as Pfam-N matches.
-  The colour code of the protein viewer is customised as 
-  **Colour By + Member Database** for all Pfam entries to be highlighted in blue.
+  Example of InterPro protein page for the Uniprot accession A0A1R3RGK4_. 
+  The only Pfam match for the protein is an InterPro-N 
+  prediction, highlighted with the sparkle icon both on the label on the right hand-side of the protein sequence viewer and next to the Pfam 
+  accession in the tooltip that appears when hovering the mouse over the coloured bar if the tooltip is active.
+  In addition, the colour code of the protein viewer is customised as **Colour By + Member Database** for all Pfam entries to be 
+  highlighted in blue. The **Full** option is selected in **Feature Display Mode**.
 
 What is the relation between Pfam and InterPro?
 ===============================================
