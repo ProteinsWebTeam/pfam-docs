@@ -21,7 +21,7 @@ AntiFam
 The **AntiFam** directory contains the different releases of the 
 `AntiFam database <https://ftp.ebi.ac.uk/pub/databases/Pfam/AntiFam>`_, identifying spurious proteins.
 
-.. _rosettafold:
+.. .. _rosettafold:
 
 .. RoseTTAfold_aln
 .. ===============
