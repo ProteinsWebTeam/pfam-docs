@@ -16,7 +16,6 @@ European Bioinformatics Institute (EMBL-EBI), UK
 - `Tiago Grego <http://www.ebi.ac.uk/about/people/tiago-grego>`_ - Software developer
 - `Beatriz Lazaro Pinto <http://www.ebi.ac.uk/about/people/beatriz-lazaro-pinto>`_ - Biocurator
 - `Nicole Morveli Flores <https://www.ebi.ac.uk/people/person/nicole-morveli/>`_ - Biocurator
-- `Typhaine Paysan-Lafosse <http://www.ebi.ac.uk/about/people/typhaine-paysan-lafosse>`_ - Curation Project Leader
 
 
 Harvard University, USA
@@ -93,6 +92,7 @@ Previous contributors
     * Lowri Williams
     * Arthur Wuster
     * Corin Yeats
+    * Typhaine Paysan-Lafosse
     
 
 Pfam is a collaborative venture and we hope to be able to interact with as many people as 
