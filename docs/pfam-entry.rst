@@ -188,8 +188,9 @@ the predicted structure of this protein in the structure viewer are displayed.
 
 It is also possible to click on the Uniprot accession to go to the InterPro protein page and select the **AlphaFold** tab, where the 
 position of the different entries in the 3D structure viewer are displayed by clicking on the bar corresponding to the entry match in 
-the protein sequence viewer. Besides, on the left hand side of the protein structure viewer there is a drop-down list that allows the 
-user to colour the structure according to the AlphaFold model confidence (default) or the predicted TED domains.
+the protein sequence viewer. Besides, on top of the protein structure viewer there is a drop-down list that allows the 
+user to colour the structure according to the AlphaFold model confidence (default), the predicted TED domains, the representative 
+families or the representative domains.
 
 .. figure:: images/pfam_page/alphafold_TED_colouring.png
   :alt: Example of an InterPro Protein entry page with the AlphaFold tab selected.
