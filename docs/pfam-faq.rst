@@ -113,7 +113,7 @@ How can I search Pfam locally?
 ==============================
 
 If you have a large number of sequences or you don't want to post your sequence across the web, you can search your sequence locally using 
-`InterProScan <https://interproscan-docs.readthedocs.io/en/latest/Introduction.html#to-install-and-run-interproscan>`_.
+`InterProScan <https://www.ebi.ac.uk/interpro/download/InterProScan/>`_.
 
 Why doesn't Pfam include my sequence?
 =====================================
