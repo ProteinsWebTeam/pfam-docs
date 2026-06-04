@@ -256,9 +256,12 @@ Before every InterPro release, the Pfam model is then run against the whole UniP
 shown in the :ref:`proteins` tab on the Pfam entry page.
 
 Different Pfam entries have annotations providing diverse amounts of information. Many of them have a description created 
-by Pfam curators. Anyone can contribute to this annotation by contacting directly the curators 
-through the **Provide feedback** button located on the right-hand side of the **Overview** tab. 
-This button links to a **Feedback** page that allows the user to suggest updates.
+by Pfam curators. Recently, we have introduced the assistance of AI in our workflows to accelerate the curation process, 
+from the generation of files required for the annotation a new Pfam family (analysis of scientific literature, 
+taxonomic distribution, domain architecture, structural similarities and functional protein association and interactions) 
+to the generation of draft names and descriptions. Furthermore, anyone can contribute to the annotation of any Pfam entry 
+available in the InterPro website by contacting directly the curators through the **Provide feedback** button located on 
+the right-hand side of the **Overview** tab. This button links to a **Feedback** page that allows the user to suggest updates.
 
 If you know of a domain that is not present in Pfam, you can submit it to the `Pfam helpdesk <https://www.ebi.ac.uk/about/contact/support/pfam>`_
 and we will endeavour to build a Pfam entry for it. Please note that our interest does not currently extend to small, species-specific protein 
