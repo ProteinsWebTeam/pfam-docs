@@ -14,6 +14,7 @@ European Bioinformatics Institute (EMBL-EBI), UK
 - `Antonina Entcheva Andreeva <https://www.ebi.ac.uk/people/person/antonina-andreeva/>`_ - Biocurator 
 - `Sara Chuguransky <http://www.ebi.ac.uk/about/people/sara-chuguransky>`_ - Senior Biocurator
 - `Tiago Grego <http://www.ebi.ac.uk/about/people/tiago-grego>`_ - Software developer
+- `Emma Hobbs <https://www.ebi.ac.uk/people/person/emma-hobbs/>`_ - Bioinformatics Developer
 - `Beatriz Lazaro Pinto <http://www.ebi.ac.uk/about/people/beatriz-lazaro-pinto>`_ - Biocurator
 - `Nicole Morveli Flores <https://www.ebi.ac.uk/people/person/nicole-morveli/>`_ - Biocurator
 
