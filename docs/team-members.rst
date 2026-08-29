@@ -11,6 +11,7 @@ European Bioinformatics Institute (EMBL-EBI), UK
 ------------------------------------------------
 
 - `Alex Bateman <http://www.ebi.ac.uk/about/people/alex-bateman>`_ - Pfam team leader and head of Protein Sequence resources at EMBL-EBI
+- `Matthias Blum <https://www.ebi.ac.uk/people/person/matthias-blum>`_ - Pfam/InterPro Software Project Leader
 - `Antonina Entcheva Andreeva <https://www.ebi.ac.uk/people/person/antonina-andreeva/>`_ - Biocurator 
 - `Sara Chuguransky <http://www.ebi.ac.uk/about/people/sara-chuguransky>`_ - Senior Biocurator
 - `Tiago Grego <http://www.ebi.ac.uk/about/people/tiago-grego>`_ - Software developer
