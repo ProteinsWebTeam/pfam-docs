@@ -18,6 +18,7 @@ in the InterPro website menu and select **Pfam** in the database section.
 
     Example of a Pfam clan page (CL0219_). All the tabs described below can be
     found on the left-hand side menu. The **Overview** tab is displayed by default.
+    The mouse is hovered over the Piwi domain entry, whose details are shown in a tooltip.
 
 In each Pfam clan page, different tabs with relevant information are available, the information they contain is described below.
 
@@ -27,11 +28,12 @@ Overview
 The clan **Overview** tab is the default display, where the clan accession number, its short name and the author(s) are shown at the top. A 
 description of the clan is displayed below, with the relevant literature references. 
 
-When a Wikipedia article is available for the clan, the first paragraph of the article together with the link to the Wikipedia article are shown in the **Wikipedia** section.
+When a Wikipedia article is available for the clan, the first paragraph of the article together with the link to the Wikipedia article are 
+shown in the **Wikipedia** section.
 
-An interactive view of the Pfam entries included in the clan is also displayed, different label types can be chosen through the 
-**Label Content** menu: Accession, Name and Short name.
-
+An interactive view including Pfam entries that belong to the clan is also displayed. The arrows/the mouse can be used to scroll in/out. 
+Hovering the mouse over a Pfam entry (circle, square or triangle) or structural relationship (line) shows details about it. Details about 
+the meaning of colours and shapes as well as the tools used for structural comparison are shown in the legend below.
 
 Entries
 =======
