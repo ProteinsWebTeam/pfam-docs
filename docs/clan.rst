@@ -18,9 +18,11 @@ in the InterPro website menu and select **Pfam** in the database section.
 
     Example of a Pfam clan page (CL0219_). All the tabs described below can be
     found on the left-hand side menu. The **Overview** tab is displayed by default.
-    The mouse is hovered over a structural relationship between the `Piwi domain <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/>`_
-    and the `Mediator complex subunit 13 C-terminal domain <https://www.ebi.ac.uk/interpro/entry/pfam/PF06333/>`_ 
-    entries, whose details are shown in a tooltip.
+    Here, the `Piwi domain <https://www.ebi.ac.uk/interpro/entry/pfam/PF02171/>`_ 
+    (integrated in `IPR003165 <https://www.ebi.ac.uk/interpro/entry/InterPro/IPR003165/>_`)
+    was seached for in the 'Find an entry' search box, the 'Interactive legend' is shown, and 
+    both the Pfam entries belonging to 'Other clan' and the DALI structural relationships 
+    ('Predicted by') with a Z-score lower than 12 are toggled off.
 
 In each Pfam clan page, different tabs with relevant information are available, the information they contain is described below.
 
@@ -33,11 +35,21 @@ description of the clan is displayed below, with the relevant literature referen
 When a Wikipedia article is available for the clan, the first paragraph of the article together with the link to the Wikipedia article are 
 shown in the **Wikipedia** section.
 
-An interactive view including Pfam entries that belong to the clan can also be displayed. This viewer is built using different comparison methods 
-to predict the relationships: Foldseek and DALI as structural methods, while HHsearch and SCOOP are profile comparison methods. The threshold used 
-for each method is shown in the legend below, together with the colour scheme for the lines linking different families. The arrows/the mouse can be 
-used to zoom in/out. Hovering the mouse over the Pfam entry (different shape and colour according to entry type and clan membership, respectively, 
-as explained in the legend ) and the lines, show details about them.
+An interactive viewer including Pfam entries that belong to the clan can also be displayed. This viewer is built using different comparison methods 
+to predict the relationships: Foldseek and DALI as structural methods, while HHsearch and SCOOP are profile comparison methods. 
+
+In the interactive viewer, the mouse can be used to zoom in/out, nodes can be moved, and the buttons at the top 
+right corner of the viewer allow to customise the size of the nodes or the labels ('Show size controls'), 
+display the interactive legend on the left hand side ('Show Interactive Legend'), display the viewer 
+in the full screen ('Full screen'), and reset the view and the filters. Hovering the mouse over a Pfam 
+entry (ellipse, circle, square or triangle) or relationship (line) shows details about it on a tooltip located 
+in the bottom right corner. Pfam entries can be selected, which makes the corresponding tooltip static,
+highlights its relationships with other Pfam entries, and shows another button on the top right corner that 
+allows showing only the selected entry and its connections. The InterPro member database page for Pfam entries can 
+opened in a different tab by using ctrl/cmd+click on the node. On the top left corner, there is a 'Find an entry' 
+search box that allows searching for a specific Pfam accession or Pfam ID, selects it and zooms on it. Finally, in the 
+interactive legend, any element (clan membership, entry type or relationship threshold) can be toggled on/off 
+by clicking on it. 
 
 Entries
 =======
