@@ -91,8 +91,9 @@ Mousing over any part of the sunburst chart shows the taxonomic name and level, 
 the number of species found at that level shown on the right-hand side.
 
 These data can also be seen as a table and as a tree. In addition, it is possible to choose to see only data from key 
-species instead. These visualisation options can be chosen from the icon panel above the sunburst. All this information 
-can be downloaded in different formats.
+species instead. These visualisation options can be chosen from the icon panel above the sunburst. The information about 
+any list of proteins accessed from this tab (i.e. any list of protein matches from an specific taxa) can be downloaded 
+in different formats.
 
 .. figure:: images/pfam_page/taxonomy.png
   :alt: Example of a Pfam entry with the Taxonomy tab selected.
@@ -110,8 +111,8 @@ Proteomes
 
 A list of the reference proteomes matched by the entry is displayed in this tab. Each item in this list shows the Proteome ID 
 (which is a link to the Proteome page in InterPro), the name of the species carrying this proteome and the number of proteins 
-in this proteome that match the entry. From the **Actions** column, users can also see a list of these proteins by clicking the 
-first icon (**View matching proteins**), download the data in different formats or **View proteome information**.
+in this proteome that match the entry. By clicking the number of proteins, users can see a list and download the data in different 
+formats.
 
 .. figure:: images/pfam_page/proteome.png
   :alt: Example of a Pfam entry with the Proteomes tab selected.
