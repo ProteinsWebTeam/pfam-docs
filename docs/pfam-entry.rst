@@ -229,6 +229,19 @@ All the alignments can be downloaded by clicking on the **Download** button.
   Example of a Pfam entry page (PF02171_) with the **Alignment** tab and the **seed** alignment selected. The right edge of the grey 
   bar was dragged to the left to zoom in, allowing to better visualise a specific region of the multiple sequence alignment.
 
+Genomic context
+===============
+This tab is available for some Pfam families. It provides information about the genomic context of representative proteins 
+matching the Pfam model by showing contigs from the OpenGenome database with a gene encoding these proteins. Each contig 
+(row) is aligned on the gene encoding a representative protein. Lines and boxes represent Pfam and Rfam familiy matches 
+respectively. Further details are shown in a tooltip by hovering the mouse over a gene. Besides, a link to the corresponding 
+`Seqhub <https://seqhub.org/>`_ site is provided in the top right corner.
+
+.. figure:: images/pfam_page/genomic_context_tab.png
+    :alt: Genomic context tab.
+    :width: 800px
+
+    Genomic context tab of a prokaryotic protein entry page (above) and a Pfam entry page (below).
 
 ************************************
 Pfam entries creation and annotation
