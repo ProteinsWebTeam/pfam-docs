@@ -91,8 +91,9 @@ Mousing over any part of the sunburst chart shows the taxonomic name and level, 
 the number of species found at that level shown on the right-hand side.
 
 These data can also be seen as a table and as a tree. In addition, it is possible to choose to see only data from key 
-species instead. These visualisation options can be chosen from the icon panel above the sunburst. All this information 
-can be downloaded in different formats.
+species instead. These visualisation options can be chosen from the icon panel above the sunburst. The information about 
+any list of proteins accessed from this tab (i.e. any list of protein matches from an specific taxa) can be downloaded 
+in different formats.
 
 .. figure:: images/pfam_page/taxonomy.png
   :alt: Example of a Pfam entry with the Taxonomy tab selected.
@@ -110,8 +111,8 @@ Proteomes
 
 A list of the reference proteomes matched by the entry is displayed in this tab. Each item in this list shows the Proteome ID 
 (which is a link to the Proteome page in InterPro), the name of the species carrying this proteome and the number of proteins 
-in this proteome that match the entry. From the **Actions** column, users can also see a list of these proteins by clicking the 
-first icon (**View matching proteins**), download the data in different formats or **View proteome information**.
+in this proteome that match the entry. By clicking the number of proteins, users can see a list and download the data in different 
+formats.
 
 .. figure:: images/pfam_page/proteome.png
   :alt: Example of a Pfam entry with the Proteomes tab selected.
@@ -229,6 +230,19 @@ All the alignments can be downloaded by clicking on the **Download** button.
   Example of a Pfam entry page (PF02171_) with the **Alignment** tab and the **seed** alignment selected. The right edge of the grey 
   bar was dragged to the left to zoom in, allowing to better visualise a specific region of the multiple sequence alignment.
 
+Genomic context
+===============
+This tab is available for some Pfam families. It provides information about the genomic context of representative proteins 
+matching the Pfam model by showing contigs from the OpenGenome database with a gene encoding these proteins. Each contig 
+(row) is aligned on the gene encoding a representative protein. Lines and boxes represent Pfam and Rfam familiy matches 
+respectively. Further details are shown in a tooltip by hovering the mouse over a gene. Besides, a link to the corresponding 
+`Seqhub <https://seqhub.org/>`_ site is provided in the top right corner.
+
+.. figure:: images/pfam_page/genomic_context_tab.png
+    :alt: Genomic context tab.
+    :width: 800px
+
+    Genomic context tab of a prokaryotic protein entry page (above) and a Pfam entry page (below).
 
 ************************************
 Pfam entries creation and annotation
